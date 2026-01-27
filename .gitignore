@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+
+# macOS
+.DS_Store
+
+# Output files
+output/
+site/data/activity-data.json
+
+# Deployment scripts (contain sensitive paths)
+deploy/

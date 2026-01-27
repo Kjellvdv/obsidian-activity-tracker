@@ -1,0 +1,19 @@
+{
+  "name": "obsidian-activity-tracker",
+  "version": "1.0.0",
+  "description": "Parse Obsidian Vibing notes and generate activity tracker data",
+  "main": "parser/parse-vibing-notes.js",
+  "scripts": {
+    "parse": "node parser/parse-vibing-notes.js",
+    "test": "node parser/parse-vibing-notes.js && echo 'Parser test complete'"
+  },
+  "keywords": ["obsidian", "activity-tracker", "vibe-coding"],
+  "author": "Kjell",
+  "license": "MIT",
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "date-fns": "^3.0.0",
+    "fs-extra": "^11.2.0",
+    "glob": "^10.3.10"
+  }
+}

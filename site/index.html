@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Coding Activity Tracker</title>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Kjell's Vibe Coding Tracker</h1>
+            <p class="subtitle">AI-assisted experiments and personal projects</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Stats Summary -->
+            <div class="stats-summary" id="stats">
+                <div class="stat-card">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Total Projects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Active Days</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">-</div>
+                    <div class="stat-label">Latest Project</div>
+                </div>
+            </div>
+
+            <!-- Contribution Graph -->
+            <div class="graph-container">
+                <h2 class="section-title">Contribution Graph</h2>
+                <div class="graph-wrapper">
+                    <div class="graph-months" id="monthsLabels"></div>
+                    <div class="graph-content">
+                        <div class="graph-days-labels">
+                            <span>Mon</span>
+                            <span>Wed</span>
+                            <span>Fri</span>
+                            <span>Sun</span>
+                        </div>
+                        <div class="graph-grid" id="contributionGraph"></div>
+                    </div>
+                </div>
+                <div class="graph-legend">
+                    <span>Less</span>
+                    <div class="legend-colors">
+                        <div class="legend-box" data-level="0"></div>
+                        <div class="legend-box" data-level="1"></div>
+                        <div class="legend-box" data-level="2"></div>
+                        <div class="legend-box" data-level="3"></div>
+                        <div class="legend-box" data-level="4"></div>
+                    </div>
+                    <span>More</span>
+                </div>
+            </div>
+
+            <!-- Recent Projects -->
+            <div class="recent-projects" id="recentProjects">
+                <h2 class="section-title">Recent Projects</h2>
+                <div class="projects-list"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Project Detail Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be injected by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Tooltip -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <!-- Scripts -->
+    <script src="js/activity-graph.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>
