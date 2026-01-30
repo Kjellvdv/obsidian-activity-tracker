@@ -157,9 +157,8 @@ function parseProjectNote(filePath) {
       const stats = fs.statSync(filePath);
       const date = format(startOfDay(stats.mtime), 'yyyy-MM-dd');
 
-      // Get first 10 lines as description
-      const cleanLines = markdownContent.trim().split('\n').filter(line => line.trim());
-      const description = cleanLines.slice(0, 10).join(' ').substring(0, 500);
+      // Get full content as description
+      const description = markdownContent.trim();
 
       // Extract learnings from full content
       const learnings = extractLearnings(markdownContent);
@@ -188,9 +187,8 @@ function parseProjectNote(filePath) {
 
     // Return multiple entries (one per date)
     return dateEntries.map((entry, index) => {
-      // Get first 10 lines as description
-      const cleanLines = entry.content.trim().split('\n').filter(line => line.trim());
-      const description = cleanLines.slice(0, 10).join(' ').substring(0, 500);
+      // Get full content as description
+      const description = entry.content.trim();
 
       // Extract learnings from section content
       const learnings = extractLearnings(entry.content);
