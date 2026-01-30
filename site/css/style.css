@@ -42,6 +42,24 @@ body {
     font-weight: 400;
 }
 
+.button-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #D76262;
+    font-weight: 400;
+    text-decoration: none;
+}
+    
+.button {
+    text-align: left;
+    border: 1px;
+    border-radius: 8px;
+    background-color: white;
+    max-width: 10%;
+    padding: 10px;
+
+}
+
 /* Main Content */
 .main {
     padding: 40px 20px;
