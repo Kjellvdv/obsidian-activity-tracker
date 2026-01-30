@@ -37,6 +37,31 @@ function calculateIntensity(content, learnings) {
 }
 
 /**
+ * Clean markdown formatting for display
+ */
+function cleanMarkdown(content) {
+  return content
+    // Remove Obsidian image embeds: ![[image.png]]
+    .replace(/!\[\[.*?\]\]/g, '')
+    // Remove bold: **text** or __text__
+    .replace(/\*\*(.*?)\*\*/g, '$1')
+    .replace(/__(.*?)__/g, '$1')
+    // Remove italic: *text* or _text_
+    .replace(/\*(.*?)\*/g, '$1')
+    .replace(/_(.*?)_/g, '$1')
+    // Convert bullet points to plain text (keep the dash/asterisk but remove markdown)
+    .replace(/^\s*[-*+]\s+/gm, '• ')
+    // Convert numbered lists
+    .replace(/^\s*\d+\.\s+/gm, '')
+    // Remove extra spaces but preserve paragraph breaks
+    .replace(/[ \t]+/g, ' ')
+    // Preserve double line breaks (paragraphs)
+    .replace(/\n\s*\n/g, '\n\n')
+    // Trim
+    .trim();
+}
+
+/**
  * Extract learnings from content
  */
 function extractLearnings(content) {
@@ -157,8 +182,8 @@ function parseProjectNote(filePath) {
       const stats = fs.statSync(filePath);
       const date = format(startOfDay(stats.mtime), 'yyyy-MM-dd');
 
-      // Get full content as description
-      const description = markdownContent.trim();
+      // Get full content as description (clean markdown formatting)
+      const description = cleanMarkdown(markdownContent);
 
       // Extract learnings from full content
       const learnings = extractLearnings(markdownContent);
@@ -187,8 +212,8 @@ function parseProjectNote(filePath) {
 
     // Return multiple entries (one per date)
     return dateEntries.map((entry, index) => {
-      // Get full content as description
-      const description = entry.content.trim();
+      // Get full content as description (clean markdown formatting)
+      const description = cleanMarkdown(entry.content);
 
       // Extract learnings from section content
       const learnings = extractLearnings(entry.content);
