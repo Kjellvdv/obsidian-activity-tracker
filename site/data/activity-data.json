@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "generated": "2026-01-30T09:56:23.836Z",
-    "totalProjects": 10,
+    "generated": "2026-01-30T10:08:51.746Z",
+    "totalProjects": 11,
     "dateRange": {
-      "start": "2026-01-16",
+      "start": "2001-01-30",
       "end": "2026-01-29"
     }
   },
@@ -27,13 +27,22 @@
       ]
     },
     "2026-01-29": {
-      "intensity": 3,
+      "intensity": 2,
       "projectCount": 2,
       "vibeTools": [
         "Claude Code",
         "Visual Code Studio",
         "ChatGPT",
         "n8n AI"
+      ]
+    },
+    "2001-01-30": {
+      "intensity": 2,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code",
+        "Visual Code Studio",
+        "ChatGPT"
       ]
     },
     "2026-01-28": {
@@ -65,7 +74,7 @@
     {
       "id": "vibing-tracker-2026-01-29",
       "date": "2026-01-29",
-      "title": "Vibing tracker",
+      "title": "Vibing tracker (Day 1)",
       "vibeTools": [
         "Claude Code",
         "Visual Code Studio",
@@ -75,13 +84,11 @@
         "Python3",
         "GitHub"
       ],
-      "description": "Deployed the Obsidian Activity Tracker online. Set up GitHub Pages with automatic deployment and configured local SiteGround deployment via SFTP.                                                         \n\n  ****Key accomplishments:****                                                                                 \n\n  - Created GitHub Actions workflows for automated deployment to GitHub Pages                             \n  - Fixed data file visibility issue (was in .gitignore, preventing deployment)                            \n\n  - Set up local-to-SiteGround deployment script with SFTP authentication                                  \n\n  - Configured .env file for secure credential management                                                  \n\n  - Installed sshpass for automated SFTP deployment                                                                                                                             \n\n  The site now auto-deploys to GitHub Pages on every push, and can be manually deployed to SiteGround from \n\n  local machine.",
-      "learnings": [
-        "Fixed data file visibility issue (was in .gitignore, preventing deployment)"
-      ],
+      "description": "Tried to deploy the Vibe coding Activity Tracker online by setting up GitHub Pages with automatic deployment and configured local SiteGround deployment via SFTP.                              \n\nUnfortunately, Siteground wasn't really working along as the files could not be pushed.\n\nAt some point I managed to show my page successfully on vibing.kjellv.com but without actually showing my activity.\n\nAlmost there but not quite yet.",
+      "learnings": [],
       "cost": null,
       "status": "completed",
-      "intensity": 3,
+      "intensity": 1,
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Vibing tracker.md"
     },
     {
@@ -100,7 +107,7 @@
         "Javascript",
         "OpenAI"
       ],
-      "description": "Sally lives on ww.willow.co/success-stories too know.\nBeen wanting to implement this for months but never felt confident about how to do it.\nSince I got more experience with webhooks now, I gave it another shot and it was easier than expected.\nStarting with a script for Webflow written by ChatGPT, it was easy enough to connect it to n8n and send back replies to the web page. \nStyling it was something I could easily do manually as well.\nPretty happy with the result.\n\n![[Screenshot 2026-01-29 at 16.56.13.png]]",
+      "description": "Sally lives on ww.willow.co/success-stories too now.\nBeen wanting to implement this for months but never felt confident about how to do it.\nSince I got more experience with webhooks now, I gave it another shot and it was easier than expected.\nStarting with a script for Webflow written by ChatGPT, it was easy enough to connect it to n8n and send back replies to the web page. \nStyling it was something I could easily do manually as well.\nPretty happy with the result.",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -123,7 +130,7 @@
         "Javascript",
         "OpenAI"
       ],
-      "description": "Just made a Slack bot that everyone in the team can talk to to ask questions about our successful customers.  \n  \nBut it can also answer other questions like:  \n  \n- Which customers are in IT?  \n- Which customers have an office manager?  \n- Who had the most impressions last year?  \n  \nHow does it work?  \n  \nTwo simple n8n workflows.  \n  \n1. Every time a new success story gets added (or updated) to Webflow, it gets synced to a database  \n  \n2. Slack messages get passed on to an AI Agent who only takes the database as a single source of truth. The reply gets sent back to the same slack channel.",
+      "description": "Just made a Slack bot that everyone in the team can talk to to ask questions about our successful customers. \n\nBut it can also answer other questions like: \n• Which customers are in IT? \n• Which customers have an office manager? \n• Who had the most impressions last year? \n\nHow does it work? \n\nTwo simple n8n workflows. \nEvery time a new success story gets added (or updated) to Webflow, it gets synced to a database \nSlack messages get passed on to an AI Agent who only takes the database as a single source of truth. The reply gets sent back to the same slack channel.",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -147,7 +154,7 @@
         "HTML",
         "Fetch API"
       ],
-      "description": "1. **Converted desktop app to web app** - Transformed the CustomTkinter desktop wardrobe manager into a Flask-based web application\n2. **Unified database** - Merged separate wardrobe.db and wardrobe_fer.db into single database with `wardrobe` field to distinguish owners\n3. **Added search & filter** - Implemented debounced search (300ms), type filtering, and sorting by rating/brand/date\n4. **Built REST API** - Created 10+ Flask endpoints for CRUD operations, search, filter, sort, and undo functionality\n5. **Vanilla JS frontend** - Developed SPA with state management, API client, and modular components (ItemCard, ItemModal, SearchFilter)\n6. **CSS theme system** - Implemented CSS variables for instant theme switching between Kjell's earthy and Fer's pink color schemes\n7. **Preserved features** - Maintained all original functionality: color-coded cards, 10-star ratings, color picker, edit/delete with undo\n8. **Migrated 72 items** - Successfully transferred all items from Kjell's wardrobe with full data integrity and backups\n9. **Responsive design** - Built mobile-friendly grid layout with auto-fill columns and media queries for various screen sizes\n10. **Complete documentation** - Created README, INSTALL, QUICKSTART guides plus verification scripts for easy setup and troubleshooting\n\n**Key Features**\n- View items organized by clothing type\n- Add/edit/delete items with confirmation\n- Color-coded item cards with contrast text\n- 10-star rating system\n- Color picker for custom colors\n- Switch between Kjell's and Fer's wardrobes\n- Undo delete (10-second window)\n- Automatic data persistence\n- **Search** - Full-text search across brand, model, materials with debouncing\n- **Filter** - Dropdown to filter by specific clothing type\n- **Sort** - Multiple sort options (rating desc, brand asc, date desc)\n- **Responsive** - Mobile-friendly grid layout\n- **Keyboard shortcuts** - ESC to close modals\n- **Real-time updates** - Observer pattern for reactive UI\n- **API access** - RESTful endpoints for external integration\n\nAccess at: **http://localhost:5001** (changed from 5000 to avoid macOS AirPlay conflict)",
+      "description": "Converted desktop app to web app - Transformed the CustomTkinter desktop wardrobe manager into a Flask-based web application\nUnified database - Merged separate wardrobe.db and wardrobe_fer.db into single database with `wardrobe` field to distinguish owners\nAdded search & filter - Implemented debounced search (300ms), type filtering, and sorting by rating/brand/date\nBuilt REST API - Created 10+ Flask endpoints for CRUD operations, search, filter, sort, and undo functionality\nVanilla JS frontend - Developed SPA with state management, API client, and modular components (ItemCard, ItemModal, SearchFilter)\nCSS theme system - Implemented CSS variables for instant theme switching between Kjell's earthy and Fer's pink color schemes\nPreserved features - Maintained all original functionality: color-coded cards, 10-star ratings, color picker, edit/delete with undo\nMigrated 72 items - Successfully transferred all items from Kjell's wardrobe with full data integrity and backups\nResponsive design - Built mobile-friendly grid layout with auto-fill columns and media queries for various screen sizes\nComplete documentation - Created README, INSTALL, QUICKSTART guides plus verification scripts for easy setup and troubleshooting\n\nKey Features\n• View items organized by clothing type\n• Add/edit/delete items with confirmation\n• Color-coded item cards with contrast text\n• 10-star rating system\n• Color picker for custom colors\n• Switch between Kjell's and Fer's wardrobes\n• Undo delete (10-second window)\n• Automatic data persistence\n• Search - Full-text search across brand, model, materials with debouncing\n• Filter - Dropdown to filter by specific clothing type\n• Sort - Multiple sort options (rating desc, brand asc, date desc)\n• Responsive - Mobile-friendly grid layout\n• Keyboard shortcuts - ESC to close modals\n• Real-time updates - Observer pattern for reactive UI\n• API access - RESTful endpoints for external integration\n\nAccess at: http://localhost:5001 (changed from 5000 to avoid macOS AirPlay conflict)",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -245,7 +252,7 @@
         "HTML",
         "Fetch API"
       ],
-      "description": "First time working with Claude Code. Developed fully locally.\nLearning here is that the main file is definitely too large. \nWondering why CSS isn't separated for example.\nAlso the stack was too light to make it work visually, but again maybe it's related to the CSS too.\nGood but expensive learning experience (around 28$)\n\n![[Screenshot 2026-01-22 at 17.13.34.png]]",
+      "description": "First time working with Claude Code. Developed fully locally.\nLearning here is that the main file is definitely too large. \nWondering why CSS isn't separated for example.\nAlso the stack was too light to make it work visually, but again maybe it's related to the CSS too.\nGood but expensive learning experience (around 28$)",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -268,6 +275,26 @@
       "status": "completed",
       "intensity": 1,
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Case study maker.md"
+    },
+    {
+      "id": "vibing-tracker-2001-01-30",
+      "date": "2001-01-30",
+      "title": "Vibing tracker (Day 2)",
+      "vibeTools": [
+        "Claude Code",
+        "Visual Code Studio",
+        "ChatGPT"
+      ],
+      "stack": [
+        "Python3",
+        "GitHub"
+      ],
+      "description": "I gave up trying to push the files directly to Siteground. \nWith a CNAME record, however, my github page now gets shown on vibing.kjellv.com\nThis requires a workflow in github that Claude wrote.\n\nAdditionally, i added a cron job to parse my Obsidian files daily and push the changes to github so that my activity tracker gets updated daily (when I'm online)\n\nFinally, I added a button in the header to go back to kjellv.com. Believe it or not, I coded this manually with some HTML and CSS. At least I have the feeling that I contributed a bit now.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 2,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Vibing tracker.md"
     }
   ]
 }
