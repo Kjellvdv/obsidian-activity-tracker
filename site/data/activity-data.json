@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated": "2026-01-30T09:37:55.313Z",
+    "generated": "2026-01-30T09:56:23.836Z",
     "totalProjects": 10,
     "dateRange": {
       "start": "2026-01-16",
@@ -75,7 +75,7 @@
         "Python3",
         "GitHub"
       ],
-      "description": "Deployed the Obsidian Activity Tracker online. Set up GitHub Pages with automatic deployment and configured local SiteGround deployment via SFTP.                                                            ****Key accomplishments:****                                                                                    - Created GitHub Actions workflows for automated deployment to GitHub Pages                                - Fixed data file visibility issue (was in .gitignore, preventing deployment",
+      "description": "Deployed the Obsidian Activity Tracker online. Set up GitHub Pages with automatic deployment and configured local SiteGround deployment via SFTP.                                                         \n\n  ****Key accomplishments:****                                                                                 \n\n  - Created GitHub Actions workflows for automated deployment to GitHub Pages                             \n  - Fixed data file visibility issue (was in .gitignore, preventing deployment)                            \n\n  - Set up local-to-SiteGround deployment script with SFTP authentication                                  \n\n  - Configured .env file for secure credential management                                                  \n\n  - Installed sshpass for automated SFTP deployment                                                                                                                             \n\n  The site now auto-deploys to GitHub Pages on every push, and can be manually deployed to SiteGround from \n\n  local machine.",
       "learnings": [
         "Fixed data file visibility issue (was in .gitignore, preventing deployment)"
       ],
@@ -87,29 +87,6 @@
     {
       "id": "sally,-customer-success-oracle-2026-01-29",
       "date": "2026-01-29",
-      "title": "Sally, customer success oracle (Day 1)",
-      "vibeTools": [
-        "n8n AI",
-        "ChatGPT"
-      ],
-      "stack": [
-        "SlackAPI",
-        "n8n",
-        "Supabase",
-        "Webflow",
-        "Javascript",
-        "OpenAI"
-      ],
-      "description": "Sally lives on ww.willow.co/success-stories too know. Been wanting to implement this for months but never felt confident about how to do it. Since I got more experience with webhooks now, I gave it another shot and it was easier than expected. Starting with a script for Webflow written by ChatGPT, it was easy enough to connect it to n8n and send back replies to the web page.  Styling it was something I could easily do manually as well. Pretty happy with the result. ![[Screenshot 2026-01-29 at 16",
-      "learnings": [],
-      "cost": null,
-      "status": "completed",
-      "intensity": 2,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Sally, customer success oracle.md"
-    },
-    {
-      "id": "sally,-customer-success-oracle-2026-01-28",
-      "date": "2026-01-28",
       "title": "Sally, customer success oracle (Day 2)",
       "vibeTools": [
         "n8n AI",
@@ -123,7 +100,30 @@
         "Javascript",
         "OpenAI"
       ],
-      "description": "Just made a Slack bot that everyone in the team can talk to to ask questions about our successful customers.   But it can also answer other questions like:   - Which customers are in IT?   - Which customers have an office manager?   - Who had the most impressions last year?   How does it work?   Two simple n8n workflows.   1. Every time a new success story gets added (or updated) to Webflow, it gets synced to a database   2. Slack messages get passed on to an AI Agent who only takes the database",
+      "description": "Sally lives on ww.willow.co/success-stories too know.\nBeen wanting to implement this for months but never felt confident about how to do it.\nSince I got more experience with webhooks now, I gave it another shot and it was easier than expected.\nStarting with a script for Webflow written by ChatGPT, it was easy enough to connect it to n8n and send back replies to the web page. \nStyling it was something I could easily do manually as well.\nPretty happy with the result.\n\n![[Screenshot 2026-01-29 at 16.56.13.png]]",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 2,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Sally, customer success oracle.md"
+    },
+    {
+      "id": "sally,-customer-success-oracle-2026-01-28",
+      "date": "2026-01-28",
+      "title": "Sally, customer success oracle (Day 1)",
+      "vibeTools": [
+        "n8n AI",
+        "ChatGPT"
+      ],
+      "stack": [
+        "SlackAPI",
+        "n8n",
+        "Supabase",
+        "Webflow",
+        "Javascript",
+        "OpenAI"
+      ],
+      "description": "Just made a Slack bot that everyone in the team can talk to to ask questions about our successful customers.  \n  \nBut it can also answer other questions like:  \n  \n- Which customers are in IT?  \n- Which customers have an office manager?  \n- Who had the most impressions last year?  \n  \nHow does it work?  \n  \nTwo simple n8n workflows.  \n  \n1. Every time a new success story gets added (or updated) to Webflow, it gets synced to a database  \n  \n2. Slack messages get passed on to an AI Agent who only takes the database as a single source of truth. The reply gets sent back to the same slack channel.",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -147,7 +147,7 @@
         "HTML",
         "Fetch API"
       ],
-      "description": "1. **Converted desktop app to web app** - Transformed the CustomTkinter desktop wardrobe manager into a Flask-based web application 2. **Unified database** - Merged separate wardrobe.db and wardrobe_fer.db into single database with `wardrobe` field to distinguish owners 3. **Added search & filter** - Implemented debounced search (300ms), type filtering, and sorting by rating/brand/date 4. **Built REST API** - Created 10+ Flask endpoints for CRUD operations, search, filter, sort, and undo functio",
+      "description": "1. **Converted desktop app to web app** - Transformed the CustomTkinter desktop wardrobe manager into a Flask-based web application\n2. **Unified database** - Merged separate wardrobe.db and wardrobe_fer.db into single database with `wardrobe` field to distinguish owners\n3. **Added search & filter** - Implemented debounced search (300ms), type filtering, and sorting by rating/brand/date\n4. **Built REST API** - Created 10+ Flask endpoints for CRUD operations, search, filter, sort, and undo functionality\n5. **Vanilla JS frontend** - Developed SPA with state management, API client, and modular components (ItemCard, ItemModal, SearchFilter)\n6. **CSS theme system** - Implemented CSS variables for instant theme switching between Kjell's earthy and Fer's pink color schemes\n7. **Preserved features** - Maintained all original functionality: color-coded cards, 10-star ratings, color picker, edit/delete with undo\n8. **Migrated 72 items** - Successfully transferred all items from Kjell's wardrobe with full data integrity and backups\n9. **Responsive design** - Built mobile-friendly grid layout with auto-fill columns and media queries for various screen sizes\n10. **Complete documentation** - Created README, INSTALL, QUICKSTART guides plus verification scripts for easy setup and troubleshooting\n\n**Key Features**\n- View items organized by clothing type\n- Add/edit/delete items with confirmation\n- Color-coded item cards with contrast text\n- 10-star rating system\n- Color picker for custom colors\n- Switch between Kjell's and Fer's wardrobes\n- Undo delete (10-second window)\n- Automatic data persistence\n- **Search** - Full-text search across brand, model, materials with debouncing\n- **Filter** - Dropdown to filter by specific clothing type\n- **Sort** - Multiple sort options (rating desc, brand asc, date desc)\n- **Responsive** - Mobile-friendly grid layout\n- **Keyboard shortcuts** - ESC to close modals\n- **Real-time updates** - Observer pattern for reactive UI\n- **API access** - RESTful endpoints for external integration\n\nAccess at: **http://localhost:5001** (changed from 5000 to avoid macOS AirPlay conflict)",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -204,7 +204,7 @@
       "stack": [
         "Python3"
       ],
-      "description": "Added a timestamp to yaml so I kind of have a feeling which emails I should read first. Also updated the script so it only processes unread emails instead of all emails. Then I ran the script again and I deleted everything from the gmail folders. Hope I didn't miss anything :) Definitely already noticed that I'm much more likely to open the emails from Obsidian than from my email app when I'm looking for something to do while waiting.",
+      "description": "Added a timestamp to yaml so I kind of have a feeling which emails I should read first.\nAlso updated the script so it only processes unread emails instead of all emails.\nThen I ran the script again and I deleted everything from the gmail folders.\nHope I didn't miss anything :)\n\nDefinitely already noticed that I'm much more likely to open the emails from Obsidian than from my email app when I'm looking for something to do while waiting.",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -221,7 +221,7 @@
       "stack": [
         null
       ],
-      "description": "Idea phase. There's Vivino for wines and Untappd for beers.  I received a set of whisky and rhum samples. So i want a simple personal tracker for those.",
+      "description": "Idea phase. There's Vivino for wines and Untappd for beers. \nI received a set of whisky and rhum samples. So i want a simple personal tracker for those.",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -245,7 +245,7 @@
         "HTML",
         "Fetch API"
       ],
-      "description": "First time working with Claude Code. Developed fully locally. Learning here is that the main file is definitely too large.  Wondering why CSS isn't separated for example. Also the stack was too light to make it work visually, but again maybe it's related to the CSS too. Good but expensive learning experience (around 28$) ![[Screenshot 2026-01-22 at 17.13.34.png]]",
+      "description": "First time working with Claude Code. Developed fully locally.\nLearning here is that the main file is definitely too large. \nWondering why CSS isn't separated for example.\nAlso the stack was too light to make it work visually, but again maybe it's related to the CSS too.\nGood but expensive learning experience (around 28$)\n\n![[Screenshot 2026-01-22 at 17.13.34.png]]",
       "learnings": [],
       "cost": null,
       "status": "completed",
