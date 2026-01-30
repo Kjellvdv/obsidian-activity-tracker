@@ -1,0 +1,214 @@
+{
+  "metadata": {
+    "generated": "2026-01-27T13:19:14.501Z",
+    "totalProjects": 8,
+    "dateRange": {
+      "start": "2026-01-16",
+      "end": "2026-02-16"
+    }
+  },
+  "dailyContributions": {
+    "2026-01-16": {
+      "intensity": 1,
+      "projectCount": 1,
+      "vibeTools": [
+        "ChatGPT",
+        "Claude Code"
+      ]
+    },
+    "2026-01-27": {
+      "intensity": 4,
+      "projectCount": 4,
+      "vibeTools": [
+        "ChatGPT",
+        "Claude Code",
+        "Visual Code Studio",
+        null
+      ]
+    },
+    "2026-01-28": {
+      "intensity": 1,
+      "projectCount": 1,
+      "vibeTools": [
+        "ChatGPT",
+        "Claude Code",
+        "Visual Code Studio"
+      ]
+    },
+    "2026-01-26": {
+      "intensity": 1,
+      "projectCount": 1,
+      "vibeTools": [
+        "ChatGPT",
+        "Claude Code",
+        "Visual Code Studio"
+      ]
+    },
+    "2026-02-16": {
+      "intensity": 1,
+      "projectCount": 1,
+      "vibeTools": [
+        "Replit"
+      ]
+    }
+  },
+  "projects": [
+    {
+      "id": "case-study-maker-2026-02-16",
+      "date": "2026-02-16",
+      "title": "Case study maker",
+      "vibeTools": [
+        "Replit"
+      ],
+      "stack": [
+        null
+      ],
+      "description": "Built a first version with Replit. The output was surprisingly good. Still, will look to recreate it locally once I've experimented with a few less important projects.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 1,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Case study maker.md"
+    },
+    {
+      "id": "updating-note-rules-for-books,-categories-and-authors-2026-01-28",
+      "date": "2026-01-28",
+      "title": "Updating note rules for books, categories and authors",
+      "vibeTools": [
+        "ChatGPT",
+        "Claude Code",
+        "Visual Code Studio"
+      ],
+      "stack": [
+        "Python3"
+      ],
+      "description": "test",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 1,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Updating note rules for books, categories and authors.md"
+    },
+    {
+      "id": "wardrobe-2026-01-27",
+      "date": "2026-01-27",
+      "title": "Wardrobe (Day 2)",
+      "vibeTools": [
+        "ChatGPT",
+        "Claude Code"
+      ],
+      "stack": [
+        "Python",
+        "Flask",
+        "Javascript",
+        "SQLite",
+        "CSS",
+        "HTML",
+        "Fetch API"
+      ],
+      "description": "1. **Converted desktop app to web app** - Transformed the CustomTkinter desktop wardrobe manager into a Flask-based web application 2. **Unified database** - Merged separate wardrobe.db and wardrobe_fer.db into single database with `wardrobe` field to distinguish owners 3. **Added search & filter** - Implemented debounced search (300ms), type filtering, and sorting by rating/brand/date 4. **Built REST API** - Created 10+ Flask endpoints for CRUD operations, search, filter, sort, and undo functio",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 4,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Wardrobe.md"
+    },
+    {
+      "id": "vibing-tracker",
+      "date": "2026-01-27",
+      "title": "Vibing tracker",
+      "vibeTools": [
+        "Claude Code",
+        "Visual Code Studio"
+      ],
+      "stack": [
+        "Python3"
+      ],
+      "description": "",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 1,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Vibing tracker.md"
+    },
+    {
+      "id": "prompt-creator",
+      "date": "2026-01-27",
+      "title": "Prompt creator",
+      "vibeTools": [
+        "ChatGPT",
+        "Claude Code",
+        "Visual Code Studio"
+      ],
+      "stack": [
+        "Python3"
+      ],
+      "description": "## 2 February 2026",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 1,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Prompt creator.md"
+    },
+    {
+      "id": "licor-rater",
+      "date": "2026-01-27",
+      "title": "Licor rater",
+      "vibeTools": [
+        null
+      ],
+      "stack": [
+        null
+      ],
+      "description": "## 5 February 2026",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 1,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Licor rater.md"
+    },
+    {
+      "id": "newsletter-automater-2026-01-26",
+      "date": "2026-01-26",
+      "title": "Newsletter automater",
+      "vibeTools": [
+        "ChatGPT",
+        "Claude Code",
+        "Visual Code Studio"
+      ],
+      "stack": [
+        "Python3"
+      ],
+      "description": "Added a timestamp to yaml so I kind of have a feeling which emails I should read first. Also updated the script so it only processes unread emails instead of all emails. Then I ran the script again and I deleted everything from the gmail folders. Hope I didn't miss anything :) Definitely already noticed that I'm much more likely to open the emails from Obsidian than from my email app when I'm looking for something to do while waiting.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 1,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Newsletter automater.md"
+    },
+    {
+      "id": "wardrobe-2026-01-16",
+      "date": "2026-01-16",
+      "title": "Wardrobe (Day 1)",
+      "vibeTools": [
+        "ChatGPT",
+        "Claude Code"
+      ],
+      "stack": [
+        "Python",
+        "Flask",
+        "Javascript",
+        "SQLite",
+        "CSS",
+        "HTML",
+        "Fetch API"
+      ],
+      "description": "First time working with Claude Code. Developed fully locally. Learning here is that the main file is definitely too large.  Wondering why CSS isn't separated for example. Also the stack was too light to make it work visually, but again maybe it's related to the CSS too. Good but expensive learning experience (around 28$) ![[Screenshot 2026-01-22 at 17.13.34.png]]",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 1,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Wardrobe.md"
+    }
+  ]
+}

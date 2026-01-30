@@ -11,9 +11,10 @@ logs/
 # macOS
 .DS_Store
 
-# Output files
+# Output files (parser working directory)
 output/
-site/data/activity-data.json
+
+# Note: site/data/activity-data.json is committed so GitHub Pages can deploy it
 
 # Deployment scripts (contain sensitive paths)
 deploy/
