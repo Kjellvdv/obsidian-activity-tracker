@@ -1,93 +1,134 @@
 {
   "metadata": {
-    "generated": "2026-01-27T13:19:14.501Z",
-    "totalProjects": 8,
+    "generated": "2026-01-30T09:33:55.779Z",
+    "totalProjects": 10,
     "dateRange": {
       "start": "2026-01-16",
-      "end": "2026-02-16"
+      "end": "2026-01-29"
     }
   },
   "dailyContributions": {
     "2026-01-16": {
       "intensity": 1,
-      "projectCount": 1,
+      "projectCount": 2,
       "vibeTools": [
         "ChatGPT",
-        "Claude Code"
+        "Claude Code",
+        "Replit"
       ]
     },
     "2026-01-27": {
       "intensity": 4,
-      "projectCount": 4,
-      "vibeTools": [
-        "ChatGPT",
-        "Claude Code",
-        "Visual Code Studio",
-        null
-      ]
-    },
-    "2026-01-28": {
-      "intensity": 1,
-      "projectCount": 1,
+      "projectCount": 2,
       "vibeTools": [
         "ChatGPT",
         "Claude Code",
         "Visual Code Studio"
+      ]
+    },
+    "2026-01-29": {
+      "intensity": 3,
+      "projectCount": 2,
+      "vibeTools": [
+        "Claude Code",
+        "Visual Code Studio",
+        "ChatGPT",
+        "n8n AI"
+      ]
+    },
+    "2026-01-28": {
+      "intensity": 2,
+      "projectCount": 1,
+      "vibeTools": [
+        "n8n AI",
+        "ChatGPT"
       ]
     },
     "2026-01-26": {
       "intensity": 1,
-      "projectCount": 1,
+      "projectCount": 2,
       "vibeTools": [
         "ChatGPT",
         "Claude Code",
         "Visual Code Studio"
       ]
     },
-    "2026-02-16": {
+    "2026-01-24": {
       "intensity": 1,
       "projectCount": 1,
       "vibeTools": [
-        "Replit"
+        null
       ]
     }
   },
   "projects": [
     {
-      "id": "case-study-maker-2026-02-16",
-      "date": "2026-02-16",
-      "title": "Case study maker",
+      "id": "vibing-tracker-2026-01-29",
+      "date": "2026-01-29",
+      "title": "Vibing tracker",
       "vibeTools": [
-        "Replit"
+        "Claude Code",
+        "Visual Code Studio",
+        "ChatGPT"
       ],
       "stack": [
-        null
+        "Python3",
+        "GitHub"
       ],
-      "description": "Built a first version with Replit. The output was surprisingly good. Still, will look to recreate it locally once I've experimented with a few less important projects.",
-      "learnings": [],
+      "description": "Deployed the Obsidian Activity Tracker online. Set up GitHub Pages with automatic deployment and configured local SiteGround deployment via SFTP.                                                            ****Key accomplishments:****                                                                                    - Created GitHub Actions workflows for automated deployment to GitHub Pages                                - Fixed data file visibility issue (was in .gitignore, preventing deployment",
+      "learnings": [
+        "Fixed data file visibility issue (was in .gitignore, preventing deployment)"
+      ],
       "cost": null,
       "status": "completed",
-      "intensity": 1,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Case study maker.md"
+      "intensity": 3,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Vibing tracker.md"
     },
     {
-      "id": "updating-note-rules-for-books,-categories-and-authors-2026-01-28",
-      "date": "2026-01-28",
-      "title": "Updating note rules for books, categories and authors",
+      "id": "sally,-customer-success-oracle-2026-01-29",
+      "date": "2026-01-29",
+      "title": "Sally, customer success oracle (Day 1)",
       "vibeTools": [
-        "ChatGPT",
-        "Claude Code",
-        "Visual Code Studio"
+        "n8n AI",
+        "ChatGPT"
       ],
       "stack": [
-        "Python3"
+        "SlackAPI",
+        "n8n",
+        "Supabase",
+        "Webflow",
+        "Javascript",
+        "OpenAI"
       ],
-      "description": "test",
+      "description": "Sally lives on ww.willow.co/success-stories too know. Been wanting to implement this for months but never felt confident about how to do it. Since I got more experience with webhooks now, I gave it another shot and it was easier than expected. Starting with a script for Webflow written by ChatGPT, it was easy enough to connect it to n8n and send back replies to the web page.  Styling it was something I could easily do manually as well. Pretty happy with the result. ![[Screenshot 2026-01-29 at 16",
       "learnings": [],
       "cost": null,
       "status": "completed",
-      "intensity": 1,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Updating note rules for books, categories and authors.md"
+      "intensity": 2,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Sally, customer success oracle.md"
+    },
+    {
+      "id": "sally,-customer-success-oracle-2026-01-28",
+      "date": "2026-01-28",
+      "title": "Sally, customer success oracle (Day 2)",
+      "vibeTools": [
+        "n8n AI",
+        "ChatGPT"
+      ],
+      "stack": [
+        "SlackAPI",
+        "n8n",
+        "Supabase",
+        "Webflow",
+        "Javascript",
+        "OpenAI"
+      ],
+      "description": "Just made a Slack bot that everyone in the team can talk to to ask questions about our successful customers.   But it can also answer other questions like:   - Which customers are in IT?   - Which customers have an office manager?   - Who had the most impressions last year?   How does it work?   Two simple n8n workflows.   1. Every time a new success story gets added (or updated) to Webflow, it gets synced to a database   2. Slack messages get passed on to an AI Agent who only takes the database",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 2,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Sally, customer success oracle.md"
     },
     {
       "id": "wardrobe-2026-01-27",
@@ -114,26 +155,27 @@
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Wardrobe.md"
     },
     {
-      "id": "vibing-tracker",
+      "id": "updating-note-rules-for-books,-categories-and-authors-2026-01-27",
       "date": "2026-01-27",
-      "title": "Vibing tracker",
+      "title": "Updating note rules for books, categories and authors",
       "vibeTools": [
+        "ChatGPT",
         "Claude Code",
         "Visual Code Studio"
       ],
       "stack": [
         "Python3"
       ],
-      "description": "",
+      "description": "In Obsidian, I need to update a bunch of existing notes. Will probably write a python script for this.",
       "learnings": [],
       "cost": null,
       "status": "completed",
       "intensity": 1,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Vibing tracker.md"
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Updating note rules for books, categories and authors.md"
     },
     {
-      "id": "prompt-creator",
-      "date": "2026-01-27",
+      "id": "prompt-creator-2026-01-26",
+      "date": "2026-01-26",
       "title": "Prompt creator",
       "vibeTools": [
         "ChatGPT",
@@ -143,29 +185,12 @@
       "stack": [
         "Python3"
       ],
-      "description": "## 2 February 2026",
+      "description": "Idea phase: should create a customgpt that helps me write better prompts",
       "learnings": [],
       "cost": null,
       "status": "completed",
       "intensity": 1,
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Prompt creator.md"
-    },
-    {
-      "id": "licor-rater",
-      "date": "2026-01-27",
-      "title": "Licor rater",
-      "vibeTools": [
-        null
-      ],
-      "stack": [
-        null
-      ],
-      "description": "## 5 February 2026",
-      "learnings": [],
-      "cost": null,
-      "status": "completed",
-      "intensity": 1,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Licor rater.md"
     },
     {
       "id": "newsletter-automater-2026-01-26",
@@ -185,6 +210,23 @@
       "status": "completed",
       "intensity": 1,
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Newsletter automater.md"
+    },
+    {
+      "id": "licor-rater-2026-01-24",
+      "date": "2026-01-24",
+      "title": "Licor rater",
+      "vibeTools": [
+        null
+      ],
+      "stack": [
+        null
+      ],
+      "description": "Idea phase. There's Vivino for wines and Untappd for beers.  I received a set of whisky and rhum samples. So i want a simple personal tracker for those.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 1,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Licor rater.md"
     },
     {
       "id": "wardrobe-2026-01-16",
@@ -209,6 +251,23 @@
       "status": "completed",
       "intensity": 1,
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Wardrobe.md"
+    },
+    {
+      "id": "case-study-maker-2026-01-16",
+      "date": "2026-01-16",
+      "title": "Case study maker",
+      "vibeTools": [
+        "Replit"
+      ],
+      "stack": [
+        null
+      ],
+      "description": "Built a first version with Replit. The output was surprisingly good. Still, will look to recreate it locally once I've experimented with a few less important projects.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 1,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Case study maker.md"
     }
   ]
 }
