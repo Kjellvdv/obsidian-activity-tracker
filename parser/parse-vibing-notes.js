@@ -213,48 +213,36 @@ function parseProjectNote(filePath) {
     // Sort date entries chronologically (oldest first)
     dateEntries.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-    // Aggregate all date sections into a single project
-    const allContent = dateEntries.map(entry => entry.content).join('\n\n');
-    const allLearnings = [];
-    let maxIntensity = 1;
-    let totalCost = 0;
-    let hasCost = false;
+    // Return one entry per date (so calendar shows all work days)
+    // but keep the same title for all entries (no "Day 1", "Day 2" suffix)
+    return dateEntries.map((entry) => {
+      // Get content as description (clean markdown formatting)
+      const description = cleanMarkdown(entry.content);
 
-    // Process each date entry to extract learnings, intensity, and cost
-    for (const entry of dateEntries) {
+      // Extract learnings from section content
       const learnings = extractLearnings(entry.content);
-      allLearnings.push(...learnings);
 
+      // Calculate intensity for this section
       const intensity = calculateIntensity(entry.content, learnings);
-      maxIntensity = Math.max(maxIntensity, intensity);
 
+      // Look for cost mentions in this section
       const costMatch = entry.content.match(/\$(\d+)/);
-      if (costMatch) {
-        totalCost += parseInt(costMatch[1], 10);
-        hasCost = true;
-      }
-    }
+      const cost = costMatch ? `$${costMatch[1]}` : null;
 
-    // Clean the aggregated content
-    const description = cleanMarkdown(allContent);
-
-    // Use the earliest date as the project date
-    const projectDate = dateEntries[0].date;
-
-    return {
-      id: title.toLowerCase().replace(/\s+/g, '-'),
-      date: projectDate,
-      title,
-      vibeTools,
-      stack,
-      description: description.trim(),
-      learnings: allLearnings,
-      cost: hasCost ? `$${totalCost}` : null,
-      status: 'completed',
-      intensity: maxIntensity,
-      filePath,
-      workDates: dateEntries.map(e => e.date) // Track all work dates
-    };
+      return {
+        id: `${title.toLowerCase().replace(/\s+/g, '-')}-${entry.date}`,
+        date: entry.date,
+        title, // Same title for all entries, no day suffix
+        vibeTools,
+        stack,
+        description: description.trim(),
+        learnings,
+        cost,
+        status: 'completed',
+        intensity,
+        filePath
+      };
+    });
 
   } catch (error) {
     console.error(`Error parsing ${filePath}:`, error.message);
@@ -300,8 +288,7 @@ async function parseVibingNotes() {
           // Handle both single project and array of projects (multiple dates)
           const projectsArray = Array.isArray(result) ? result : [result];
           projects.push(...projectsArray);
-          const workDays = result.workDates ? result.workDates.length : 1;
-          console.log(`✓ Parsed: ${path.basename(file, '.md')} (${workDays} work session${workDays > 1 ? 's' : ''})`);
+          console.log(`✓ Parsed: ${path.basename(file, '.md')} (${projectsArray.length} date${projectsArray.length > 1 ? 's' : ''})`);
         }
       }
 
@@ -326,8 +313,7 @@ async function parseVibingNotes() {
       // Handle both single project and array of projects (multiple dates)
       const projectsArray = Array.isArray(result) ? result : [result];
       projects.push(...projectsArray);
-      const workDays = result.workDates ? result.workDates.length : 1;
-      console.log(`✓ Parsed: ${path.basename(file, '.md')} (${workDays} work session${workDays > 1 ? 's' : ''})`);
+      console.log(`✓ Parsed: ${path.basename(file, '.md')} (${projectsArray.length} date${projectsArray.length > 1 ? 's' : ''})`);
     }
   }
 
