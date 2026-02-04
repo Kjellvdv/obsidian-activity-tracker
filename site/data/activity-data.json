@@ -1,15 +1,15 @@
 {
   "metadata": {
-    "generated": "2026-01-30T10:08:51.746Z",
-    "totalProjects": 11,
+    "generated": "2026-02-04T08:59:30.294Z",
+    "totalProjects": 8,
     "dateRange": {
-      "start": "2001-01-30",
-      "end": "2026-01-29"
+      "start": "2026-01-16",
+      "end": "2026-02-03"
     }
   },
   "dailyContributions": {
     "2026-01-16": {
-      "intensity": 1,
+      "intensity": 4,
       "projectCount": 2,
       "vibeTools": [
         "ChatGPT",
@@ -17,32 +17,22 @@
         "Replit"
       ]
     },
-    "2026-01-27": {
-      "intensity": 4,
-      "projectCount": 2,
-      "vibeTools": [
-        "ChatGPT",
-        "Claude Code",
-        "Visual Code Studio"
-      ]
-    },
     "2026-01-29": {
-      "intensity": 2,
-      "projectCount": 2,
-      "vibeTools": [
-        "Claude Code",
-        "Visual Code Studio",
-        "ChatGPT",
-        "n8n AI"
-      ]
-    },
-    "2001-01-30": {
       "intensity": 2,
       "projectCount": 1,
       "vibeTools": [
         "Claude Code",
         "Visual Code Studio",
         "ChatGPT"
+      ]
+    },
+    "2026-01-27": {
+      "intensity": 1,
+      "projectCount": 1,
+      "vibeTools": [
+        "ChatGPT",
+        "Claude Code",
+        "Visual Code Studio"
       ]
     },
     "2026-01-28": {
@@ -62,19 +52,45 @@
         "Visual Code Studio"
       ]
     },
-    "2026-01-24": {
-      "intensity": 1,
+    "2026-02-03": {
+      "intensity": 2,
       "projectCount": 1,
       "vibeTools": [
-        null
+        "Claude Code",
+        "Visual Code Studio"
       ]
     }
   },
   "projects": [
     {
-      "id": "vibing-tracker-2026-01-29",
+      "id": "liquor-rater",
+      "date": "2026-02-03",
+      "title": "Liquor rater",
+      "vibeTools": [
+        "Claude Code",
+        "Visual Code Studio"
+      ],
+      "stack": [
+        "HTML",
+        "Javascript",
+        "CSS",
+        "Node.js"
+      ],
+      "description": "There's Vivino for wines and Untappd for beers but what about liquors?\nDon't judge me.\nI received a set of about 20 whisky and rhum samples. And I also got 12 last year. They're only 2cl each but I want a place to track and rate them.\n\nClaude Code very quickly created an HMTL file that basically does everything. It seemed functional, but no separate style sheet and no separate database sound wrong to me.\n\nClaude split it up into a js server, json files for data and css style sheet. Still looks the same. Impressive. \n\nCurrently no public repo, might push it later if it looks better.\n\nSeparating tabs for collection and adding a new entry really made it look better.\n\nTried to implement voice transcription as well last night, but that didn't seem to work because it needs internet access and this is a local app (for now).\nSo I'm going to include OCR instead to speed up text input. That seems to work better.\nI'm also making some changes to the layout and card field: adding years of aging and putting it in two columns so it stays in one screen.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 2,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Liquor rater.md",
+      "workDates": [
+        "2026-02-03",
+        "2026-02-04"
+      ]
+    },
+    {
+      "id": "vibing-tracker",
       "date": "2026-01-29",
-      "title": "Vibing tracker (Day 1)",
+      "title": "Vibing tracker",
       "vibeTools": [
         "Claude Code",
         "Visual Code Studio",
@@ -82,87 +98,50 @@
       ],
       "stack": [
         "Python3",
-        "GitHub"
-      ],
-      "description": "Tried to deploy the Vibe coding Activity Tracker online by setting up GitHub Pages with automatic deployment and configured local SiteGround deployment via SFTP.                              \n\nUnfortunately, Siteground wasn't really working along as the files could not be pushed.\n\nAt some point I managed to show my page successfully on vibing.kjellv.com but without actually showing my activity.\n\nAlmost there but not quite yet.",
-      "learnings": [],
-      "cost": null,
-      "status": "completed",
-      "intensity": 1,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Vibing tracker.md"
-    },
-    {
-      "id": "sally,-customer-success-oracle-2026-01-29",
-      "date": "2026-01-29",
-      "title": "Sally, customer success oracle (Day 2)",
-      "vibeTools": [
-        "n8n AI",
-        "ChatGPT"
-      ],
-      "stack": [
-        "SlackAPI",
-        "n8n",
-        "Supabase",
-        "Webflow",
-        "Javascript",
-        "OpenAI"
-      ],
-      "description": "Sally lives on ww.willow.co/success-stories too now.\nBeen wanting to implement this for months but never felt confident about how to do it.\nSince I got more experience with webhooks now, I gave it another shot and it was easier than expected.\nStarting with a script for Webflow written by ChatGPT, it was easy enough to connect it to n8n and send back replies to the web page. \nStyling it was something I could easily do manually as well.\nPretty happy with the result.",
-      "learnings": [],
-      "cost": null,
-      "status": "completed",
-      "intensity": 2,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Sally, customer success oracle.md"
-    },
-    {
-      "id": "sally,-customer-success-oracle-2026-01-28",
-      "date": "2026-01-28",
-      "title": "Sally, customer success oracle (Day 1)",
-      "vibeTools": [
-        "n8n AI",
-        "ChatGPT"
-      ],
-      "stack": [
-        "SlackAPI",
-        "n8n",
-        "Supabase",
-        "Webflow",
-        "Javascript",
-        "OpenAI"
-      ],
-      "description": "Just made a Slack bot that everyone in the team can talk to to ask questions about our successful customers. \n\nBut it can also answer other questions like: \n• Which customers are in IT? \n• Which customers have an office manager? \n• Who had the most impressions last year? \n\nHow does it work? \n\nTwo simple n8n workflows. \nEvery time a new success story gets added (or updated) to Webflow, it gets synced to a database \nSlack messages get passed on to an AI Agent who only takes the database as a single source of truth. The reply gets sent back to the same slack channel.",
-      "learnings": [],
-      "cost": null,
-      "status": "completed",
-      "intensity": 2,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Sally, customer success oracle.md"
-    },
-    {
-      "id": "wardrobe-2026-01-27",
-      "date": "2026-01-27",
-      "title": "Wardrobe (Day 2)",
-      "vibeTools": [
-        "ChatGPT",
-        "Claude Code"
-      ],
-      "stack": [
-        "Python",
-        "Flask",
-        "Javascript",
-        "SQLite",
+        "GitHub",
         "CSS",
-        "HTML",
-        "Fetch API"
+        "Javascript"
       ],
-      "description": "Converted desktop app to web app - Transformed the CustomTkinter desktop wardrobe manager into a Flask-based web application\nUnified database - Merged separate wardrobe.db and wardrobe_fer.db into single database with `wardrobe` field to distinguish owners\nAdded search & filter - Implemented debounced search (300ms), type filtering, and sorting by rating/brand/date\nBuilt REST API - Created 10+ Flask endpoints for CRUD operations, search, filter, sort, and undo functionality\nVanilla JS frontend - Developed SPA with state management, API client, and modular components (ItemCard, ItemModal, SearchFilter)\nCSS theme system - Implemented CSS variables for instant theme switching between Kjell's earthy and Fer's pink color schemes\nPreserved features - Maintained all original functionality: color-coded cards, 10-star ratings, color picker, edit/delete with undo\nMigrated 72 items - Successfully transferred all items from Kjell's wardrobe with full data integrity and backups\nResponsive design - Built mobile-friendly grid layout with auto-fill columns and media queries for various screen sizes\nComplete documentation - Created README, INSTALL, QUICKSTART guides plus verification scripts for easy setup and troubleshooting\n\nKey Features\n• View items organized by clothing type\n• Add/edit/delete items with confirmation\n• Color-coded item cards with contrast text\n• 10-star rating system\n• Color picker for custom colors\n• Switch between Kjell's and Fer's wardrobes\n• Undo delete (10-second window)\n• Automatic data persistence\n• Search - Full-text search across brand, model, materials with debouncing\n• Filter - Dropdown to filter by specific clothing type\n• Sort - Multiple sort options (rating desc, brand asc, date desc)\n• Responsive - Mobile-friendly grid layout\n• Keyboard shortcuts - ESC to close modals\n• Real-time updates - Observer pattern for reactive UI\n• API access - RESTful endpoints for external integration\n\nAccess at: http://localhost:5001 (changed from 5000 to avoid macOS AirPlay conflict)",
+      "description": "Tried to deploy the Vibe coding Activity Tracker online by setting up GitHub Pages with automatic deployment and configured local SiteGround deployment via SFTP.                              \n\nUnfortunately, Siteground wasn't really working along as the files could not be pushed.\n\nAt some point I managed to show my page successfully on vibing.kjellv.com but without actually showing my activity.\n\nAlmost there but not quite yet.\n\nI gave up trying to push the files directly to Siteground. \nWith a CNAME record, however, my github page now gets shown on vibing.kjellv.com\nThis requires a workflow in github that Claude wrote.\n\nAdditionally, i added a cron job to parse my Obsidian files daily and push the changes to github so that my activity tracker gets updated daily (when I'm online)\n\nFinally, I added a button in the header to go back to kjellv.com. Believe it or not, I coded this manually with some HTML and CSS. At least I have the feeling that I contributed a bit now.",
       "learnings": [],
       "cost": null,
       "status": "completed",
-      "intensity": 4,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Wardrobe.md"
+      "intensity": 2,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Vibing tracker.md",
+      "workDates": [
+        "2026-01-29",
+        "2026-01-30"
+      ]
     },
     {
-      "id": "updating-note-rules-for-books,-categories-and-authors-2026-01-27",
+      "id": "sally,-customer-success-oracle",
+      "date": "2026-01-28",
+      "title": "Sally, customer success oracle",
+      "vibeTools": [
+        "n8n AI",
+        "ChatGPT"
+      ],
+      "stack": [
+        "SlackAPI",
+        "n8n",
+        "Supabase",
+        "Webflow",
+        "Javascript",
+        "OpenAI"
+      ],
+      "description": "Just made a Slack bot that everyone in the team can talk to to ask questions about our successful customers. \n\nBut it can also answer other questions like: \n• Which customers are in IT? \n• Which customers have an office manager? \n• Who had the most impressions last year? \n\nHow does it work? \n\nTwo simple n8n workflows. \nEvery time a new success story gets added (or updated) to Webflow, it gets synced to a database \nSlack messages get passed on to an AI Agent who only takes the database as a single source of truth. The reply gets sent back to the same slack channel.\n\nSally lives on ww.willow.co/success-stories too now.\nBeen wanting to implement this for months but never felt confident about how to do it.\nSince I got more experience with webhooks now, I gave it another shot and it was easier than expected.\nStarting with a script for Webflow written by ChatGPT, it was easy enough to connect it to n8n and send back replies to the web page. \nStyling it was something I could easily do manually as well.\nPretty happy with the result.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 2,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Sally, customer success oracle.md",
+      "workDates": [
+        "2026-01-28",
+        "2026-01-29"
+      ]
+    },
+    {
+      "id": "updating-note-rules-for-books,-categories-and-authors",
       "date": "2026-01-27",
       "title": "Updating note rules for books, categories and authors",
       "vibeTools": [
@@ -178,10 +157,13 @@
       "cost": null,
       "status": "completed",
       "intensity": 1,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Updating note rules for books, categories and authors.md"
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Updating note rules for books, categories and authors.md",
+      "workDates": [
+        "2026-01-27"
+      ]
     },
     {
-      "id": "prompt-creator-2026-01-26",
+      "id": "prompt-creator",
       "date": "2026-01-26",
       "title": "Prompt creator",
       "vibeTools": [
@@ -197,10 +179,13 @@
       "cost": null,
       "status": "completed",
       "intensity": 1,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Prompt creator.md"
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Prompt creator.md",
+      "workDates": [
+        "2026-01-26"
+      ]
     },
     {
-      "id": "newsletter-automater-2026-01-26",
+      "id": "newsletter-automater",
       "date": "2026-01-26",
       "title": "Newsletter automater",
       "vibeTools": [
@@ -216,29 +201,15 @@
       "cost": null,
       "status": "completed",
       "intensity": 1,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Newsletter automater.md"
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Newsletter automater.md",
+      "workDates": [
+        "2026-01-26"
+      ]
     },
     {
-      "id": "licor-rater-2026-01-24",
-      "date": "2026-01-24",
-      "title": "Licor rater",
-      "vibeTools": [
-        null
-      ],
-      "stack": [
-        null
-      ],
-      "description": "Idea phase. There's Vivino for wines and Untappd for beers. \nI received a set of whisky and rhum samples. So i want a simple personal tracker for those.",
-      "learnings": [],
-      "cost": null,
-      "status": "completed",
-      "intensity": 1,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Licor rater.md"
-    },
-    {
-      "id": "wardrobe-2026-01-16",
+      "id": "wardrobe",
       "date": "2026-01-16",
-      "title": "Wardrobe (Day 1)",
+      "title": "Wardrobe",
       "vibeTools": [
         "ChatGPT",
         "Claude Code"
@@ -252,15 +223,19 @@
         "HTML",
         "Fetch API"
       ],
-      "description": "First time working with Claude Code. Developed fully locally.\nLearning here is that the main file is definitely too large. \nWondering why CSS isn't separated for example.\nAlso the stack was too light to make it work visually, but again maybe it's related to the CSS too.\nGood but expensive learning experience (around 28$)",
+      "description": "First time working with Claude Code. Developed fully locally.\nLearning here is that the main file is definitely too large. \nWondering why CSS isn't separated for example.\nAlso the stack was too light to make it work visually, but again maybe it's related to the CSS too.\nGood but expensive learning experience (around 28$)\nConverted desktop app to web app - Transformed the CustomTkinter desktop wardrobe manager into a Flask-based web application\nUnified database - Merged separate wardrobe.db and wardrobe_fer.db into single database with `wardrobe` field to distinguish owners\nAdded search & filter - Implemented debounced search (300ms), type filtering, and sorting by rating/brand/date\nBuilt REST API - Created 10+ Flask endpoints for CRUD operations, search, filter, sort, and undo functionality\nVanilla JS frontend - Developed SPA with state management, API client, and modular components (ItemCard, ItemModal, SearchFilter)\nCSS theme system - Implemented CSS variables for instant theme switching between Kjell's earthy and Fer's pink color schemes\nPreserved features - Maintained all original functionality: color-coded cards, 10-star ratings, color picker, edit/delete with undo\nMigrated 72 items - Successfully transferred all items from Kjell's wardrobe with full data integrity and backups\nResponsive design - Built mobile-friendly grid layout with auto-fill columns and media queries for various screen sizes\nComplete documentation - Created README, INSTALL, QUICKSTART guides plus verification scripts for easy setup and troubleshooting\n\nKey Features\n• View items organized by clothing type\n• Add/edit/delete items with confirmation\n• Color-coded item cards with contrast text\n• 10-star rating system\n• Color picker for custom colors\n• Switch between Kjell's and Fer's wardrobes\n• Undo delete (10-second window)\n• Automatic data persistence\n• Search - Full-text search across brand, model, materials with debouncing\n• Filter - Dropdown to filter by specific clothing type\n• Sort - Multiple sort options (rating desc, brand asc, date desc)\n• Responsive - Mobile-friendly grid layout\n• Keyboard shortcuts - ESC to close modals\n• Real-time updates - Observer pattern for reactive UI\n• API access - RESTful endpoints for external integration\n\nAccess at: http://localhost:5001 (changed from 5000 to avoid macOS AirPlay conflict)",
       "learnings": [],
       "cost": null,
       "status": "completed",
-      "intensity": 1,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Wardrobe.md"
+      "intensity": 4,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Wardrobe.md",
+      "workDates": [
+        "2026-01-16",
+        "2026-01-27"
+      ]
     },
     {
-      "id": "case-study-maker-2026-01-16",
+      "id": "case-study-maker",
       "date": "2026-01-16",
       "title": "Case study maker",
       "vibeTools": [
@@ -274,27 +249,10 @@
       "cost": null,
       "status": "completed",
       "intensity": 1,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Case study maker.md"
-    },
-    {
-      "id": "vibing-tracker-2001-01-30",
-      "date": "2001-01-30",
-      "title": "Vibing tracker (Day 2)",
-      "vibeTools": [
-        "Claude Code",
-        "Visual Code Studio",
-        "ChatGPT"
-      ],
-      "stack": [
-        "Python3",
-        "GitHub"
-      ],
-      "description": "I gave up trying to push the files directly to Siteground. \nWith a CNAME record, however, my github page now gets shown on vibing.kjellv.com\nThis requires a workflow in github that Claude wrote.\n\nAdditionally, i added a cron job to parse my Obsidian files daily and push the changes to github so that my activity tracker gets updated daily (when I'm online)\n\nFinally, I added a button in the header to go back to kjellv.com. Believe it or not, I coded this manually with some HTML and CSS. At least I have the feeling that I contributed a bit now.",
-      "learnings": [],
-      "cost": null,
-      "status": "completed",
-      "intensity": 2,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Vibing tracker.md"
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Case study maker.md",
+      "workDates": [
+        "2026-01-16"
+      ]
     }
   ]
 }

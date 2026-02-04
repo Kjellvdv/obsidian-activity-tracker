@@ -210,35 +210,51 @@ function parseProjectNote(filePath) {
       };
     }
 
-    // Return multiple entries (one per date)
-    return dateEntries.map((entry, index) => {
-      // Get full content as description (clean markdown formatting)
-      const description = cleanMarkdown(entry.content);
+    // Sort date entries chronologically (oldest first)
+    dateEntries.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-      // Extract learnings from section content
+    // Aggregate all date sections into a single project
+    const allContent = dateEntries.map(entry => entry.content).join('\n\n');
+    const allLearnings = [];
+    let maxIntensity = 1;
+    let totalCost = 0;
+    let hasCost = false;
+
+    // Process each date entry to extract learnings, intensity, and cost
+    for (const entry of dateEntries) {
       const learnings = extractLearnings(entry.content);
+      allLearnings.push(...learnings);
 
-      // Calculate intensity for this section
       const intensity = calculateIntensity(entry.content, learnings);
+      maxIntensity = Math.max(maxIntensity, intensity);
 
-      // Look for cost mentions in this section
       const costMatch = entry.content.match(/\$(\d+)/);
-      const cost = costMatch ? `$${costMatch[1]}` : null;
+      if (costMatch) {
+        totalCost += parseInt(costMatch[1], 10);
+        hasCost = true;
+      }
+    }
 
-      return {
-        id: `${title.toLowerCase().replace(/\s+/g, '-')}-${entry.date}`,
-        date: entry.date,
-        title: dateEntries.length > 1 ? `${title} (Day ${index + 1})` : title,
-        vibeTools,
-        stack,
-        description: description.trim(),
-        learnings,
-        cost,
-        status: 'completed',
-        intensity,
-        filePath
-      };
-    });
+    // Clean the aggregated content
+    const description = cleanMarkdown(allContent);
+
+    // Use the earliest date as the project date
+    const projectDate = dateEntries[0].date;
+
+    return {
+      id: title.toLowerCase().replace(/\s+/g, '-'),
+      date: projectDate,
+      title,
+      vibeTools,
+      stack,
+      description: description.trim(),
+      learnings: allLearnings,
+      cost: hasCost ? `$${totalCost}` : null,
+      status: 'completed',
+      intensity: maxIntensity,
+      filePath,
+      workDates: dateEntries.map(e => e.date) // Track all work dates
+    };
 
   } catch (error) {
     console.error(`Error parsing ${filePath}:`, error.message);
@@ -284,7 +300,8 @@ async function parseVibingNotes() {
           // Handle both single project and array of projects (multiple dates)
           const projectsArray = Array.isArray(result) ? result : [result];
           projects.push(...projectsArray);
-          console.log(`✓ Parsed: ${path.basename(file, '.md')} (${projectsArray.length} day${projectsArray.length > 1 ? 's' : ''})`);
+          const workDays = result.workDates ? result.workDates.length : 1;
+          console.log(`✓ Parsed: ${path.basename(file, '.md')} (${workDays} work session${workDays > 1 ? 's' : ''})`);
         }
       }
 
@@ -309,7 +326,8 @@ async function parseVibingNotes() {
       // Handle both single project and array of projects (multiple dates)
       const projectsArray = Array.isArray(result) ? result : [result];
       projects.push(...projectsArray);
-      console.log(`✓ Parsed: ${path.basename(file, '.md')} (${projectsArray.length} day${projectsArray.length > 1 ? 's' : ''})`);
+      const workDays = result.workDates ? result.workDates.length : 1;
+      console.log(`✓ Parsed: ${path.basename(file, '.md')} (${workDays} work session${workDays > 1 ? 's' : ''})`);
     }
   }
 
