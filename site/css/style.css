@@ -476,6 +476,35 @@ body {
     font-weight: bold;
 }
 
+/* Modal Description Formatting */
+.modal-description {
+    line-height: 1.8;
+}
+
+.modal-description .date-header {
+    font-size: 20px;
+    font-weight: 600;
+    color: #D76262; /* Coral */
+    margin: 24px 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #D6D1CB; /* Stone */
+}
+
+.modal-description .date-header:first-child {
+    margin-top: 0;
+}
+
+.modal-description .day-separator {
+    margin: 32px 0;
+    border: none;
+    border-top: 2px solid #D6D1CB; /* Stone */
+}
+
+.modal-description p {
+    margin-bottom: 16px;
+    color: #2B2B2B;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .title {

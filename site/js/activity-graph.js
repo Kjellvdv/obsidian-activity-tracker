@@ -45,9 +45,15 @@ function updateStats() {
 
     // Latest project
     if (activityData.projects.length > 0) {
-        const latestProject = activityData.projects[0].title;
-        statCards[2].querySelector('.stat-value').textContent = latestProject;
-        statCards[2].querySelector('.stat-value').style.fontSize = '24px'; // Smaller font for longer titles
+        const latestProject = activityData.projects[0];
+        const latestProjectCard = statCards[2];
+
+        latestProjectCard.querySelector('.stat-value').textContent = latestProject.title;
+        latestProjectCard.querySelector('.stat-value').style.fontSize = '24px'; // Smaller font for longer titles
+
+        // Make it clickable
+        latestProjectCard.style.cursor = 'pointer';
+        latestProjectCard.onclick = () => showProjectModal(latestProject);
     }
 }
 
@@ -183,7 +189,14 @@ function generateContributionGraph() {
  * Handle click on a day
  */
 function handleDayClick(dateStr) {
-    const projects = activityData.projects.filter(p => p.date === dateStr);
+    // Filter projects that have this date in their workDates array OR as their main date
+    const projects = activityData.projects.filter(p => {
+        if (p.workDates && Array.isArray(p.workDates)) {
+            return p.workDates.includes(dateStr);
+        }
+        return p.date === dateStr;
+    });
+
     if (projects.length > 0) {
         // Pass all projects for that day (modal will handle single or multiple)
         showProjectModal(projects);
@@ -261,7 +274,7 @@ function createProjectCard(project) {
         `<span class="tag tag-tool">${tool}</span>`
     ).join('');
 
-    const stackTags = project.stack.slice(0, 3).map(tech =>
+    const stackTags = project.stack.map(tech =>
         `<span class="tag tag-stack">${tech}</span>`
     ).join('');
 

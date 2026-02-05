@@ -3,6 +3,25 @@
  */
 
 /**
+ * Format description with date headers and separators
+ */
+function formatDescription(description) {
+    // Split by horizontal rule markers (---)
+    const sections = description.split(/\n*---\n*/);
+
+    // Format each section
+    return sections.map(section => {
+        // Replace bold date headers with styled divs
+        section = section.replace(/\*\*([^*]+)\*\*/g, '<div class="date-header">$1</div>');
+
+        // Replace line breaks with <br> for proper paragraph spacing
+        section = section.replace(/\n\n/g, '</p><p>');
+
+        return `<p>${section}</p>`;
+    }).join('<hr class="day-separator">');
+}
+
+/**
  * Show project detail modal (handles single project or array of projects)
  */
 function showProjectModal(projects) {
@@ -69,7 +88,7 @@ function showProjectModal(projects) {
 
             <div class="modal-section">
                 <h3 class="modal-section-title">Description</h3>
-                <p>${project.description}</p>
+                <div class="modal-description">${formatDescription(project.description)}</div>
             </div>
 
             ${learningsHTML}

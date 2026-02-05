@@ -213,8 +213,18 @@ function parseProjectNote(filePath) {
     // Sort date entries chronologically (oldest first)
     dateEntries.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-    // Aggregate all date sections into a single project
-    const allContent = dateEntries.map(entry => entry.content).join('\n\n');
+    // Aggregate all date sections with date headers for clear separation
+    const allContent = dateEntries.map(entry => {
+      // Format date nicely (e.g., "January 29, 2026")
+      const date = new Date(entry.date);
+      const formattedDate = date.toLocaleDateString('en-US', {
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric'
+      });
+      return `**${formattedDate}**\n\n${entry.content}`;
+    }).join('\n\n---\n\n');
+
     const allLearnings = [];
     let maxIntensity = 1;
     let totalCost = 0;
@@ -235,7 +245,7 @@ function parseProjectNote(filePath) {
       }
     }
 
-    // Clean the aggregated content
+    // Clean the aggregated content (preserving the date headers and separators)
     const description = cleanMarkdown(allContent);
 
     // Use the earliest date as the project date
