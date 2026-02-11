@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-02-05T08:19:43.255Z",
-    "totalProjects": 9,
+    "generated": "2026-02-11T16:36:27.383Z",
+    "totalProjects": 11,
     "dateRange": {
       "start": "2026-01-16",
-      "end": "2026-02-05"
+      "end": "2026-02-11"
     }
   },
   "dailyContributions": {
@@ -55,7 +55,7 @@
       ]
     },
     "2026-02-05": {
-      "intensity": 2,
+      "intensity": 3,
       "projectCount": 2,
       "vibeTools": [
         "Claude Code",
@@ -87,20 +87,87 @@
         "Claude Code",
         "Visual Code Studio"
       ]
+    },
+    "2026-02-09": {
+      "intensity": 3,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code",
+        "Xcode",
+        "Le Chat"
+      ]
+    },
+    "2026-02-10": {
+      "intensity": 3,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code",
+        "Xcode",
+        "Le Chat"
+      ]
+    },
+    "2026-02-11": {
+      "intensity": 1,
+      "projectCount": 1,
+      "vibeTools": []
     }
   },
   "projects": [
     {
-      "id": "rent-scraper",
-      "date": "2026-02-05",
-      "title": "Rent scraper",
+      "id": "!-project-ideas",
+      "date": "2026-02-11",
+      "title": "! Project ideas",
       "vibeTools": [],
       "stack": [],
-      "description": "February 5, 2026\n\nWe're looking for larger place to live but there aren't many larger houses for rent.\nIt's getting quite tiring to check 10+ real estate pages from time to time, so would be great if I could make a scraper that pulls in new houses for rent that match my requirements.",
+      "description": "• tool to help me describe taste of coffee -> also ranker like liquor rater",
       "learnings": [],
       "cost": null,
       "status": "completed",
       "intensity": 1,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/! Project ideas.md"
+    },
+    {
+      "id": "finance-tracking",
+      "date": "2026-02-09",
+      "title": "Finance tracking",
+      "vibeTools": [
+        "Claude Code",
+        "Xcode",
+        "Le Chat"
+      ],
+      "stack": [
+        "SwiftUI",
+        "SwiftData",
+        "Swift Charts"
+      ],
+      "description": "February 9, 2026\n\nI just realised that I don't have a solid view of my business expenses. I know that I typically earn more than I spend, but how much?\nNo better way to find out, than to vibe code a desktop app to keep track of invoices sent and received. \nInitially, it doesn't need to be complicated. The only tricky part is the difference between one-off expenses, and monthly, quarterly and yearly recurring ones. \n\nWhen this part works, I also want to develop a personal tracker. I've been tracking my investments in a Number sheet for over 10 years and it's getting kind of clunky. I'm also pretty sure there are some mistakes in my logic. So I can fix it and add it to my tracker.\n\nLater on, if everything works, I could look at automating parts. I'm especially thinking about syncing expenses. Open banking is something I'm not going to get involved with, though.\n\nThis session, Claude generated:\n• 26 Swift files (~3,700 lines of code)\n• 24 source files\n• 2 test files (30+ unit tests)\n• 6 documentation files (comprehensive guides)\n• 100% of planned features implemented\n\nThis version included an App with CloudKit. It sounded like an overkill for an app that just needs to sync between my devices, but what do I know? Only after trying to set it up in Xcode, my suspicions were confirmed.\n\nIt cost less than $5 so far. But it will probably end up costing a lot more as I need quite some back and forth to roll back Cloud capabilities that aren't available to free plans. Easily spent an extra hour on this as well. \n\nDamn, it looks like a real Apple App. Not what I expected but pretty nice apart from some alignment issues.\n\n---\n\nFebruary 10, 2026\n\nAfter some further back and forth, I got the app to work with decent padding too.\n\nNow, I'm most definitely not going to use the same app for personal finances because it's going to break again. But I can use the structure and learnings from this to create another one.\n\nOnly thing left to do now is figure out how i can add this app to my desktop and how to give it a logo so I don't have to run it from Xcode every time.\n\n### next changes\n• net profit = difference between income and expenses without VAT\n• (later include more detailed calcs for VAT based on category)\n• Save names of expenses eg charging\n• Detailed overview of expenses per name instead of category\n• quarterly and yearly costs -> split over months",
+      "learnings": [],
+      "cost": "$5",
+      "status": "completed",
+      "intensity": 3,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Finance tracking.md",
+      "workDates": [
+        "2026-02-09",
+        "2026-02-10"
+      ]
+    },
+    {
+      "id": "rent-scraper",
+      "date": "2026-02-05",
+      "title": "Rent scraper",
+      "vibeTools": [
+        "Claude Code",
+        "Visual Code Studio"
+      ],
+      "stack": [
+        "Python3",
+        null
+      ],
+      "description": "February 5, 2026\n\nWe're looking for larger place to live but there aren't many larger houses for rent.\nIt's getting quite tiring to check 10+ real estate pages from time to time, so would be great if I could make a scraper that pulls in new houses for rent that match my requirements.\n\nJust planning with Claude Code cost a surprising lot of tokens. It took around 250k tokens just to analyse previous projects and find parts to re-use. I wonder if that was worth the effort. At least, it did come up with a very detailed and well-structured plan.\n\nWhile fine-tuning the plan it helped to stop and clarify that I'm looking for a simple solution. That made Claude suggest to create an email digest instead of an app.\n\nFirst result looks pretty nice - however the scrapers don't work well. Only 13 listings were found from the first three implemented websites. 2 passed the filters but they didn't actually meet the requirements that we set at the start.\n\nTo get all the listings, Claude had to create scrapers for every page. It took two tries for most websites but five out of fourteen didn't work according to Claude. I asked what I could do manually, but the suggestions were and API or installing more complicated dependencies. Instead, I inspected a page and copied the exact path to where the room numbers is on the page. This helped me fix one scraper. On to the next now.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 3,
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Rent scraper.md",
       "workDates": [
         "2026-02-05"
@@ -146,7 +213,7 @@
         "CSS",
         "Javascript"
       ],
-      "description": "January 29, 2026\n\nTried to deploy the Vibe coding Activity Tracker online by setting up GitHub Pages with automatic deployment and configured local SiteGround deployment via SFTP.                              \n\nUnfortunately, Siteground wasn't really working along as the files could not be pushed.\n\nAt some point I managed to show my page successfully on vibing.kjellv.com but without actually showing my activity.\n\nAlmost there but not quite yet.\n\n---\n\nJanuary 30, 2026\n\nI gave up trying to push the files directly to Siteground. \nWith a CNAME record, however, my github page now gets shown on vibing.kjellv.com\nThis requires a workflow in github that Claude wrote.\n\nAdditionally, i added a cron job to parse my Obsidian files daily and push the changes to github so that my activity tracker gets updated daily (when I'm online)\n\nFinally, I added a button in the header to go back to kjellv.com. Believe it or not, I coded this manually with some HTML and CSS. At least I have the feeling that I contributed a bit now.\n\n---\n\nFebruary 4, 2026\n\nMade some small changes to how projects and days are being parsed.\nOne project per note file: Each Obsidian note is now treated as a single project, regardless of how many date sections (H2 headers) it contains. \nChronological ordering: Date sections within a note are now sorted chronologically (oldest to newest) before being processed and aggregated.\nAggregated content: All work sessions from different dates are combined into a single project entry with:\n• The earliest date as the main project date\n• All content from all sessions aggregated\n• All learnings combined\n• Maximum intensity across all sessions\n• A new workDates array that tracks all the dates you worked on that project\nClean titles: Project titles no longer have \"(Day 1)\", \"(Day 2)\" labels.\n\n---\n\nFebruary 5, 2026\n\nThe changes from yesterday didn't really work out the way I wanted.\nI trusted Claude to just change everything at once but it didn't work.\nI then tried again, giving more and clearer instructions but it almost reversed the changes instead.\nToday, I tried implementing the small changes one by one, instead.",
+      "description": "January 29, 2026\n\nTried to deploy the Vibe coding Activity Tracker online by setting up GitHub Pages with automatic deployment and configured local SiteGround deployment via SFTP.                              \n\nUnfortunately, Siteground wasn't really working along as the files could not be pushed.\n\nAt some point I managed to show my page successfully on vibing.kjellv.com but without actually showing my activity.\n\nAlmost there but not quite yet.\n\n---\n\nJanuary 30, 2026\n\nI gave up trying to push the files directly to Siteground. \nWith a CNAME record, however, my github page now gets shown on vibing.kjellv.com\nThis requires a workflow in github that Claude wrote.\n\nAdditionally, i added a cron job to parse my Obsidian files daily and push the changes to github so that my activity tracker gets updated daily (when I'm online)\n\nFinally, I added a button in the header to go back to kjellv.com. Believe it or not, I coded this manually with some HTML and CSS. At least I have the feeling that I contributed a bit now.\n\n---\n\nFebruary 4, 2026\n\nMade some small changes to how projects and days are being parsed.\nOne project per note file: Each Obsidian note is now treated as a single project, regardless of how many date sections (H2 headers) it contains. \nChronological ordering: Date sections within a note are now sorted chronologically (oldest to newest) before being processed and aggregated.\nAggregated content: All work sessions from different dates are combined into a single project entry with:\n• The earliest date as the main project date\n• All content from all sessions aggregated\n• All learnings combined\n• Maximum intensity across all sessions\n• A new workDates array that tracks all the dates you worked on that project\nClean titles: Project titles no longer have \"(Day 1)\", \"(Day 2)\" labels.\n\n---\n\nFebruary 5, 2026\n\nThe changes from yesterday didn't really work out the way I wanted.\nI trusted Claude to just change everything at once but it didn't work.\nI then tried again, giving more and clearer instructions but it almost reversed the changes instead.\nToday, I tried implementing the small changes one by one, instead.\nThe key learning here is that you can't ask too much at once. I actually knew this from the very first time I started vibe coding but i was starting to trust the machine too much.",
       "learnings": [
         "All learnings combined"
       ],
