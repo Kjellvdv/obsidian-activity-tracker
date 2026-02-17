@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-02-16T10:08:18.011Z",
-    "totalProjects": 11,
+    "generated": "2026-02-17T08:00:19.755Z",
+    "totalProjects": 12,
     "dateRange": {
       "start": "2026-01-16",
       "end": "2026-02-16"
@@ -106,33 +106,65 @@
         "Le Chat"
       ]
     },
+    "2026-02-16": {
+      "intensity": 3,
+      "projectCount": 2,
+      "vibeTools": [
+        "Le Chat",
+        "Claude Code",
+        "GitHub",
+        "Railway"
+      ]
+    },
+    "2026-02-13": {
+      "intensity": 3,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code",
+        "Le Chat",
+        "GitHub",
+        "Railway"
+      ]
+    },
     "2026-02-15": {
       "intensity": 3,
       "projectCount": 1,
       "vibeTools": [
         "Claude Code",
         "Le Chat",
-        "Railway"
-      ]
-    },
-    "2026-02-16": {
-      "intensity": 3,
-      "projectCount": 1,
-      "vibeTools": [
-        "Claude Code",
-        "Le Chat",
+        "GitHub",
         "Railway"
       ]
     }
   },
   "projects": [
     {
+      "id": "english-learning-app",
+      "date": "2026-02-16",
+      "title": "English learning app",
+      "vibeTools": [
+        "Le Chat",
+        "Claude Code"
+      ],
+      "stack": [],
+      "description": "February 16, 2026\n\nI wanted to take a break from vibe coding tonight, but my wife just completed an online course and she mentioned that her next goal is to improve her English skills. Since she's already tried all sorts of tools, I have no other choice but to vibe-code something.\n\nI've got a pretty interesting idea that should work perfectly in the AI era. But before I start, I'm going to use Mistral's Le Chat to fine-tune my prompt. That's something I've not done enough for previous projects.\n\nAsked it to be motivational and flower-themed. Super impressed with the suggested prompt. i'm afraid the scope will be a bit out of my comfort zone, but all the apps have been and I should always aim a step higher.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 2,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/English learning app.md",
+      "workDates": [
+        "2026-02-16"
+      ]
+    },
+    {
       "id": "coffee-rater-app",
-      "date": "2026-02-15",
+      "date": "2026-02-13",
       "title": "Coffee rater app",
       "vibeTools": [
         "Claude Code",
         "Le Chat",
+        "GitHub",
         "Railway"
       ],
       "stack": [
@@ -143,16 +175,16 @@
         "Tailwind CSS",
         "Radix UI",
         "Express",
-        "Drizzle ORM",
-        "Relay"
+        "Drizzle ORM"
       ],
-      "description": "February 15, 2026\n\nClaude wrote the documentation for deployment and I double-checked some things in Le Chat. They seem to agree on the next steps, so I'll try to implement it that way today.\n\nBut first some local testing, I thought. Turns out I can't test without a database so I'll connect and deploy to railway right away.\n\nAs usual, after an hour of back-and-forthing I'm still not there. Making progress? Yes. But some dependencies were outdated and god knows what else is wrong. Even got to a stage where Claude is using me as a human to update files manually. Who would've thought?\n\nAnd another two hours of debugging in the evening. Claude doesn't seem to have all the latest info and it's actually contradicting what Railway says. Claude thinks Railpack is outdated but it's actually Nixpacks that's deprecated. \n\nPerhaps the long context window wasn't helping. After compacting the context, Claude suggested more elaborate changes.\n\nFound the issue: Claude told me to write port 3000 in the settings for my custom domain but the app was listening to port 8080. Had to find it on my own. Still wasted lots of credits and two hours of my time, but does this now mean I'm smarter than Claude? lol.\n\nShort-lasting sense of victory. Can't even create an account. It was a parsing issue. But also the username can't have @ but the label says username or email. Nice one, Claude. \n\nI'll fix those manually later. It's almost working now. Just an authentication issue because the cookie is missing (says Claude). To be fixed by adding another variable: CLIENT_URL\n\nPS: If you've read it this far, you can test the app via coffee.kjellv.com - enjoy. (but it's in Spanish)\n\n---\n\nFebruary 16, 2026\n\nFinally fixed the cookie issue. Just in time, because I'm down to the last coffee of this batch.\n\nNever mind, saving a coffee still doesn't work. Small user-id issue. Claude says \"The schema was expecting userId in the request body, but it should come from the authenticated user (req.user.id), not from the client. I've added userId to the omit list.\"\n\nUp and running now :)",
+      "description": "February 13, 2026\n\nJust bought 8 new types of coffees and I want to make sure I remember which one I like best. But also in the future, I'll likely keep trying other brands, so having a rater app will be cool.\n\nFor this one, I'm going to build on top of the liquor rater I've already created. I'm not really happy with the interface, but improving that won't be my focus for this project.\n\nWhat I want to achieve here is something I've never tried before, so I want to really focus on that. This app needs to include three additional things that the liquor rater doesn't:\n• A chat interface to help me determine the flavour profile and my rating\n• At least two user accounts\n• A social feed to see the ratings of other users\n\n Total Implementation:\n• Files Created: 50+ (components, pages, routes, utilities)\n• Lines of Code: ~5,000+\n• Features: 25+ major features\n• Documentation: 4 comprehensive guides\n• Cost of around 17 dollars before testing\n\n---\n\nFebruary 15, 2026\n\nClaude wrote the documentation for deployment and I double-checked some things in Le Chat. They seem to agree on the next steps, so I'll try to implement it that way today.\n\nBut first some local testing, I thought. Turns out I can't test without a database so I'll connect and deploy to railway right away.\n\nAs usual, after an hour of back-and-forthing I'm still not there. Making progress? Yes. But some dependencies were outdated and god knows what else is wrong. Even got to a stage where Claude is using me as a human to update files manually. Who would've thought?\n\nAnd another two hours of debugging in the evening. Claude doesn't seem to have all the latest info and it's actually contradicting what Railway says. Claude thinks Railpack is outdated but it's actually Nixpacks that's deprecated. \n\nPerhaps the long context window wasn't helping. After compacting the context, Claude suggested more elaborate changes.\n\nFound the issue: Claude told me to write port 3000 in the settings for my custom domain but the app was listening to port 8080. Had to find it on my own. Still wasted lots of credits and two hours of my time, but does this now mean I'm smarter than Claude? lol.\n\nShort-lasting sense of victory. Can't even create an account. It was a parsing issue. But also the username can't have @ but the label says username or email. Nice one, Claude. \n\nI'll fix those manually later. It's almost working now. Just an authentication issue because the cookie is missing (says Claude). To be fixed by adding another variable: CLIENT_URL\n\nPS: If you've read it this far, you can test the app via coffee.kjellv.com - enjoy. (but it's in Spanish)\n\n---\n\nFebruary 16, 2026\n\nFinally fixed the cookie issue. Just in time, because I'm down to the last coffee of this batch.\n\nNever mind, saving a coffee still doesn't work. Small user-id issue. Claude says \"The schema was expecting userId in the request body, but it should come from the authenticated user (req.user.id), not from the client. I've added userId to the omit list.\"\n\nUp and running now :)",
       "learnings": [],
       "cost": null,
       "status": "completed",
       "intensity": 3,
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Coffee rater app.md",
       "workDates": [
+        "2026-02-13",
         "2026-02-15",
         "2026-02-16"
       ]
