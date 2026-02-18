@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "generated": "2026-02-17T08:00:19.755Z",
+    "generated": "2026-02-18T08:00:01.580Z",
     "totalProjects": 12,
     "dateRange": {
-      "start": "2026-01-16",
+      "start": "2001-02-17",
       "end": "2026-02-16"
     }
   },
@@ -106,14 +106,24 @@
         "Le Chat"
       ]
     },
+    "2001-02-17": {
+      "intensity": 2,
+      "projectCount": 1,
+      "vibeTools": [
+        "Le Chat",
+        "Claude Code",
+        "Railway",
+        "GitHub"
+      ]
+    },
     "2026-02-16": {
       "intensity": 3,
       "projectCount": 2,
       "vibeTools": [
         "Le Chat",
         "Claude Code",
-        "GitHub",
-        "Railway"
+        "Railway",
+        "GitHub"
       ]
     },
     "2026-02-13": {
@@ -138,25 +148,6 @@
     }
   },
   "projects": [
-    {
-      "id": "english-learning-app",
-      "date": "2026-02-16",
-      "title": "English learning app",
-      "vibeTools": [
-        "Le Chat",
-        "Claude Code"
-      ],
-      "stack": [],
-      "description": "February 16, 2026\n\nI wanted to take a break from vibe coding tonight, but my wife just completed an online course and she mentioned that her next goal is to improve her English skills. Since she's already tried all sorts of tools, I have no other choice but to vibe-code something.\n\nI've got a pretty interesting idea that should work perfectly in the AI era. But before I start, I'm going to use Mistral's Le Chat to fine-tune my prompt. That's something I've not done enough for previous projects.\n\nAsked it to be motivational and flower-themed. Super impressed with the suggested prompt. i'm afraid the scope will be a bit out of my comfort zone, but all the apps have been and I should always aim a step higher.",
-      "learnings": [],
-      "cost": null,
-      "status": "completed",
-      "intensity": 2,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/English learning app.md",
-      "workDates": [
-        "2026-02-16"
-      ]
-    },
     {
       "id": "coffee-rater-app",
       "date": "2026-02-13",
@@ -430,6 +421,34 @@
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Case study maker.md",
       "workDates": [
         "2026-01-16"
+      ]
+    },
+    {
+      "id": "english-learning-app",
+      "date": "2001-02-17",
+      "title": "English learning app",
+      "vibeTools": [
+        "Le Chat",
+        "Claude Code",
+        "Railway",
+        "GitHub"
+      ],
+      "stack": [
+        "Typescript",
+        "React",
+        "Express",
+        "PostgreSQL",
+        "Drizzle ORM"
+      ],
+      "description": "February 17, 2001\n\nYesterday I wrapped up the plan. Today, I executed the plan. (Hit enter and let Claude do it's thing)\n\n---\n\nFebruary 16, 2026\n\nI wanted to take a break from vibe coding tonight, but my wife just completed an online course and she mentioned that her next goal is to improve her English skills. Since she's already tried all sorts of tools, I have no other choice but to vibe-code something.\n\nI've got a pretty interesting idea that should work perfectly in the AI era. But before I start, I'm going to use Mistral's Le Chat to fine-tune my prompt. That's something I've not done enough for previous projects.\n\nAsked it to be motivational and flower-themed. Super impressed with the suggested prompt. i'm afraid the scope will be a bit out of my comfort zone, but all the apps have been and I should always aim a step higher.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 2,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/English learning app.md",
+      "workDates": [
+        "2001-02-17",
+        "2026-02-16"
       ]
     }
   ]
