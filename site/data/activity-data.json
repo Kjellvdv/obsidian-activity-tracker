@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-02-20T08:00:05.930Z",
-    "totalProjects": 12,
+    "generated": "2026-02-21T08:00:00.808Z",
+    "totalProjects": 13,
     "dateRange": {
-      "start": "2001-02-17",
-      "end": "2026-02-16"
+      "start": "2026-01-16",
+      "end": "2026-02-20"
     }
   },
   "dailyContributions": {
@@ -80,6 +80,13 @@
         "Visual Code Studio"
       ]
     },
+    "2026-02-20": {
+      "intensity": 2,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code"
+      ]
+    },
     "2026-02-03": {
       "intensity": 2,
       "projectCount": 1,
@@ -106,9 +113,9 @@
         "Le Chat"
       ]
     },
-    "2001-02-17": {
-      "intensity": 2,
-      "projectCount": 1,
+    "2026-02-16": {
+      "intensity": 3,
+      "projectCount": 2,
       "vibeTools": [
         "Le Chat",
         "Claude Code",
@@ -116,9 +123,9 @@
         "GitHub"
       ]
     },
-    "2026-02-16": {
-      "intensity": 3,
-      "projectCount": 2,
+    "2026-02-17": {
+      "intensity": 2,
+      "projectCount": 1,
       "vibeTools": [
         "Le Chat",
         "Claude Code",
@@ -148,6 +155,61 @@
     }
   },
   "projects": [
+    {
+      "id": "planner-and-goal-tracker",
+      "date": "2026-02-20",
+      "title": "Planner and goal-tracker",
+      "vibeTools": [
+        "Claude Code"
+      ],
+      "stack": [
+        "Flask",
+        "Python3",
+        "SQLAlchemy",
+        "SQLite",
+        "HTML",
+        "Vanilla CSS",
+        "Claude API",
+        "Obsidian"
+      ],
+      "description": "February 20, 2026\n\nI built a personal goals tracking system that manages my career progression from daily activities up to my 15-year vision. The system lets me log daily work, set weekly goals, track quarterly objectives, and maintain long-term visions for 2030, 2035, and 2040. Every Friday when I log my activities, it automatically generates a weekly overview markdown file and saves it to my Obsidian vault in the \"Weekly B2B notes\" folder.\n\nI also integrated Claude AI so I can chat about my goals and progress. I can ask questions like \"When did I last work on coffee-rater?\" or \"What activities aren't aligned with my long-term vision?\" and Claude analyzes my last 30 days of activities and all my goals to give me contextual answers. The chat remembers our conversation and helps me stay aligned with my 2030/2035/2040 vision milestones.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 2,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Planner and goal-tracker.md",
+      "workDates": [
+        "2026-02-20"
+      ]
+    },
+    {
+      "id": "english-learning-app",
+      "date": "2026-02-16",
+      "title": "English learning app",
+      "vibeTools": [
+        "Le Chat",
+        "Claude Code",
+        "Railway",
+        "GitHub"
+      ],
+      "stack": [
+        "Typescript",
+        "React",
+        "Express",
+        "PostgreSQL",
+        "Drizzle ORM"
+      ],
+      "description": "February 16, 2026\n\nI wanted to take a break from vibe coding tonight, but my wife just completed an online course and she mentioned that her next goal is to improve her English skills. Since she's already tried all sorts of tools, I have no other choice but to vibe-code something.\n\nI've got a pretty interesting idea that should work perfectly in the AI era. But before I start, I'm going to use Mistral's Le Chat to fine-tune my prompt. That's something I've not done enough for previous projects.\n\nAsked it to be motivational and flower-themed. Super impressed with the suggested prompt. i'm afraid the scope will be a bit out of my comfort zone, but all the apps have been and I should always aim a step higher.\n\n---\n\nFebruary 17, 2026\n\nYesterday I wrapped up the plan. Today, I executed the plan. (Hit enter and let Claude do it's thing)",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 2,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/English learning app.md",
+      "workDates": [
+        "2026-02-16",
+        "2026-02-17"
+      ]
+    },
     {
       "id": "coffee-rater-app",
       "date": "2026-02-13",
@@ -421,34 +483,6 @@
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Case study maker.md",
       "workDates": [
         "2026-01-16"
-      ]
-    },
-    {
-      "id": "english-learning-app",
-      "date": "2001-02-17",
-      "title": "English learning app",
-      "vibeTools": [
-        "Le Chat",
-        "Claude Code",
-        "Railway",
-        "GitHub"
-      ],
-      "stack": [
-        "Typescript",
-        "React",
-        "Express",
-        "PostgreSQL",
-        "Drizzle ORM"
-      ],
-      "description": "February 17, 2001\n\nYesterday I wrapped up the plan. Today, I executed the plan. (Hit enter and let Claude do it's thing)\n\n---\n\nFebruary 16, 2026\n\nI wanted to take a break from vibe coding tonight, but my wife just completed an online course and she mentioned that her next goal is to improve her English skills. Since she's already tried all sorts of tools, I have no other choice but to vibe-code something.\n\nI've got a pretty interesting idea that should work perfectly in the AI era. But before I start, I'm going to use Mistral's Le Chat to fine-tune my prompt. That's something I've not done enough for previous projects.\n\nAsked it to be motivational and flower-themed. Super impressed with the suggested prompt. i'm afraid the scope will be a bit out of my comfort zone, but all the apps have been and I should always aim a step higher.",
-      "learnings": [],
-      "cost": null,
-      "status": "completed",
-      "intensity": 2,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/English learning app.md",
-      "workDates": [
-        "2001-02-17",
-        "2026-02-16"
       ]
     }
   ]
