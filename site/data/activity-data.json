@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-02-26T08:01:57.877Z",
-    "totalProjects": 13,
+    "generated": "2026-02-27T08:00:02.221Z",
+    "totalProjects": 12,
     "dateRange": {
       "start": "2026-01-16",
-      "end": "2026-02-20"
+      "end": "2026-02-27"
     }
   },
   "dailyContributions": {
@@ -115,7 +115,7 @@
     },
     "2026-02-16": {
       "intensity": 3,
-      "projectCount": 2,
+      "projectCount": 1,
       "vibeTools": [
         "Le Chat",
         "Claude Code",
@@ -124,7 +124,7 @@
       ]
     },
     "2026-02-17": {
-      "intensity": 2,
+      "intensity": 3,
       "projectCount": 1,
       "vibeTools": [
         "Le Chat",
@@ -133,24 +133,24 @@
         "GitHub"
       ]
     },
-    "2026-02-13": {
+    "2026-02-26": {
       "intensity": 3,
       "projectCount": 1,
       "vibeTools": [
-        "Claude Code",
         "Le Chat",
-        "GitHub",
-        "Railway"
+        "Claude Code",
+        "Railway",
+        "GitHub"
       ]
     },
-    "2026-02-15": {
+    "2026-02-27": {
       "intensity": 3,
       "projectCount": 1,
       "vibeTools": [
-        "Claude Code",
         "Le Chat",
-        "GitHub",
-        "Railway"
+        "Claude Code",
+        "Railway",
+        "GitHub"
       ]
     }
   },
@@ -199,47 +199,17 @@
         "PostgreSQL",
         "Drizzle ORM"
       ],
-      "description": "February 16, 2026\n\nI wanted to take a break from vibe coding tonight, but my wife just completed an online course and she mentioned that her next goal is to improve her English skills. Since she's already tried all sorts of tools, I have no other choice but to vibe-code something.\n\nI've got a pretty interesting idea that should work perfectly in the AI era. But before I start, I'm going to use Mistral's Le Chat to fine-tune my prompt. That's something I've not done enough for previous projects.\n\nAsked it to be motivational and flower-themed. Super impressed with the suggested prompt. i'm afraid the scope will be a bit out of my comfort zone, but all the apps have been and I should always aim a step higher.\n\n---\n\nFebruary 17, 2026\n\nYesterday I wrapped up the plan. Today, I executed the plan. (Hit enter and let Claude do it's thing)",
-      "learnings": [],
-      "cost": null,
-      "status": "completed",
-      "intensity": 2,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/English learning app.md",
-      "workDates": [
-        "2026-02-16",
-        "2026-02-17"
-      ]
-    },
-    {
-      "id": "coffee-rater-app",
-      "date": "2026-02-13",
-      "title": "Coffee rater app",
-      "vibeTools": [
-        "Claude Code",
-        "Le Chat",
-        "GitHub",
-        "Railway"
-      ],
-      "stack": [
-        "Typescript",
-        "PostgreSQL",
-        "React",
-        "Vite",
-        "Tailwind CSS",
-        "Radix UI",
-        "Express",
-        "Drizzle ORM"
-      ],
-      "description": "February 13, 2026\n\nJust bought 8 new types of coffees and I want to make sure I remember which one I like best. But also in the future, I'll likely keep trying other brands, so having a rater app will be cool.\n\nFor this one, I'm going to build on top of the liquor rater I've already created. I'm not really happy with the interface, but improving that won't be my focus for this project.\n\nWhat I want to achieve here is something I've never tried before, so I want to really focus on that. This app needs to include three additional things that the liquor rater doesn't:\n• A chat interface to help me determine the flavour profile and my rating\n• At least two user accounts\n• A social feed to see the ratings of other users\n\n Total Implementation:\n• Files Created: 50+ (components, pages, routes, utilities)\n• Lines of Code: ~5,000+\n• Features: 25+ major features\n• Documentation: 4 comprehensive guides\n• Cost of around 17 dollars before testing\n\n---\n\nFebruary 15, 2026\n\nClaude wrote the documentation for deployment and I double-checked some things in Le Chat. They seem to agree on the next steps, so I'll try to implement it that way today.\n\nBut first some local testing, I thought. Turns out I can't test without a database so I'll connect and deploy to railway right away.\n\nAs usual, after an hour of back-and-forthing I'm still not there. Making progress? Yes. But some dependencies were outdated and god knows what else is wrong. Even got to a stage where Claude is using me as a human to update files manually. Who would've thought?\n\nAnd another two hours of debugging in the evening. Claude doesn't seem to have all the latest info and it's actually contradicting what Railway says. Claude thinks Railpack is outdated but it's actually Nixpacks that's deprecated. \n\nPerhaps the long context window wasn't helping. After compacting the context, Claude suggested more elaborate changes.\n\nFound the issue: Claude told me to write port 3000 in the settings for my custom domain but the app was listening to port 8080. Had to find it on my own. Still wasted lots of credits and two hours of my time, but does this now mean I'm smarter than Claude? lol.\n\nShort-lasting sense of victory. Can't even create an account. It was a parsing issue. But also the username can't have @ but the label says username or email. Nice one, Claude. \n\nI'll fix those manually later. It's almost working now. Just an authentication issue because the cookie is missing (says Claude). To be fixed by adding another variable: CLIENT_URL\n\nPS: If you've read it this far, you can test the app via coffee.kjellv.com - enjoy. (but it's in Spanish)\n\n---\n\nFebruary 16, 2026\n\nFinally fixed the cookie issue. Just in time, because I'm down to the last coffee of this batch.\n\nNever mind, saving a coffee still doesn't work. Small user-id issue. Claude says \"The schema was expecting userId in the request body, but it should come from the authenticated user (req.user.id), not from the client. I've added userId to the omit list.\"\n\nUp and running now :) \n\nUser feedback (aka me and my wife)\n• auto scroll to top on new page\n• Duplicate coffee info from community page\n• Add weblink to coffee card\n• H2H comparison",
+      "description": "February 16, 2026\n\nI wanted to take a break from vibe coding tonight, but my wife just completed an online course and she mentioned that her next goal is to improve her English skills. Since she's already tried all sorts of tools, I have no other choice but to vibe-code something.\n\nI've got a pretty interesting idea that should work perfectly in the AI era. But before I start, I'm going to use Mistral's Le Chat to fine-tune my prompt. That's something I've not done enough for previous projects.\n\nAsked it to be motivational and flower-themed. Super impressed with the suggested prompt. i'm afraid the scope will be a bit out of my comfort zone, but all the apps have been and I should always aim a step higher.\n\n---\n\nFebruary 17, 2026\n\nYesterday I wrapped up the plan. Today, I executed the plan. (Hit enter and let Claude do it's thing)\n\n---\n\nFebruary 26, 2026\n\nCommitting and pushing to github today. Then I'll deploy it via Railway. Super curious as to what i'll see and how many bugs will need to be fixed...\n\nBiggest issue is connecting the database. I thought it would be straightforward since we've done it before, but it is't. I should have taken better notes from the previous project. I asked Claude how we did it for the coffee rater app and hope to make progress with this but it sounds more complicated than I remembered. But I'm also getting so security warnings from deprecated packages. And even though Claude tells me not to worry, I want to get this fixed first.\n\nThink I'm understanding the issue now. At some point, I created a duplicate of the coffee rater app, but Claude has based this new app on the outdated, incomplete first version. Another few hours of learning money paid.\n\nI suddenly noticed when Drizzle ORM was outdated. In the end, the solution wasn't that difficult but I thought I was fixing a new unexpected problem instead of the same one as before.\n\nHaha, it's still not working to create an account. Wouldn't be too much fun if everything worked right. Even though a lot changed in the background, I'm still seeing the same error when trying to create an account.\n\nStill had a problem with Vite which Claude found because I reminded him again to compare with the successful coffee tracker app. Now i can log in but of course we have some front end issues now. The learning levels exist but aren't being shown. Well, first they weren't in the database but that was fixed rather quickly even though I have no clue how.\n\n---\n\nFebruary 27, 2026\n\nCouldn't make it work yesterday and couldn't sleep this morning. So back at it before the kids wake up. Found another localhost link so hopefully removing that will fix it now. Or it will reveal another issue. \n\nWhile waiting for the app to rebuild and redeploy over 20 times, I explored Railway and found the \"observability\" tab. Very clean dashboards but can't really make sense of what they mean. Will need to look into egress later because the numbers of predicted usage and actual usage don't match at all. We're talking cents but I wanna avoid adding another paid subscription for now.\n\nAha. Another issue we had with the coffee rater app. Session cookies aren't being created. It's funny how 2 lines of code can break an entire app.",
       "learnings": [],
       "cost": null,
       "status": "completed",
       "intensity": 3,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Coffee rater app.md",
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/English learning app.md",
       "workDates": [
-        "2026-02-13",
-        "2026-02-15",
-        "2026-02-16"
+        "2026-02-16",
+        "2026-02-17",
+        "2026-02-26",
+        "2026-02-27"
       ]
     },
     {
