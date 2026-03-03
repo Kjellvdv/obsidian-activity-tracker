@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-02-27T08:00:02.221Z",
-    "totalProjects": 12,
+    "generated": "2026-03-03T08:05:01.489Z",
+    "totalProjects": 13,
     "dateRange": {
       "start": "2026-01-16",
-      "end": "2026-02-27"
+      "end": "2026-03-02"
     }
   },
   "dailyContributions": {
@@ -95,18 +95,9 @@
         "Visual Code Studio"
       ]
     },
-    "2026-02-09": {
+    "2026-03-02": {
       "intensity": 3,
-      "projectCount": 1,
-      "vibeTools": [
-        "Claude Code",
-        "Xcode",
-        "Le Chat"
-      ]
-    },
-    "2026-02-10": {
-      "intensity": 3,
-      "projectCount": 1,
+      "projectCount": 2,
       "vibeTools": [
         "Claude Code",
         "Xcode",
@@ -152,9 +143,49 @@
         "Railway",
         "GitHub"
       ]
+    },
+    "2026-02-09": {
+      "intensity": 3,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code",
+        "Xcode",
+        "Le Chat"
+      ]
+    },
+    "2026-02-10": {
+      "intensity": 3,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code",
+        "Xcode",
+        "Le Chat"
+      ]
     }
   },
   "projects": [
+    {
+      "id": "investment-tracker",
+      "date": "2026-03-02",
+      "title": "Investment tracker",
+      "vibeTools": [
+        "Claude Code",
+        "Xcode"
+      ],
+      "stack": [
+        "Drizzle ORM",
+        "PostgreSQL"
+      ],
+      "description": "March 2, 2026\n\nFor over 10 years, i've been tracking my investments in a Numbers file. Over time, i've wanted to add more calculations and \"features\" but the more I add, the more I start to doubt the accuracy. So it was about time to code something.\n\nThe plan was defined rather quickly based on an csv of my existing file.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 1,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Investment tracker.md",
+      "workDates": [
+        "2026-03-02"
+      ]
+    },
     {
       "id": "planner-and-goal-tracker",
       "date": "2026-02-20",
@@ -213,9 +244,9 @@
       ]
     },
     {
-      "id": "finance-tracking",
+      "id": "company-finance-tracking",
       "date": "2026-02-09",
-      "title": "Finance tracking",
+      "title": "Company finance tracking",
       "vibeTools": [
         "Claude Code",
         "Xcode",
@@ -226,15 +257,16 @@
         "SwiftData",
         "Swift Charts"
       ],
-      "description": "February 9, 2026\n\nI just realised that I don't have a solid view of my business expenses. I know that I typically earn more than I spend, but how much?\nNo better way to find out, than to vibe code a desktop app to keep track of invoices sent and received. \nInitially, it doesn't need to be complicated. The only tricky part is the difference between one-off expenses, and monthly, quarterly and yearly recurring ones. \n\nWhen this part works, I also want to develop a personal tracker. I've been tracking my investments in a Number sheet for over 10 years and it's getting kind of clunky. I'm also pretty sure there are some mistakes in my logic. So I can fix it and add it to my tracker.\n\nLater on, if everything works, I could look at automating parts. I'm especially thinking about syncing expenses. Open banking is something I'm not going to get involved with, though.\n\nThis session, Claude generated:\n• 26 Swift files (~3,700 lines of code)\n• 24 source files\n• 2 test files (30+ unit tests)\n• 6 documentation files (comprehensive guides)\n• 100% of planned features implemented\n\nThis version included an App with CloudKit. It sounded like an overkill for an app that just needs to sync between my devices, but what do I know? Only after trying to set it up in Xcode, my suspicions were confirmed.\n\nIt cost less than $5 so far. But it will probably end up costing a lot more as I need quite some back and forth to roll back Cloud capabilities that aren't available to free plans. Easily spent an extra hour on this as well. \n\nDamn, it looks like a real Apple App. Not what I expected but pretty nice apart from some alignment issues.\n\n---\n\nFebruary 10, 2026\n\nAfter some further back and forth, I got the app to work with decent padding too.\n\nNow, I'm most definitely not going to use the same app for personal finances because it's going to break again. But I can use the structure and learnings from this to create another one.\n\nOnly thing left to do now is figure out how i can add this app to my desktop and how to give it a logo so I don't have to run it from Xcode every time.\n\n### next changes\n• net profit = difference between income and expenses without VAT\n• (later include more detailed calcs for VAT based on category)\n• Save names of expenses eg charging\n• Detailed overview of expenses per name instead of category\n• quarterly and yearly costs -> split over months",
+      "description": "February 9, 2026\n\nI just realised that I don't have a solid view of my business expenses. I know that I typically earn more than I spend, but how much?\nNo better way to find out, than to vibe code a desktop app to keep track of invoices sent and received. \nInitially, it doesn't need to be complicated. The only tricky part is the difference between one-off expenses, and monthly, quarterly and yearly recurring ones. \n\nWhen this part works, I also want to develop a personal tracker. I've been tracking my investments in a Number sheet for over 10 years and it's getting kind of clunky. I'm also pretty sure there are some mistakes in my logic. So I can fix it and add it to my tracker.\n\nLater on, if everything works, I could look at automating parts. I'm especially thinking about syncing expenses. Open banking is something I'm not going to get involved with, though.\n\nThis session, Claude generated:\n• 26 Swift files (~3,700 lines of code)\n• 24 source files\n• 2 test files (30+ unit tests)\n• 6 documentation files (comprehensive guides)\n• 100% of planned features implemented\n\nThis version included an App with CloudKit. It sounded like an overkill for an app that just needs to sync between my devices, but what do I know? Only after trying to set it up in Xcode, my suspicions were confirmed.\n\nIt cost less than $5 so far. But it will probably end up costing a lot more as I need quite some back and forth to roll back Cloud capabilities that aren't available to free plans. Easily spent an extra hour on this as well. \n\nDamn, it looks like a real Apple App. Not what I expected but pretty nice apart from some alignment issues.\n\n---\n\nFebruary 10, 2026\n\nAfter some further back and forth, I got the app to work with decent padding too.\n\nNow, I'm most definitely not going to use the same app for personal finances because it's going to break again. But I can use the structure and learnings from this to create another one.\n\nOnly thing left to do now is figure out how i can add this app to my desktop and how to give it a logo so I don't have to run it from Xcode every time.\n\n---\n\nMarch 2, 2026\n\nTime to implement the next changes:\n• net profit = difference between income and expenses without VAT\n• (later include more detailed calculations for VAT based on category)\n• Save names of expenses (eg charging) + detailed overview of expenses per name instead of category\n• quarterly and yearly costs -> split over months but only if the expense is more than 250 euros.\n\n It worked pretty well but I had to delete the database and start from scratch since there was no database backup. Ah well, I didn't have that much in there yet anyway.",
       "learnings": [],
       "cost": "$5",
       "status": "completed",
       "intensity": 3,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Finance tracking.md",
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Company finance tracking.md",
       "workDates": [
         "2026-02-09",
-        "2026-02-10"
+        "2026-02-10",
+        "2026-03-02"
       ]
     },
     {
