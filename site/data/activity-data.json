@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-03-03T08:05:01.489Z",
+    "generated": "2026-03-04T08:00:05.871Z",
     "totalProjects": 13,
     "dateRange": {
       "start": "2026-01-16",
-      "end": "2026-03-02"
+      "end": "2026-03-03"
     }
   },
   "dailyContributions": {
@@ -104,6 +104,17 @@
         "Le Chat"
       ]
     },
+    "2026-03-03": {
+      "intensity": 3,
+      "projectCount": 2,
+      "vibeTools": [
+        "Claude Code",
+        "Xcode",
+        "Le Chat",
+        "Railway",
+        "GitHub"
+      ]
+    },
     "2026-02-16": {
       "intensity": 3,
       "projectCount": 1,
@@ -176,14 +187,15 @@
         "Drizzle ORM",
         "PostgreSQL"
       ],
-      "description": "March 2, 2026\n\nFor over 10 years, i've been tracking my investments in a Numbers file. Over time, i've wanted to add more calculations and \"features\" but the more I add, the more I start to doubt the accuracy. So it was about time to code something.\n\nThe plan was defined rather quickly based on an csv of my existing file.",
+      "description": "March 2, 2026\n\nFor over 10 years, i've been tracking my investments in a Numbers file. Over time, i've wanted to add more calculations and \"features\" but the more I add, the more I start to doubt the accuracy. So it was about time to code something.\n\nThe plan was defined rather quickly based on an csv of my existing file. \n\n---\n\nMarch 3, 2026\n\nSomehow the hardest app of all - just cant handle the existing data. two hours of debugging have only made things worse. Should I put the money I've spent on Claude down as an investment? It feels more like a waste at the moment...\n\nBack to scratch is the only way i can see this working out. Trying a \"soft\" reset didn't lreally do it. Telling Claude to clean the existing databases didn't really work because he ran into another conflict half an hour later. \n\nSo I told Claude to make an assessment and really start over. Judging from his reply, he agrees: \"will be much faster than continuing to debug mysterious database issues\"",
       "learnings": [],
       "cost": null,
       "status": "completed",
-      "intensity": 1,
+      "intensity": 2,
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Investment tracker.md",
       "workDates": [
-        "2026-03-02"
+        "2026-03-02",
+        "2026-03-03"
       ]
     },
     {
@@ -228,9 +240,10 @@
         "React",
         "Express",
         "PostgreSQL",
-        "Drizzle ORM"
+        "Drizzle ORM",
+        "Claude API"
       ],
-      "description": "February 16, 2026\n\nI wanted to take a break from vibe coding tonight, but my wife just completed an online course and she mentioned that her next goal is to improve her English skills. Since she's already tried all sorts of tools, I have no other choice but to vibe-code something.\n\nI've got a pretty interesting idea that should work perfectly in the AI era. But before I start, I'm going to use Mistral's Le Chat to fine-tune my prompt. That's something I've not done enough for previous projects.\n\nAsked it to be motivational and flower-themed. Super impressed with the suggested prompt. i'm afraid the scope will be a bit out of my comfort zone, but all the apps have been and I should always aim a step higher.\n\n---\n\nFebruary 17, 2026\n\nYesterday I wrapped up the plan. Today, I executed the plan. (Hit enter and let Claude do it's thing)\n\n---\n\nFebruary 26, 2026\n\nCommitting and pushing to github today. Then I'll deploy it via Railway. Super curious as to what i'll see and how many bugs will need to be fixed...\n\nBiggest issue is connecting the database. I thought it would be straightforward since we've done it before, but it is't. I should have taken better notes from the previous project. I asked Claude how we did it for the coffee rater app and hope to make progress with this but it sounds more complicated than I remembered. But I'm also getting so security warnings from deprecated packages. And even though Claude tells me not to worry, I want to get this fixed first.\n\nThink I'm understanding the issue now. At some point, I created a duplicate of the coffee rater app, but Claude has based this new app on the outdated, incomplete first version. Another few hours of learning money paid.\n\nI suddenly noticed when Drizzle ORM was outdated. In the end, the solution wasn't that difficult but I thought I was fixing a new unexpected problem instead of the same one as before.\n\nHaha, it's still not working to create an account. Wouldn't be too much fun if everything worked right. Even though a lot changed in the background, I'm still seeing the same error when trying to create an account.\n\nStill had a problem with Vite which Claude found because I reminded him again to compare with the successful coffee tracker app. Now i can log in but of course we have some front end issues now. The learning levels exist but aren't being shown. Well, first they weren't in the database but that was fixed rather quickly even though I have no clue how.\n\n---\n\nFebruary 27, 2026\n\nCouldn't make it work yesterday and couldn't sleep this morning. So back at it before the kids wake up. Found another localhost link so hopefully removing that will fix it now. Or it will reveal another issue. \n\nWhile waiting for the app to rebuild and redeploy over 20 times, I explored Railway and found the \"observability\" tab. Very clean dashboards but can't really make sense of what they mean. Will need to look into egress later because the numbers of predicted usage and actual usage don't match at all. We're talking cents but I wanna avoid adding another paid subscription for now.\n\nAha. Another issue we had with the coffee rater app. Session cookies aren't being created. It's funny how 2 lines of code can break an entire app.",
+      "description": "February 16, 2026\n\nI wanted to take a break from vibe coding tonight, but my wife just completed an online course and she mentioned that her next goal is to improve her English skills. Since she's already tried all sorts of tools, I have no other choice but to vibe-code something.\n\nI've got a pretty interesting idea that should work perfectly in the AI era. But before I start, I'm going to use Mistral's Le Chat to fine-tune my prompt. That's something I've not done enough for previous projects.\n\nAsked it to be motivational and flower-themed. Super impressed with the suggested prompt. i'm afraid the scope will be a bit out of my comfort zone, but all the apps have been and I should always aim a step higher.\n\n---\n\nFebruary 17, 2026\n\nYesterday I wrapped up the plan. Today, I executed the plan. (Hit enter and let Claude do it's thing)\n\n---\n\nFebruary 26, 2026\n\nCommitting and pushing to github today. Then I'll deploy it via Railway. Super curious as to what i'll see and how many bugs will need to be fixed...\n\nBiggest issue is connecting the database. I thought it would be straightforward since we've done it before, but it is't. I should have taken better notes from the previous project. I asked Claude how we did it for the coffee rater app and hope to make progress with this but it sounds more complicated than I remembered. But I'm also getting so security warnings from deprecated packages. And even though Claude tells me not to worry, I want to get this fixed first.\n\nThink I'm understanding the issue now. At some point, I created a duplicate of the coffee rater app, but Claude has based this new app on the outdated, incomplete first version. Another few hours of learning money paid.\n\nI suddenly noticed when Drizzle ORM was outdated. In the end, the solution wasn't that difficult but I thought I was fixing a new unexpected problem instead of the same one as before.\n\nHaha, it's still not working to create an account. Wouldn't be too much fun if everything worked right. Even though a lot changed in the background, I'm still seeing the same error when trying to create an account.\n\nStill had a problem with Vite which Claude found because I reminded him again to compare with the successful coffee tracker app. Now i can log in but of course we have some front end issues now. The learning levels exist but aren't being shown. Well, first they weren't in the database but that was fixed rather quickly even though I have no clue how.\n\n---\n\nFebruary 27, 2026\n\nCouldn't make it work yesterday and couldn't sleep this morning. So back at it before the kids wake up. Found another localhost link so hopefully removing that will fix it now. Or it will reveal another issue. \n\nWhile waiting for the app to rebuild and redeploy over 20 times, I explored Railway and found the \"observability\" tab. Very clean dashboards but can't really make sense of what they mean. Will need to look into egress later because the numbers of predicted usage and actual usage don't match at all. We're talking cents but I wanna avoid adding another paid subscription for now.\n\nAha. Another issue we had with the coffee rater app. Session cookies aren't being created. It's funny how 2 lines of code can break an entire app.\n\n---\n\nMarch 3, 2026\n\nI've completed the first three levels without issues but that seems to be the end of it. For an app that should learn and create new levels, it's a bit disappointing. \n\nI've no instructed the tool to create two additional levels every time the current levels are completed. One level should focus on improving what needs reinforcements and the other level should offer something new. It will use Claude API in the background to create these levels. Surprisingly, there were no bugs and it seems to be working. I see 3 new levels in my account.\n\nBut I'll have it create 3 new levels at a time instead. One isn't a lot, so the reinforcement level will be quite empty or get very repetitive as is.\n\nI also made some changes to the app's logic. Now every level needed a 100% success rate to succeed but I've changed that to 80%.\n\nDid have a few minor issues such as \"it is one o'clock\" being transcribed as \"it is 1:00\" - and spelling exercises were showing the English word. Both were easy fixes fortunately. Don't know if the model suddenly got better or if the foundation is actually this solid lol.",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -240,7 +253,8 @@
         "2026-02-16",
         "2026-02-17",
         "2026-02-26",
-        "2026-02-27"
+        "2026-02-27",
+        "2026-03-03"
       ]
     },
     {
