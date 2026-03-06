@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-03-05T08:05:59.094Z",
-    "totalProjects": 13,
+    "generated": "2026-03-06T08:00:02.324Z",
+    "totalProjects": 14,
     "dateRange": {
       "start": "2026-01-16",
-      "end": "2026-03-04"
+      "end": "2026-03-05"
     }
   },
   "dailyContributions": {
@@ -24,6 +24,14 @@
         "ChatGPT",
         "Claude Code",
         "Visual Code Studio"
+      ]
+    },
+    "2026-03-05": {
+      "intensity": 4,
+      "projectCount": 3,
+      "vibeTools": [
+        "ChatGPT",
+        "Claude Code"
       ]
     },
     "2026-01-29": {
@@ -109,7 +117,6 @@
       "projectCount": 2,
       "vibeTools": [
         "Claude Code",
-        "Xcode",
         "Le Chat",
         "Railway",
         "GitHub"
@@ -119,8 +126,7 @@
       "intensity": 2,
       "projectCount": 1,
       "vibeTools": [
-        "Claude Code",
-        "Xcode"
+        "Claude Code"
       ]
     },
     "2026-02-16": {
@@ -184,12 +190,40 @@
   },
   "projects": [
     {
+      "id": "content-planner",
+      "date": "2026-03-05",
+      "title": "Content planner",
+      "vibeTools": [
+        "Claude Code"
+      ],
+      "stack": [
+        "Express",
+        "Obsidian",
+        "SQLite",
+        "React",
+        "Vite",
+        "TailwindCSS",
+        "Radix UI",
+        "Drizzle ORM",
+        "Typescript",
+        "Claude API"
+      ],
+      "description": "March 5, 2026\n\nThought it's about time to create my own social media engine :) Of course, we're doing great work over at Willow, but we're not at a level (yet?) were I can just use my Obsidian notes as the foundation for my content strategy.\n\nSo today we're building a clean interface and self-learning content system that has a weekly rotation of 5 topics:\n• product marketing\n• lesson from last week\n• ux law \n• cool story combined with marketing lesson\n• random marketing topic\n\nSome things that I find important:\n• apparently it's better to ask for a social media post instead of a linkedin post\n• every day/category will have a different skill.\n• i will always have the change to edit and review. Approved drafts are saved to improve future output. \n\nOnce approved, my LinkedIn image skill will create a visual for it. \nFirst impression is great, but it still needs some work on the writing style. Hashtags, really Claude? I'll have to fine-tune that a bit, and then...\n\nLet's see how this does for a week :) \n\n## next time\n• work with most recent note for weekly progress \n• work with most recently updated for vibing\n• dates don't match the right day.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 3,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Content planner.md",
+      "workDates": [
+        "2026-03-05"
+      ]
+    },
+    {
       "id": "investment-tracker",
       "date": "2026-03-02",
       "title": "Investment tracker",
       "vibeTools": [
-        "Claude Code",
-        "Xcode"
+        "Claude Code"
       ],
       "stack": [
         "Drizzle ORM",
@@ -224,14 +258,15 @@
         "Claude API",
         "Obsidian"
       ],
-      "description": "February 20, 2026\n\nI built a personal goals tracking system that manages my career progression from daily activities up to my 15-year vision. The system lets me log daily work, set weekly goals, track quarterly objectives, and maintain long-term visions for 2030, 2035, and 2040. Every Friday when I log my activities, it automatically generates a weekly overview markdown file and saves it to my Obsidian vault in the \"Weekly B2B notes\" folder.\n\nI also integrated Claude AI so I can chat about my goals and progress. I can ask questions like \"When did I last work on coffee-rater?\" or \"What activities aren't aligned with my long-term vision?\" and Claude analyzes my last 30 days of activities and all my goals to give me contextual answers. The chat remembers our conversation and helps me stay aligned with my 2030/2035/2040 vision milestones.",
+      "description": "February 20, 2026\n\nI built a personal goals tracking system that manages my career progression from daily activities up to my 15-year vision. The system lets me log daily work, set weekly goals, track quarterly objectives, and maintain long-term visions for 2030, 2035, and 2040. Every Friday when I log my activities, it automatically generates a weekly overview markdown file and saves it to my Obsidian vault in the \"Weekly B2B notes\" folder.\n\nI also integrated Claude AI so I can chat about my goals and progress. I can ask questions like \"When did I last work on coffee-rater?\" or \"What activities aren't aligned with my long-term vision?\" and Claude analyzes my last 30 days of activities and all my goals to give me contextual answers. The chat remembers our conversation and helps me stay aligned with my 2030/2035/2040 vision milestones.\n\n---\n\nMarch 5, 2026\n\nAI chat button wasn't working. I had to update some packages to make it work again.\n\nThe fact that this chat works with my memories/notes from the past weeks and aligns them with future goals and can guide me on what is useful and what is not, is insane.",
       "learnings": [],
       "cost": null,
       "status": "completed",
       "intensity": 2,
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Planner and goal-tracker.md",
       "workDates": [
-        "2026-02-20"
+        "2026-02-20",
+        "2026-03-05"
       ]
     },
     {
@@ -479,7 +514,7 @@
         "HTML",
         "Fetch API"
       ],
-      "description": "January 16, 2026\n\nFirst time working with Claude Code. Developed fully locally.\nLearning here is that the main file is definitely too large. \nWondering why CSS isn't separated for example.\nAlso the stack was too light to make it work visually, but again maybe it's related to the CSS too.\nGood but expensive learning experience (around 28$)\n\n---\n\nJanuary 27, 2026\nConverted desktop app to web app - Transformed the CustomTkinter desktop wardrobe manager into a Flask-based web application\nUnified database - Merged separate wardrobe.db and wardrobe_fer.db into single database with `wardrobe` field to distinguish owners\nAdded search & filter - Implemented debounced search (300ms), type filtering, and sorting by rating/brand/date\nBuilt REST API - Created 10+ Flask endpoints for CRUD operations, search, filter, sort, and undo functionality\nVanilla JS frontend - Developed SPA with state management, API client, and modular components (ItemCard, ItemModal, SearchFilter)\nCSS theme system - Implemented CSS variables for instant theme switching between Kjell's earthy and Fer's pink color schemes\nPreserved features - Maintained all original functionality: color-coded cards, 10-star ratings, color picker, edit/delete with undo\nMigrated 72 items - Successfully transferred all items from Kjell's wardrobe with full data integrity and backups\nResponsive design - Built mobile-friendly grid layout with auto-fill columns and media queries for various screen sizes\nComplete documentation - Created README, INSTALL, QUICKSTART guides plus verification scripts for easy setup and troubleshooting\n\nKey Features\n• View items organized by clothing type\n• Add/edit/delete items with confirmation\n• Color-coded item cards with contrast text\n• 10-star rating system\n• Color picker for custom colors\n• Switch between Kjell's and Fer's wardrobes\n• Undo delete (10-second window)\n• Automatic data persistence\n• Search - Full-text search across brand, model, materials with debouncing\n• Filter - Dropdown to filter by specific clothing type\n• Sort - Multiple sort options (rating desc, brand asc, date desc)\n• Responsive - Mobile-friendly grid layout\n• Keyboard shortcuts - ESC to close modals\n• Real-time updates - Observer pattern for reactive UI\n• API access - RESTful endpoints for external integration\n\nAccess at: http://localhost:5001 (changed from 5000 to avoid macOS AirPlay conflict)",
+      "description": "January 16, 2026\n\nFirst time working with Claude Code. Developed fully locally.\nLearning here is that the main file is definitely too large. \nWondering why CSS isn't separated for example.\nAlso the stack was too light to make it work visually, but again maybe it's related to the CSS too.\nGood but expensive learning experience (around 28$)\n\n---\n\nJanuary 27, 2026\nConverted desktop app to web app - Transformed the CustomTkinter desktop wardrobe manager into a Flask-based web application\nUnified database - Merged separate wardrobe.db and wardrobe_fer.db into single database with `wardrobe` field to distinguish owners\nAdded search & filter - Implemented debounced search (300ms), type filtering, and sorting by rating/brand/date\nBuilt REST API - Created 10+ Flask endpoints for CRUD operations, search, filter, sort, and undo functionality\nVanilla JS frontend - Developed SPA with state management, API client, and modular components (ItemCard, ItemModal, SearchFilter)\nCSS theme system - Implemented CSS variables for instant theme switching between Kjell's earthy and Fer's pink color schemes\nPreserved features - Maintained all original functionality: color-coded cards, 10-star ratings, color picker, edit/delete with undo\nMigrated 72 items - Successfully transferred all items from Kjell's wardrobe with full data integrity and backups\nResponsive design - Built mobile-friendly grid layout with auto-fill columns and media queries for various screen sizes\nComplete documentation - Created README, INSTALL, QUICKSTART guides plus verification scripts for easy setup and troubleshooting\n\nKey Features\n• View items organized by clothing type\n• Add/edit/delete items with confirmation\n• Color-coded item cards with contrast text\n• 10-star rating system\n• Color picker for custom colors\n• Switch between Kjell's and Fer's wardrobes\n• Undo delete (10-second window)\n• Automatic data persistence\n• Search - Full-text search across brand, model, materials with debouncing\n• Filter - Dropdown to filter by specific clothing type\n• Sort - Multiple sort options (rating desc, brand asc, date desc)\n• Responsive - Mobile-friendly grid layout\n• Keyboard shortcuts - ESC to close modals\n• Real-time updates - Observer pattern for reactive UI\n• API access - RESTful endpoints for external integration\n\n---\n\nMarch 5, 2026\n\nSome time ago, I added a shortcut so I can launch the app by typing \"wardrobe\" in terminal. That's pretty easy. Made some tiny changes today:\n• Renamed categories that were still in Dutch\n• Reorganised by tops and bottoms instead of alphabetically.\n• Made categories collapsable.\n\nClaude took care of it while I took a break. What a life.",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -487,7 +522,8 @@
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Wardrobe.md",
       "workDates": [
         "2026-01-16",
-        "2026-01-27"
+        "2026-01-27",
+        "2026-03-05"
       ]
     },
     {
