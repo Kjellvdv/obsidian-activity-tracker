@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-03-06T08:00:02.324Z",
-    "totalProjects": 14,
+    "generated": "2026-03-07T08:00:00.680Z",
+    "totalProjects": 15,
     "dateRange": {
       "start": "2026-01-16",
-      "end": "2026-03-05"
+      "end": "2026-03-07"
     }
   },
   "dailyContributions": {
@@ -169,6 +169,13 @@
         "GitHub"
       ]
     },
+    "2026-03-07": {
+      "intensity": 3,
+      "projectCount": 2,
+      "vibeTools": [
+        "Claude Code"
+      ]
+    },
     "2026-02-09": {
       "intensity": 3,
       "projectCount": 1,
@@ -190,6 +197,24 @@
   },
   "projects": [
     {
+      "id": "coffee-rater",
+      "date": "2026-03-07",
+      "title": "Coffee rater",
+      "vibeTools": [
+        "Claude Code"
+      ],
+      "stack": [],
+      "description": "March 7, 2026\n\nI swear I had a note about this app but I can't find it anywhere. It's completely gone. Not even in my bin.\n\nSo it's a spanish-language app because it's mainly for me and my wife, but I do want to test it with a few other people now.\n\nIt lets users write down information about the coffee beans they try and then it guides them to create a flavour profile of the coffee. Personally, i found it very interesting because i learned a lot about coffee by doing this. Especially about the difference between arabica and robusta coffee.\n\nSo today, I'm making a change that should make it easier for my wife to use the app. I'm enabling copies from the community page. So once I've rated an app, she can copy the entry and create her own flavour profile.\n\nNext, I also want to add side-by-side comparisons.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 2,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Coffee rater.md",
+      "workDates": [
+        "2026-03-07"
+      ]
+    },
+    {
       "id": "content-planner",
       "date": "2026-03-05",
       "title": "Content planner",
@@ -208,14 +233,15 @@
         "Typescript",
         "Claude API"
       ],
-      "description": "March 5, 2026\n\nThought it's about time to create my own social media engine :) Of course, we're doing great work over at Willow, but we're not at a level (yet?) were I can just use my Obsidian notes as the foundation for my content strategy.\n\nSo today we're building a clean interface and self-learning content system that has a weekly rotation of 5 topics:\n• product marketing\n• lesson from last week\n• ux law \n• cool story combined with marketing lesson\n• random marketing topic\n\nSome things that I find important:\n• apparently it's better to ask for a social media post instead of a linkedin post\n• every day/category will have a different skill.\n• i will always have the change to edit and review. Approved drafts are saved to improve future output. \n\nOnce approved, my LinkedIn image skill will create a visual for it. \nFirst impression is great, but it still needs some work on the writing style. Hashtags, really Claude? I'll have to fine-tune that a bit, and then...\n\nLet's see how this does for a week :) \n\n## next time\n• work with most recent note for weekly progress \n• work with most recently updated for vibing\n• dates don't match the right day.",
+      "description": "March 5, 2026\n\nThought it's about time to create my own social media engine :) Of course, we're doing great work over at Willow, but we're not at a level (yet?) were I can just use my Obsidian notes as the foundation for my content strategy.\n\nSo today we're building a clean interface and self-learning content system that has a weekly rotation of 5 topics:\n• product marketing\n• lesson from last week\n• ux law \n• cool story combined with marketing lesson\n• random marketing topic\n\nSome things that I find important:\n• apparently it's better to ask for a social media post instead of a linkedin post\n• every day/category will have a different skill.\n• i will always have the change to edit and review. Approved drafts are saved to improve future output. \n\nOnce approved, my LinkedIn image skill will create a visual for it. \nFirst impression is great, but it still needs some work on the writing style. Hashtags, really Claude? I'll have to fine-tune that a bit, and then...\n\nLet's see how this does for a week :) \n\n## next time\n• work with most recent note for weekly progress \n• work with most recently updated for vibing\n• dates don't match the right day. \n\n---\n\nMarch 7, 2026\n\nI let Claude write skills for every category of post, then I edited them manually. Unfortunately, the planner can't work directly with the skills, but the prompts were integrated into the existing tool. Since it will take into account the last five approved drafts for writing a new one, the system should still be kind of self-learning, only the prompt itself won't be updated automatically (if needed)\n\nLater, I can set up an \"update skills with examples workflow\" to see if that does have a significant impact on the quality. But let's test the quality first.",
       "learnings": [],
       "cost": null,
       "status": "completed",
       "intensity": 3,
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Content planner.md",
       "workDates": [
-        "2026-03-05"
+        "2026-03-05",
+        "2026-03-07"
       ]
     },
     {
