@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-03-09T08:00:00.746Z",
+    "generated": "2026-03-10T08:00:01.907Z",
     "totalProjects": 15,
     "dateRange": {
       "start": "2026-01-16",
-      "end": "2026-03-07"
+      "end": "2026-03-09"
     }
   },
   "dailyContributions": {
@@ -71,6 +71,15 @@
         "ChatGPT"
       ]
     },
+    "2026-03-09": {
+      "intensity": 3,
+      "projectCount": 4,
+      "vibeTools": [
+        "Claude Code",
+        "Visual Code Studio",
+        "ChatGPT"
+      ]
+    },
     "2026-01-28": {
       "intensity": 2,
       "projectCount": 1,
@@ -101,6 +110,13 @@
       "vibeTools": [
         "Claude Code",
         "Visual Code Studio"
+      ]
+    },
+    "2026-03-07": {
+      "intensity": 3,
+      "projectCount": 2,
+      "vibeTools": [
+        "Claude Code"
       ]
     },
     "2026-03-02": {
@@ -169,13 +185,6 @@
         "GitHub"
       ]
     },
-    "2026-03-07": {
-      "intensity": 3,
-      "projectCount": 2,
-      "vibeTools": [
-        "Claude Code"
-      ]
-    },
     "2026-02-09": {
       "intensity": 3,
       "projectCount": 1,
@@ -215,9 +224,9 @@
       ]
     },
     {
-      "id": "content-planner",
+      "id": "linkedin-planner",
       "date": "2026-03-05",
-      "title": "Content planner",
+      "title": "LinkedIn planner",
       "vibeTools": [
         "Claude Code"
       ],
@@ -233,15 +242,16 @@
         "Typescript",
         "Claude API"
       ],
-      "description": "March 5, 2026\n\nThought it's about time to create my own social media engine :) Of course, we're doing great work over at Willow, but we're not at a level (yet?) were I can just use my Obsidian notes as the foundation for my content strategy.\n\nSo today we're building a clean interface and self-learning content system that has a weekly rotation of 5 topics:\n• product marketing\n• lesson from last week\n• ux law \n• cool story combined with marketing lesson\n• random marketing topic\n\nSome things that I find important:\n• apparently it's better to ask for a social media post instead of a linkedin post\n• every day/category will have a different skill.\n• i will always have the change to edit and review. Approved drafts are saved to improve future output. \n\nOnce approved, my LinkedIn image skill will create a visual for it. \nFirst impression is great, but it still needs some work on the writing style. Hashtags, really Claude? I'll have to fine-tune that a bit, and then...\n\nLet's see how this does for a week :) \n\n## next time\n• work with most recent note for weekly progress \n• work with most recently updated for vibing\n• dates don't match the right day. \n\n---\n\nMarch 7, 2026\n\nI let Claude write skills for every category of post, then I edited them manually. Unfortunately, the planner can't work directly with the skills, but the prompts were integrated into the existing tool. Since it will take into account the last five approved drafts for writing a new one, the system should still be kind of self-learning, only the prompt itself won't be updated automatically (if needed)\n\nLater, I can set up an \"update skills with examples workflow\" to see if that does have a significant impact on the quality. But let's test the quality first.",
+      "description": "March 5, 2026\n\nThought it's about time to create my own social media engine :) Of course, we're doing great work over at Willow, but we're not at a level (yet?) were I can just use my Obsidian notes as the foundation for my content strategy.\n\nSo today we're building a clean interface and self-learning content system that has a weekly rotation of 5 topics:\n• product marketing\n• lesson from last week\n• ux law \n• cool story combined with marketing lesson\n• random marketing topic\n\nSome things that I find important:\n• apparently it's better to ask for a social media post instead of a linkedin post\n• every day/category will have a different skill.\n• i will always have the change to edit and review. Approved drafts are saved to improve future output. \n\nOnce approved, my LinkedIn image skill will create a visual for it. \nFirst impression is great, but it still needs some work on the writing style. Hashtags, really Claude? I'll have to fine-tune that a bit, and then...\n\nLet's see how this does for a week :) \n\n## next time\n• work with most recent note for weekly progress \n• work with most recently updated for vibing\n• dates don't match the right day. \n\n---\n\nMarch 7, 2026\n\nI let Claude write skills for every category of post, then I edited them manually. Unfortunately, the planner can't work directly with the skills, but the prompts were integrated into the existing tool. Since it will take into account the last five approved drafts for writing a new one, the system should still be kind of self-learning, only the prompt itself won't be updated automatically (if needed)\n\nLater, I can set up an \"update skills with examples workflow\" to see if that does have a significant impact on the quality. But let's test the quality first.\n\n---\n\nMarch 9, 2026\n\n I noticed that for the product marketing posts, all the obsidian notes were being loaded, but I need only one note as source for a draft. For weekly updates, it should always be based on the most recent entry\n\n once approved, then what: create image with claude skill:\n\n You click Approve → post is saved as approved → infographic generation starts automatically     Topbar shows \"Generating infographic…\" spinner (purple)                                                                 When done → \"Open infographic\" link appears → opens the HTML file in a new tab                      You screenshot it in the browser and it's ready for LinkedIn\n\n never use hashtags",
       "learnings": [],
       "cost": null,
       "status": "completed",
       "intensity": 3,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Content planner.md",
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/LinkedIn planner.md",
       "workDates": [
         "2026-03-05",
-        "2026-03-07"
+        "2026-03-07",
+        "2026-03-09"
       ]
     },
     {
@@ -284,7 +294,7 @@
         "Claude API",
         "Obsidian"
       ],
-      "description": "February 20, 2026\n\nI built a personal goals tracking system that manages my career progression from daily activities up to my 15-year vision. The system lets me log daily work, set weekly goals, track quarterly objectives, and maintain long-term visions for 2030, 2035, and 2040. Every Friday when I log my activities, it automatically generates a weekly overview markdown file and saves it to my Obsidian vault in the \"Weekly B2B notes\" folder.\n\nI also integrated Claude AI so I can chat about my goals and progress. I can ask questions like \"When did I last work on coffee-rater?\" or \"What activities aren't aligned with my long-term vision?\" and Claude analyzes my last 30 days of activities and all my goals to give me contextual answers. The chat remembers our conversation and helps me stay aligned with my 2030/2035/2040 vision milestones.\n\n---\n\nMarch 5, 2026\n\nAI chat button wasn't working. I had to update some packages to make it work again.\n\nThe fact that this chat works with my memories/notes from the past weeks and aligns them with future goals and can guide me on what is useful and what is not, is insane.",
+      "description": "February 20, 2026\n\nI built a personal goals tracking system that manages my career progression from daily activities up to my 15-year vision. The system lets me log daily work, set weekly goals, track quarterly objectives, and maintain long-term visions for 2030, 2035, and 2040. Every Friday when I log my activities, it automatically generates a weekly overview markdown file and saves it to my Obsidian vault in the \"Weekly B2B notes\" folder.\n\nI also integrated Claude AI so I can chat about my goals and progress. I can ask questions like \"When did I last work on coffee-rater?\" or \"What activities aren't aligned with my long-term vision?\" and Claude analyzes my last 30 days of activities and all my goals to give me contextual answers. The chat remembers our conversation and helps me stay aligned with my 2030/2035/2040 vision milestones.\n\n---\n\nMarch 5, 2026\n\nAI chat button wasn't working. I had to update some packages to make it work again.\n\nThe fact that this chat works with my memories/notes from the past weeks and aligns them with future goals and can guide me on what is useful and what is not, is insane.\n\n---\n\nMarch 9, 2026\n\nIt looks like the automatic weekly summaries aren't being made, so I have to look into this. And while i'm doing this, I should probably include a check to complete missing info and see if I've crossed off all my weekly goals.\n\nThe easiest way for this, i think, is a screen with all the daily entries of the past 4 weeks. This way, I can edit and add information easily. I can also manually generate a summary for the missing weeks, once the info is completed.",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -292,7 +302,8 @@
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Planner and goal-tracker.md",
       "workDates": [
         "2026-02-20",
-        "2026-03-05"
+        "2026-03-05",
+        "2026-03-09"
       ]
     },
     {
@@ -415,7 +426,7 @@
         "CSS",
         "Javascript"
       ],
-      "description": "January 29, 2026\n\nTried to deploy the Vibe coding Activity Tracker online by setting up GitHub Pages with automatic deployment and configured local SiteGround deployment via SFTP.                              \n\nUnfortunately, Siteground wasn't really working along as the files could not be pushed.\n\nAt some point I managed to show my page successfully on vibing.kjellv.com but without actually showing my activity.\n\nAlmost there but not quite yet.\n\n---\n\nJanuary 30, 2026\n\nI gave up trying to push the files directly to Siteground. \nWith a CNAME record, however, my github page now gets shown on vibing.kjellv.com\nThis requires a workflow in github that Claude wrote.\n\nAdditionally, i added a cron job to parse my Obsidian files daily and push the changes to github so that my activity tracker gets updated daily (when I'm online)\n\nFinally, I added a button in the header to go back to kjellv.com. Believe it or not, I coded this manually with some HTML and CSS. At least I have the feeling that I contributed a bit now.\n\n---\n\nFebruary 4, 2026\n\nMade some small changes to how projects and days are being parsed.\nOne project per note file: Each Obsidian note is now treated as a single project, regardless of how many date sections (H2 headers) it contains. \nChronological ordering: Date sections within a note are now sorted chronologically (oldest to newest) before being processed and aggregated.\nAggregated content: All work sessions from different dates are combined into a single project entry with:\n• The earliest date as the main project date\n• All content from all sessions aggregated\n• All learnings combined\n• Maximum intensity across all sessions\n• A new workDates array that tracks all the dates you worked on that project\nClean titles: Project titles no longer have \"(Day 1)\", \"(Day 2)\" labels.\n\n---\n\nFebruary 5, 2026\n\nThe changes from yesterday didn't really work out the way I wanted.\nI trusted Claude to just change everything at once but it didn't work.\nI then tried again, giving more and clearer instructions but it almost reversed the changes instead.\nToday, I tried implementing the small changes one by one, instead.\nThe key learning here is that you can't ask too much at once. I actually knew this from the very first time I started vibe coding but i was starting to trust the machine too much.",
+      "description": "January 29, 2026\n\nTried to deploy the Vibe coding Activity Tracker online by setting up GitHub Pages with automatic deployment and configured local SiteGround deployment via SFTP.                              \n\nUnfortunately, Siteground wasn't really working along as the files could not be pushed.\n\nAt some point I managed to show my page successfully on vibing.kjellv.com but without actually showing my activity.\n\nAlmost there but not quite yet.\n\n---\n\nJanuary 30, 2026\n\nI gave up trying to push the files directly to Siteground. \nWith a CNAME record, however, my github page now gets shown on vibing.kjellv.com\nThis requires a workflow in github that Claude wrote.\n\nAdditionally, i added a cron job to parse my Obsidian files daily and push the changes to github so that my activity tracker gets updated daily (when I'm online)\n\nFinally, I added a button in the header to go back to kjellv.com. Believe it or not, I coded this manually with some HTML and CSS. At least I have the feeling that I contributed a bit now.\n\n---\n\nFebruary 4, 2026\n\nMade some small changes to how projects and days are being parsed.\nOne project per note file: Each Obsidian note is now treated as a single project, regardless of how many date sections (H2 headers) it contains. \nChronological ordering: Date sections within a note are now sorted chronologically (oldest to newest) before being processed and aggregated.\nAggregated content: All work sessions from different dates are combined into a single project entry with:\n• The earliest date as the main project date\n• All content from all sessions aggregated\n• All learnings combined\n• Maximum intensity across all sessions\n• A new workDates array that tracks all the dates you worked on that project\nClean titles: Project titles no longer have \"(Day 1)\", \"(Day 2)\" labels.\n---\n\nFebruary 5, 2026\n\nThe changes from yesterday didn't really work out the way I wanted.\nI trusted Claude to just change everything at once but it didn't work.\nI then tried again, giving more and clearer instructions but it almost reversed the changes instead.\nToday, I tried implementing the small changes one by one, instead.\nThe key learning here is that you can't ask too much at once. I actually knew this from the very first time I started vibe coding but i was starting to trust the machine too much.\n\n---\n\nMarch 9, 2026\n\nFixed the graph because it was still displaying 13 months instead of 12.\nUp until now, ranking takes into account the first day of the project but i'd like them to be ranked by the last day an update was made. So I made that change and also removed the limit of displaying only the 10 most recent projects.",
       "learnings": [
         "All learnings combined"
       ],
@@ -427,7 +438,8 @@
         "2026-01-29",
         "2026-01-30",
         "2026-02-04",
-        "2026-02-05"
+        "2026-02-05",
+        "2026-03-09"
       ]
     },
     {
@@ -513,14 +525,15 @@
       "stack": [
         "Python3"
       ],
-      "description": "January 26, 2026\n\nAdded a timestamp to yaml so I kind of have a feeling which emails I should read first.\nAlso updated the script so it only processes unread emails instead of all emails.\nThen I ran the script again and I deleted everything from the gmail folders.\nHope I didn't miss anything :)\n\nDefinitely already noticed that I'm much more likely to open the emails from Obsidian than from my email app when I'm looking for something to do while waiting.",
+      "description": "January 26, 2026\n\nAdded a timestamp to yaml so I kind of have a feeling which emails I should read first.\nAlso updated the script so it only processes unread emails instead of all emails.\nThen I ran the script again and I deleted everything from the gmail folders.\nHope I didn't miss anything :)\n\nDefinitely already noticed that I'm much more likely to open the emails from Obsidian than from my email app when I'm looking for something to do while waiting. \n\n---\n\nMarch 9, 2026\n\nThe script was made to run in a virtual environment, which is great for security but which doesn't really work that well if it's only going to be used once a wek via a launch agent. \n\nSo I recreated it without the venv. Most packages were already installed globally anyway and it was a good moment to replace openai with claude.",
       "learnings": [],
       "cost": null,
       "status": "completed",
       "intensity": 1,
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Newsletter automater.md",
       "workDates": [
-        "2026-01-26"
+        "2026-01-26",
+        "2026-03-09"
       ]
     },
     {
