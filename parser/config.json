@@ -3,5 +3,5 @@
   "vibingFolderName": "Vibing",
   "outputPath": "./output/activity-data.json",
   "siteDataPath": "./site/data/activity-data.json",
-  "useWorkspaceFallback": false
+  "useWorkspaceFallback": true
 }

@@ -299,11 +299,18 @@ async function parseVibingNotes() {
 
       // Use workspace path
       const markdownFiles = await glob('**/*.md', { cwd: workspaceVibingPath });
-      console.log(`📁 Found ${markdownFiles.length} markdown files in workspace\n`);
+
+      // Filter out files that start with ! (e.g., !Project Ideas)
+      const filteredFiles = markdownFiles.filter(file => {
+        const basename = path.basename(file);
+        return !basename.startsWith('!');
+      });
+
+      console.log(`📁 Found ${markdownFiles.length} markdown files in workspace (${markdownFiles.length - filteredFiles.length} excluded)\n`);
 
       // Parse all files
       const projects = [];
-      for (const file of markdownFiles) {
+      for (const file of filteredFiles) {
         const fullPath = path.join(workspaceVibingPath, file);
         const result = parseProjectNote(fullPath);
         if (result) {
@@ -325,11 +332,18 @@ async function parseVibingNotes() {
 
   // Find all markdown files in Vibing folder
   const markdownFiles = await glob('**/*.md', { cwd: VIBING_PATH });
-  console.log(`📁 Found ${markdownFiles.length} markdown files in ${config.vibingFolderName}/\n`);
+
+  // Filter out files that start with ! (e.g., !Project Ideas)
+  const filteredFiles = markdownFiles.filter(file => {
+    const basename = path.basename(file);
+    return !basename.startsWith('!');
+  });
+
+  console.log(`📁 Found ${markdownFiles.length} markdown files in ${config.vibingFolderName}/ (${markdownFiles.length - filteredFiles.length} excluded)\n`);
 
   // Parse all files
   const projects = [];
-  for (const file of markdownFiles) {
+  for (const file of filteredFiles) {
     const fullPath = path.join(VIBING_PATH, file);
     const result = parseProjectNote(fullPath);
     if (result) {

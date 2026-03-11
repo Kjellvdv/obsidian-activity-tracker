@@ -6,7 +6,7 @@
 set -e
 
 # Change to project directory
-cd "/Users/kjellvandevyvere/Documents/Projects/Very Klear/Product Studio/obsidian-activity-tracker"
+cd "/Users/kjellvandevyvere/Projects/obsidian-activity-tracker"
 
 # Run parser
 echo "$(date): Running parser..."

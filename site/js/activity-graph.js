@@ -43,9 +43,19 @@ function updateStats() {
     const activeDays = Object.keys(activityData.dailyContributions).length;
     statCards[1].querySelector('.stat-value').textContent = activeDays;
 
-    // Latest project
+    // Latest project - find project with most recent work date
     if (activityData.projects.length > 0) {
-        const latestProject = activityData.projects[0];
+        const getLatestDate = (project) => {
+            if (project.workDates && Array.isArray(project.workDates) && project.workDates.length > 0) {
+                return Math.max(...project.workDates.map(d => new Date(d).getTime()));
+            }
+            return new Date(project.date).getTime();
+        };
+
+        const latestProject = activityData.projects.reduce((latest, current) => {
+            return getLatestDate(current) > getLatestDate(latest) ? current : latest;
+        });
+
         const latestProjectCard = statCards[2];
 
         latestProjectCard.querySelector('.stat-value').textContent = latestProject.title;
@@ -67,8 +77,8 @@ function generateContributionGraph() {
     // Calculate date range - 12 full calendar months
     const today = new Date();
 
-    // Start from the 1st of the month, 11 months ago
-    const startDate = new Date(today.getFullYear(), today.getMonth() - 11, 1);
+    // Start from the 1st of the month, 10 months ago
+    const startDate = new Date(today.getFullYear(), today.getMonth() - 10, 1);
 
     // End on the last day of current month
     const endDate = new Date(today.getFullYear(), today.getMonth() + 1, 0);
@@ -246,10 +256,26 @@ function hideTooltip() {
 function showRecentProjects() {
     const container = document.querySelector('.projects-list');
 
-    // Get 10 most recent projects
-    const recentProjects = activityData.projects.slice(0, 10);
+    // Sort projects by most recent work date
+    const sortedProjects = [...activityData.projects].sort((a, b) => {
+        // Get the most recent date for each project
+        const getLatestDate = (project) => {
+            if (project.workDates && Array.isArray(project.workDates) && project.workDates.length > 0) {
+                // If workDates exists, find the latest date in the array
+                return Math.max(...project.workDates.map(d => new Date(d).getTime()));
+            }
+            // Otherwise use the main date
+            return new Date(project.date).getTime();
+        };
 
-    recentProjects.forEach(project => {
+        const latestA = getLatestDate(a);
+        const latestB = getLatestDate(b);
+
+        return latestB - latestA; // Sort descending (most recent first)
+    });
+
+    // Display all projects (no limit)
+    sortedProjects.forEach(project => {
         const card = createProjectCard(project);
         container.appendChild(card);
     });
@@ -263,7 +289,14 @@ function createProjectCard(project) {
     card.className = 'project-card';
     card.onclick = () => showProjectModal(project);
 
-    const formattedDate = new Date(project.date).toLocaleDateString('en-US', {
+    // Get the most recent date for this project
+    let displayDate = project.date;
+    if (project.workDates && Array.isArray(project.workDates) && project.workDates.length > 0) {
+        const latestTimestamp = Math.max(...project.workDates.map(d => new Date(d).getTime()));
+        displayDate = new Date(latestTimestamp).toISOString().split('T')[0];
+    }
+
+    const formattedDate = new Date(displayDate).toLocaleDateString('en-US', {
         month: 'short',
         day: 'numeric',
         year: 'numeric'
