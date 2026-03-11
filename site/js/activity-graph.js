@@ -68,30 +68,29 @@ function updateStats() {
 }
 
 /**
- * Generate contribution graph for 12 full calendar months
+ * Generate contribution graph for exactly 52 weeks (GitHub-style)
  */
 function generateContributionGraph() {
     const graph = document.getElementById('contributionGraph');
     const monthsLabels = document.getElementById('monthsLabels');
 
-    // Calculate date range - 12 full calendar months
+    // Calculate date range - exactly 52 weeks
     const today = new Date();
+    const endDate = new Date(today);
 
-    // Start from the 1st of the month, 10 months ago
-    const startDate = new Date(today.getFullYear(), today.getMonth() - 10, 1);
-
-    // End on the last day of current month
-    const endDate = new Date(today.getFullYear(), today.getMonth() + 1, 0);
-
-    // Adjust start to the Monday on or before the 1st
-    const startDayOfWeek = startDate.getDay();
-    const daysToMonday = startDayOfWeek === 0 ? 6 : startDayOfWeek - 1;
-    startDate.setDate(startDate.getDate() - daysToMonday);
-
-    // Adjust end to the Sunday on or after the last day
+    // Adjust end to the most recent Sunday (or today if today is Sunday)
     const endDayOfWeek = endDate.getDay();
     const daysToSunday = endDayOfWeek === 0 ? 0 : 7 - endDayOfWeek;
     endDate.setDate(endDate.getDate() + daysToSunday);
+
+    // Start date is exactly 52 weeks (364 days) before the end date
+    const startDate = new Date(endDate);
+    startDate.setDate(startDate.getDate() - (52 * 7 - 1)); // 363 days back
+
+    // Adjust start to Monday (should already be Monday, but ensure it)
+    const startDayOfWeek = startDate.getDay();
+    const daysToMonday = startDayOfWeek === 0 ? 6 : startDayOfWeek - 1;
+    startDate.setDate(startDate.getDate() - daysToMonday);
 
     // Calculate number of weeks
     const totalDays = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24)) + 1;
@@ -234,12 +233,34 @@ function showTooltip(event, dateStr, dayData) {
         </div>
     `;
 
-    // Position tooltip
+    // Position tooltip (fixed positioning, so use viewport coordinates)
     const rect = event.target.getBoundingClientRect();
-    tooltip.style.left = `${rect.left + window.scrollX}px`;
-    tooltip.style.top = `${rect.bottom + window.scrollY + 8}px`;
 
+    // Start with default position (below the element)
+    let left = rect.left;
+    let top = rect.bottom + 8;
+
+    // Show tooltip temporarily to get its dimensions
     tooltip.classList.add('visible');
+    const tooltipRect = tooltip.getBoundingClientRect();
+
+    // Prevent tooltip from going off the right edge
+    if (left + tooltipRect.width > window.innerWidth - 10) {
+        left = window.innerWidth - tooltipRect.width - 10;
+    }
+
+    // Prevent tooltip from going off the left edge
+    if (left < 10) {
+        left = 10;
+    }
+
+    // If tooltip would go below viewport, show it above the element instead
+    if (top + tooltipRect.height > window.innerHeight - 10) {
+        top = rect.top - tooltipRect.height - 8;
+    }
+
+    tooltip.style.left = `${left}px`;
+    tooltip.style.top = `${top}px`;
 }
 
 /**

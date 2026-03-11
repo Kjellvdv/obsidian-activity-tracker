@@ -21,9 +21,15 @@ body {
 /* Header */
 .header {
     background: linear-gradient(135deg, #D76262 0%, #F59E0B 100%); /* Coral to Saffron */
-    padding: 60px 20px;
+    padding: 70px 20px 60px;
     text-align: center;
     border-bottom: 2px solid #D6D1CB; /* Subtle stone */
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 60px 20px;
+    }
 }
 
 .title {
@@ -42,22 +48,66 @@ body {
     font-weight: 400;
 }
 
-.button-text {
+/* Back Button */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.back-button a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font-family: 'Inter', sans-serif;
     font-size: 14px;
-    color: #D76262;
-    font-weight: 400;
-    text-decoration: none;
-}
-    
-.button {
-    text-align: left;
-    border: 1px;
+    font-weight: 500;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
-    background-color: white;
-    max-width: 10%;
-    padding: 10px;
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
+.back-button a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateX(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.back-button a:active {
+    transform: translateX(-2px);
+}
+
+.back-button a::before {
+    content: "←";
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Mobile: Make button more prominent and easier to tap */
+@media (max-width: 768px) {
+    .back-button {
+        position: static;
+        margin: 0;
+        padding: 16px 20px 0;
+        background: linear-gradient(135deg, #D76262 0%, #F59E0B 100%);
+    }
+
+    .back-button a {
+        width: 100%;
+        justify-content: center;
+        font-size: 15px;
+        padding: 12px 20px;
+        background: rgba(255, 255, 255, 0.25);
+    }
 }
 
 /* Main Content */
