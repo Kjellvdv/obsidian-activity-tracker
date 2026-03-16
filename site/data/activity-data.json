@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-03-15T08:00:00.886Z",
+    "generated": "2026-03-16T08:00:00.617Z",
     "totalProjects": 16,
     "dateRange": {
       "start": "2026-01-16",
-      "end": "2026-03-11"
+      "end": "2026-03-15"
     }
   },
   "dailyContributions": {
@@ -29,6 +29,14 @@
     "2026-03-05": {
       "intensity": 4,
       "projectCount": 3,
+      "vibeTools": [
+        "ChatGPT",
+        "Claude Code"
+      ]
+    },
+    "2026-03-15": {
+      "intensity": 4,
+      "projectCount": 2,
       "vibeTools": [
         "ChatGPT",
         "Claude Code"
@@ -72,7 +80,7 @@
       ]
     },
     "2026-03-09": {
-      "intensity": 3,
+      "intensity": 4,
       "projectCount": 4,
       "vibeTools": [
         "Claude Code",
@@ -98,7 +106,7 @@
       ]
     },
     "2026-02-20": {
-      "intensity": 2,
+      "intensity": 4,
       "projectCount": 1,
       "vibeTools": [
         "Claude Code"
@@ -312,16 +320,17 @@
         "Claude API",
         "Obsidian"
       ],
-      "description": "February 20, 2026\n\nI built a personal goals tracking system that manages my career progression from daily activities up to my 15-year vision. The system lets me log daily work, set weekly goals, track quarterly objectives, and maintain long-term visions for 2030, 2035, and 2040. Every Friday when I log my activities, it automatically generates a weekly overview markdown file and saves it to my Obsidian vault in the \"Weekly B2B notes\" folder.\n\nI also integrated Claude AI so I can chat about my goals and progress. I can ask questions like \"When did I last work on coffee-rater?\" or \"What activities aren't aligned with my long-term vision?\" and Claude analyzes my last 30 days of activities and all my goals to give me contextual answers. The chat remembers our conversation and helps me stay aligned with my 2030/2035/2040 vision milestones.\n\n---\n\nMarch 5, 2026\n\nAI chat button wasn't working. I had to update some packages to make it work again.\n\nThe fact that this chat works with my memories/notes from the past weeks and aligns them with future goals and can guide me on what is useful and what is not, is insane.\n\n---\n\nMarch 9, 2026\n\nIt looks like the automatic weekly summaries aren't being made, so I have to look into this. And while i'm doing this, I should probably include a check to complete missing info and see if I've crossed off all my weekly goals.\n\nThe easiest way for this, i think, is a screen with all the daily entries of the past 4 weeks. This way, I can edit and add information easily. I can also manually generate a summary for the missing weeks, once the info is completed.",
+      "description": "February 20, 2026\n\nI built a personal goals tracking system that manages my career progression from daily activities up to my 15-year vision. The system lets me log daily work, set weekly goals, track quarterly objectives, and maintain long-term visions for 2030, 2035, and 2040. Every Friday when I log my activities, it automatically generates a weekly overview markdown file and saves it to my Obsidian vault in the \"Weekly B2B notes\" folder.\n\nI also integrated Claude AI so I can chat about my goals and progress. I can ask questions like \"When did I last work on coffee-rater?\" or \"What activities aren't aligned with my long-term vision?\" and Claude analyzes my last 30 days of activities and all my goals to give me contextual answers. The chat remembers our conversation and helps me stay aligned with my 2030/2035/2040 vision milestones.\n\n---\n\nMarch 5, 2026\n\nAI chat button wasn't working. I had to update some packages to make it work again.\n\nThe fact that this chat works with my memories/notes from the past weeks and aligns them with future goals and can guide me on what is useful and what is not, is insane.\n\n---\n\nMarch 9, 2026\n\nIt looks like the automatic weekly summaries aren't being made, so I have to look into this. And while i'm doing this, I should probably include a check to complete missing info and see if I've crossed off all my weekly goals.\n\nThe easiest way for this, i think, is a screen with all the daily entries of the past 4 weeks. This way, I can edit and add information easily. I can also manually generate a summary for the missing weeks, once the info is completed.\n\n---\n\nMarch 15, 2026\n\n\"Really happy but looks like weekly and quarterly goals can't be checked off yet. Would need this capability + an overview of weekly goals that have or have not been accomplished + maybe some graphs.\n\nNow I can chat with the AI to talk about my progress, but would be nice if i got feedback autonomously. One way is to have the AI link my weekly notes to my quarterly goals and long-term vision and write a few lines about that in the summary.\n\nBut I think i should also export a more comprehensive quarterly report based on everything from the past month. Should look into reports/frameworks to make the most of this.\"\n\nSent all of this to Claude in plan mode. GREAT decision as it mapped out changes and allowed me to fine-tune the next steps.\n\n Check-off weekly/quarterly goals — Checkbox forms on the dashboard toggle active ↔ completed. Failed goals show a red strikethrough with a \"Mark done\" button.                                                \n  Weekly goals overview with chart — /history/weekly now shows a stacked Chart.js bar chart (completed/failed/active per week) and per-week completion badges (\"2 / 3 done · 1 failed\") with toggle buttons.       \n\n  AI reflection in weekly Obsidian export — generateweeklyoverview() now calls Claude with your visions, quarterly goals, and week's activities to write a 2-3 sentence \"Reflection\" subsection at the top of the summary.\n\n  Failed status for expired goals — expireoldgoals() runs on every dashboard load, auto-failing any weekly goal where week_end < today and any quarterly goal where the quarter has ended. Shown in red strikethrough everywhere.                                                                                                                                                                                           \n    Quarterly report — \"📊 Generate Quarterly Report\" button in the footer. POSTs to /report/quarterly/export, calls Claude for Vision Alignment + Retrospective + Focus sections, interleaves OKR-style goal completion stats and week-by-week progress table, writes 2026 - Q1 quarterly review.md to your Obsidian weekly notes folder.",
       "learnings": [],
       "cost": null,
       "status": "completed",
-      "intensity": 2,
+      "intensity": 4,
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Planner and goal-tracker.md",
       "workDates": [
         "2026-02-20",
         "2026-03-05",
-        "2026-03-09"
+        "2026-03-09",
+        "2026-03-15"
       ]
     },
     {
@@ -571,7 +580,7 @@
         "HTML",
         "Fetch API"
       ],
-      "description": "January 16, 2026\n\nFirst time working with Claude Code. Developed fully locally.\nLearning here is that the main file is definitely too large. \nWondering why CSS isn't separated for example.\nAlso the stack was too light to make it work visually, but again maybe it's related to the CSS too.\nGood but expensive learning experience (around 28$)\n\n---\n\nJanuary 27, 2026\nConverted desktop app to web app - Transformed the CustomTkinter desktop wardrobe manager into a Flask-based web application\nUnified database - Merged separate wardrobe.db and wardrobe_fer.db into single database with `wardrobe` field to distinguish owners\nAdded search & filter - Implemented debounced search (300ms), type filtering, and sorting by rating/brand/date\nBuilt REST API - Created 10+ Flask endpoints for CRUD operations, search, filter, sort, and undo functionality\nVanilla JS frontend - Developed SPA with state management, API client, and modular components (ItemCard, ItemModal, SearchFilter)\nCSS theme system - Implemented CSS variables for instant theme switching between Kjell's earthy and Fer's pink color schemes\nPreserved features - Maintained all original functionality: color-coded cards, 10-star ratings, color picker, edit/delete with undo\nMigrated 72 items - Successfully transferred all items from Kjell's wardrobe with full data integrity and backups\nResponsive design - Built mobile-friendly grid layout with auto-fill columns and media queries for various screen sizes\nComplete documentation - Created README, INSTALL, QUICKSTART guides plus verification scripts for easy setup and troubleshooting\n\nKey Features\n• View items organized by clothing type\n• Add/edit/delete items with confirmation\n• Color-coded item cards with contrast text\n• 10-star rating system\n• Color picker for custom colors\n• Switch between Kjell's and Fer's wardrobes\n• Undo delete (10-second window)\n• Automatic data persistence\n• Search - Full-text search across brand, model, materials with debouncing\n• Filter - Dropdown to filter by specific clothing type\n• Sort - Multiple sort options (rating desc, brand asc, date desc)\n• Responsive - Mobile-friendly grid layout\n• Keyboard shortcuts - ESC to close modals\n• Real-time updates - Observer pattern for reactive UI\n• API access - RESTful endpoints for external integration\n\n---\n\nMarch 5, 2026\n\nSome time ago, I added a shortcut so I can launch the app by typing \"wardrobe\" in terminal. That's pretty easy. Made some tiny changes today:\n• Renamed categories that were still in Dutch\n• Reorganised by tops and bottoms instead of alphabetically.\n• Made categories collapsable.\n\nClaude took care of it while I took a break. What a life.",
+      "description": "January 16, 2026\n\nFirst time working with Claude Code. Developed fully locally.\nLearning here is that the main file is definitely too large. \nWondering why CSS isn't separated for example.\nAlso the stack was too light to make it work visually, but again maybe it's related to the CSS too.\nGood but expensive learning experience (around 28$)\n\n---\n\nJanuary 27, 2026\nConverted desktop app to web app - Transformed the CustomTkinter desktop wardrobe manager into a Flask-based web application\nUnified database - Merged separate wardrobe.db and wardrobe_fer.db into single database with `wardrobe` field to distinguish owners\nAdded search & filter - Implemented debounced search (300ms), type filtering, and sorting by rating/brand/date\nBuilt REST API - Created 10+ Flask endpoints for CRUD operations, search, filter, sort, and undo functionality\nVanilla JS frontend - Developed SPA with state management, API client, and modular components (ItemCard, ItemModal, SearchFilter)\nCSS theme system - Implemented CSS variables for instant theme switching between Kjell's earthy and Fer's pink color schemes\nPreserved features - Maintained all original functionality: color-coded cards, 10-star ratings, color picker, edit/delete with undo\nMigrated 72 items - Successfully transferred all items from Kjell's wardrobe with full data integrity and backups\nResponsive design - Built mobile-friendly grid layout with auto-fill columns and media queries for various screen sizes\nComplete documentation - Created README, INSTALL, QUICKSTART guides plus verification scripts for easy setup and troubleshooting\n\nKey Features\n• View items organized by clothing type\n• Add/edit/delete items with confirmation\n• Color-coded item cards with contrast text\n• 10-star rating system\n• Color picker for custom colors\n• Switch between Kjell's and Fer's wardrobes\n• Undo delete (10-second window)\n• Automatic data persistence\n• Search - Full-text search across brand, model, materials with debouncing\n• Filter - Dropdown to filter by specific clothing type\n• Sort - Multiple sort options (rating desc, brand asc, date desc)\n• Responsive - Mobile-friendly grid layout\n• Keyboard shortcuts - ESC to close modals\n• Real-time updates - Observer pattern for reactive UI\n• API access - RESTful endpoints for external integration\n\n---\n\nMarch 5, 2026\n\nSome time ago, I added a shortcut so I can launch the app by typing \"wardrobe\" in terminal. That's pretty easy. Made some tiny changes today:\n• Renamed categories that were still in Dutch\n• Reorganised by tops and bottoms instead of alphabetically.\n• Made categories collapsable.\n\nClaude took care of it while I took a break. What a life.\n\n---\n\nMarch 15, 2026\n• Added a purchase date\n• Fixing styling because everything has different font sizes. Brand a bit bigger, the rest same size.\n• Saving cards when hitting enter\n• Checkbox for \"approved brands\" -> shows check next to brand in overview.",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -580,7 +589,8 @@
       "workDates": [
         "2026-01-16",
         "2026-01-27",
-        "2026-03-05"
+        "2026-03-05",
+        "2026-03-15"
       ]
     },
     {
