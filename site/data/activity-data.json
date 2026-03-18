@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-03-17T08:07:09.569Z",
+    "generated": "2026-03-18T08:00:02.232Z",
     "totalProjects": 16,
     "dateRange": {
       "start": "2026-01-16",
-      "end": "2026-03-15"
+      "end": "2026-03-17"
     }
   },
   "dailyContributions": {
@@ -128,6 +128,13 @@
     "2026-03-07": {
       "intensity": 3,
       "projectCount": 2,
+      "vibeTools": [
+        "Claude Code"
+      ]
+    },
+    "2026-03-17": {
+      "intensity": 3,
+      "projectCount": 1,
       "vibeTools": [
         "Claude Code"
       ]
@@ -268,7 +275,7 @@
         "Typescript",
         "Claude API"
       ],
-      "description": "March 5, 2026\n\nThought it's about time to create my own social media engine :) Of course, we're doing great work over at Willow, but we're not at a level (yet?) were I can just use my Obsidian notes as the foundation for my content strategy.\n\nSo today we're building a clean interface and self-learning content system that has a weekly rotation of 5 topics:\n• product marketing\n• lesson from last week\n• ux law \n• cool story combined with marketing lesson\n• random marketing topic\n\nSome things that I find important:\n• apparently it's better to ask for a social media post instead of a linkedin post\n• every day/category will have a different skill.\n• i will always have the change to edit and review. Approved drafts are saved to improve future output. \n\nOnce approved, my LinkedIn image skill will create a visual for it. \nFirst impression is great, but it still needs some work on the writing style. Hashtags, really Claude? I'll have to fine-tune that a bit, and then...\n\nLet's see how this does for a week :) \n\n## next time\n• work with most recent note for weekly progress \n• work with most recently updated for vibing\n• dates don't match the right day. \n\n---\n\nMarch 7, 2026\n\nI let Claude write skills for every category of post, then I edited them manually. Unfortunately, the planner can't work directly with the skills, but the prompts were integrated into the existing tool. Since it will take into account the last five approved drafts for writing a new one, the system should still be kind of self-learning, only the prompt itself won't be updated automatically (if needed)\n\nLater, I can set up an \"update skills with examples workflow\" to see if that does have a significant impact on the quality. But let's test the quality first.\n\n---\n\nMarch 9, 2026\n\n I noticed that for the product marketing posts, all the obsidian notes were being loaded, but I need only one note as source for a draft. For weekly updates, it should always be based on the most recent entry\n\n once approved, then what: create image with claude skill:\n\n You click Approve → post is saved as approved → infographic generation starts automatically     Topbar shows \"Generating infographic…\" spinner (purple)                                                                 When done → \"Open infographic\" link appears → opens the HTML file in a new tab                      You screenshot it in the browser and it's ready for LinkedIn\n\n never use hashtags",
+      "description": "March 5, 2026\n\nThought it's about time to create my own social media engine :) Of course, we're doing great work over at Willow, but we're not at a level (yet?) were I can just use my Obsidian notes as the foundation for my content strategy.\n\nSo today we're building a clean interface and self-learning content system that has a weekly rotation of 5 topics:\n• product marketing\n• lesson from last week\n• ux law \n• cool story combined with marketing lesson\n• random marketing topic\n\nSome things that I find important:\n• apparently it's better to ask for a social media post instead of a linkedin post\n• every day/category will have a different skill.\n• i will always have the change to edit and review. Approved drafts are saved to improve future output. \n\nOnce approved, my LinkedIn image skill will create a visual for it. \nFirst impression is great, but it still needs some work on the writing style. Hashtags, really Claude? I'll have to fine-tune that a bit, and then...\n\nLet's see how this does for a week :) \n\n## next time\n• work with most recent note for weekly progress \n• work with most recently updated for vibing\n• dates don't match the right day. \n\n---\n\nMarch 7, 2026\n\nI let Claude write skills for every category of post, then I edited them manually. Unfortunately, the planner can't work directly with the skills, but the prompts were integrated into the existing tool. Since it will take into account the last five approved drafts for writing a new one, the system should still be kind of self-learning, only the prompt itself won't be updated automatically (if needed)\n\nLater, I can set up an \"update skills with examples workflow\" to see if that does have a significant impact on the quality. But let's test the quality first.\n\n---\n\nMarch 9, 2026\n\n I noticed that for the product marketing posts, all the obsidian notes were being loaded, but I need only one note as source for a draft. For weekly updates, it should always be based on the most recent entry\n\n once approved, then what: create image with claude skill:\n\n You click Approve → post is saved as approved → infographic generation starts automatically     Topbar shows \"Generating infographic…\" spinner (purple)                                                                 When done → \"Open infographic\" link appears → opens the HTML file in a new tab                      You screenshot it in the browser and it's ready for LinkedIn\n\n never use hashtags\n\n---\n\nMarch 17, 2026\n\nWhile tinkering with Claude Cowork for Willow this morning, I found a way to create html visuals with a download button. It works really well for Willow so I wanted to implement this as well for my own visual creation skill.\n\nAfter doing that, I still had to make sure that the tool call the right skill at the right time to generate the visual.\n\nStill not entirely happy with some of the writing prompts, however, but hope this will improve over time as I have more approved posts.",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -277,7 +284,8 @@
       "workDates": [
         "2026-03-05",
         "2026-03-07",
-        "2026-03-09"
+        "2026-03-09",
+        "2026-03-17"
       ]
     },
     {
