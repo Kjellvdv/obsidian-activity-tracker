@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-03-24T08:00:00.758Z",
+    "generated": "2026-03-25T08:00:01.379Z",
     "totalProjects": 17,
     "dateRange": {
       "start": "2001-03-19",
-      "end": "2026-03-17"
+      "end": "2026-03-24"
     }
   },
   "dailyContributions": {
@@ -113,6 +113,20 @@
       ]
     },
     "2026-02-20": {
+      "intensity": 4,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code"
+      ]
+    },
+    "2026-03-16": {
+      "intensity": 4,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code"
+      ]
+    },
+    "2026-03-24": {
       "intensity": 4,
       "projectCount": 1,
       "vibeTools": [
@@ -335,7 +349,7 @@
         "Claude API",
         "Obsidian"
       ],
-      "description": "February 20, 2026\n\nI built a personal goals tracking system that manages my career progression from daily activities up to my 15-year vision. The system lets me log daily work, set weekly goals, track quarterly objectives, and maintain long-term visions for 2030, 2035, and 2040. Every Friday when I log my activities, it automatically generates a weekly overview markdown file and saves it to my Obsidian vault in the \"Weekly B2B notes\" folder.\n\nI also integrated Claude AI so I can chat about my goals and progress. I can ask questions like \"When did I last work on coffee-rater?\" or \"What activities aren't aligned with my long-term vision?\" and Claude analyzes my last 30 days of activities and all my goals to give me contextual answers. The chat remembers our conversation and helps me stay aligned with my 2030/2035/2040 vision milestones.\n\n---\n\nMarch 5, 2026\n\nAI chat button wasn't working. I had to update some packages to make it work again.\n\nThe fact that this chat works with my memories/notes from the past weeks and aligns them with future goals and can guide me on what is useful and what is not, is insane.\n\n---\n\nMarch 9, 2026\n\nIt looks like the automatic weekly summaries aren't being made, so I have to look into this. And while i'm doing this, I should probably include a check to complete missing info and see if I've crossed off all my weekly goals.\n\nThe easiest way for this, i think, is a screen with all the daily entries of the past 4 weeks. This way, I can edit and add information easily. I can also manually generate a summary for the missing weeks, once the info is completed.\n\n---\n\nMarch 15, 2026\n\n\"Really happy but looks like weekly and quarterly goals can't be checked off yet. Would need this capability + an overview of weekly goals that have or have not been accomplished + maybe some graphs.\n\nNow I can chat with the AI to talk about my progress, but would be nice if i got feedback autonomously. One way is to have the AI link my weekly notes to my quarterly goals and long-term vision and write a few lines about that in the summary.\n\nBut I think i should also export a more comprehensive quarterly report based on everything from the past month. Should look into reports/frameworks to make the most of this.\"\n\nSent all of this to Claude in plan mode. GREAT decision as it mapped out changes and allowed me to fine-tune the next steps.\n\n Check-off weekly/quarterly goals — Checkbox forms on the dashboard toggle active ↔ completed. Failed goals show a red strikethrough with a \"Mark done\" button.                                                \n  Weekly goals overview with chart — /history/weekly now shows a stacked Chart.js bar chart (completed/failed/active per week) and per-week completion badges (\"2 / 3 done · 1 failed\") with toggle buttons.       \n\n  AI reflection in weekly Obsidian export — generateweeklyoverview() now calls Claude with your visions, quarterly goals, and week's activities to write a 2-3 sentence \"Reflection\" subsection at the top of the summary.\n\n  Failed status for expired goals — expireoldgoals() runs on every dashboard load, auto-failing any weekly goal where week_end < today and any quarterly goal where the quarter has ended. Shown in red strikethrough everywhere.                                                                                                                                                                                           \n    Quarterly report — \"📊 Generate Quarterly Report\" button in the footer. POSTs to /report/quarterly/export, calls Claude for Vision Alignment + Retrospective + Focus sections, interleaves OKR-style goal completion stats and week-by-week progress table, writes 2026 - Q1 quarterly review.md to your Obsidian weekly notes folder.",
+      "description": "February 20, 2026\n\nI built a personal goals tracking system that manages my career progression from daily activities up to my 15-year vision. The system lets me log daily work, set weekly goals, track quarterly objectives, and maintain long-term visions for 2030, 2035, and 2040. Every Friday when I log my activities, it automatically generates a weekly overview markdown file and saves it to my Obsidian vault in the \"Weekly B2B notes\" folder.\n\nI also integrated Claude AI so I can chat about my goals and progress. I can ask questions like \"When did I last work on coffee-rater?\" or \"What activities aren't aligned with my long-term vision?\" and Claude analyzes my last 30 days of activities and all my goals to give me contextual answers. The chat remembers our conversation and helps me stay aligned with my 2030/2035/2040 vision milestones.\n\n---\n\nMarch 5, 2026\n\nAI chat button wasn't working. I had to update some packages to make it work again.\n\nThe fact that this chat works with my memories/notes from the past weeks and aligns them with future goals and can guide me on what is useful and what is not, is insane.\n\n---\n\nMarch 9, 2026\n\nIt looks like the automatic weekly summaries aren't being made, so I have to look into this. And while i'm doing this, I should probably include a check to complete missing info and see if I've crossed off all my weekly goals.\n\nThe easiest way for this, i think, is a screen with all the daily entries of the past 4 weeks. This way, I can edit and add information easily. I can also manually generate a summary for the missing weeks, once the info is completed.\n\n---\n\nMarch 15, 2026\n\n\"Really happy but looks like weekly and quarterly goals can't be checked off yet. Would need this capability + an overview of weekly goals that have or have not been accomplished + maybe some graphs.\n\nNow I can chat with the AI to talk about my progress, but would be nice if i got feedback autonomously. One way is to have the AI link my weekly notes to my quarterly goals and long-term vision and write a few lines about that in the summary.\n\nBut I think i should also export a more comprehensive quarterly report based on everything from the past month. Should look into reports/frameworks to make the most of this.\"\n\nSent all of this to Claude in plan mode. GREAT decision as it mapped out changes and allowed me to fine-tune the next steps.\n\n Check-off weekly/quarterly goals — Checkbox forms on the dashboard toggle active ↔ completed. Failed goals show a red strikethrough with a \"Mark done\" button.                                                \n  Weekly goals overview with chart — /history/weekly now shows a stacked Chart.js bar chart (completed/failed/active per week) and per-week completion badges (\"2 / 3 done · 1 failed\") with toggle buttons.       \n\n  AI reflection in weekly Obsidian export — generateweeklyoverview() now calls Claude with your visions, quarterly goals, and week's activities to write a 2-3 sentence \"Reflection\" subsection at the top of the summary.\n\n  Failed status for expired goals — expireoldgoals() runs on every dashboard load, auto-failing any weekly goal where week_end < today and any quarterly goal where the quarter has ended. Shown in red strikethrough everywhere.                                                                                                                                                                                           \n    Quarterly report — \"📊 Generate Quarterly Report\" button in the footer. POSTs to /report/quarterly/export, calls Claude for Vision Alignment + Retrospective + Focus sections, interleaves OKR-style goal completion stats and week-by-week progress table, writes 2026 - Q1 quarterly review.md to your Obsidian weekly notes folder.\n\n---\n\nMarch 16, 2026\n\nAlso might need to look into the size of the database. at what stage does it become an issue? Perhaps I can clean the database's daily entries after 6 months since everything should be in Obsidian by then anyway. On the other hand, if it's just text entries, it doesn't take a lot of memory.\n\nFeels like the summary is a python script, and not an AI summary because it's pretty long and almost identical to the daily entries...\n\n---\n\nMarch 24, 2026\n\nTrying to hook up my calendar to create daily entries automatically.",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -345,7 +359,9 @@
         "2026-02-20",
         "2026-03-05",
         "2026-03-09",
-        "2026-03-15"
+        "2026-03-15",
+        "2026-03-16",
+        "2026-03-24"
       ]
     },
     {
