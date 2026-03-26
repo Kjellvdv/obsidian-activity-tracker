@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-03-25T08:00:01.379Z",
+    "generated": "2026-03-26T08:00:03.081Z",
     "totalProjects": 17,
     "dateRange": {
-      "start": "2001-03-19",
-      "end": "2026-03-24"
+      "start": "2026-01-16",
+      "end": "2026-03-25"
     }
   },
   "dailyContributions": {
@@ -88,13 +88,6 @@
         "ChatGPT"
       ]
     },
-    "2001-03-19": {
-      "intensity": 1,
-      "projectCount": 1,
-      "vibeTools": [
-        "Claude Code"
-      ]
-    },
     "2026-01-28": {
       "intensity": 2,
       "projectCount": 1,
@@ -131,6 +124,14 @@
       "projectCount": 1,
       "vibeTools": [
         "Claude Code"
+      ]
+    },
+    "2026-03-25": {
+      "intensity": 4,
+      "projectCount": 3,
+      "vibeTools": [
+        "Claude Code",
+        "Le Chat"
       ]
     },
     "2026-03-11": {
@@ -247,6 +248,33 @@
   },
   "projects": [
     {
+      "id": "icp,-positioning-and-messaging-agents",
+      "date": "2026-03-25",
+      "title": "ICP, positioning and messaging agents",
+      "vibeTools": [
+        "Claude Code",
+        "Le Chat"
+      ],
+      "stack": [
+        "Flask",
+        "Claude API",
+        "WeasyPrint",
+        "Jinja2",
+        "Vanilla JS",
+        "CSS",
+        "JSON"
+      ],
+      "description": "March 25, 2026\n\nI started with an agent in Mistral's chat because I wanted to create like a nice framework combining three existing documents to create ICPs, positioning frameworks, and messaging ideas. But when I started talking, it suggested the agency works together so that changes to customer talks would influence ICP, that would then influence the positioning, and that positioning would then source new messaging. I really liked that idea, so I wanted to have that automation, and so I asked the chat to continue exploring the idea, but it was very focused on having this in the cloud with Zapier, with Make, with all sorts of different tools. So instead, I decided to take the input from the chat, put it into Cloud in plan mode, have it look at other tools that are existing, and then recreate a new one that will follow the agentic flows as suggested by the chat. So now it's taking the front-end UI from my planner and goal tracker to make this new tab with everything linked to each other. Now let's see!\n\nI didn't do a terrific job of importing my existing templates for ICP and positioning but with some tweak we'll get there. I also will ask claude to analyse my product marketing notes to find further improvements.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 3,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/ICP, positioning and messaging agents.md",
+      "workDates": [
+        "2026-03-25"
+      ]
+    },
+    {
       "id": "personal-marketing-assistant",
       "date": "2026-03-11",
       "title": "Personal marketing assistant",
@@ -296,7 +324,7 @@
         "Typescript",
         "Claude API"
       ],
-      "description": "March 5, 2026\n\nThought it's about time to create my own social media engine :) Of course, we're doing great work over at Willow, but we're not at a level (yet?) were I can just use my Obsidian notes as the foundation for my content strategy.\n\nSo today we're building a clean interface and self-learning content system that has a weekly rotation of 5 topics:\n• product marketing\n• lesson from last week\n• ux law \n• cool story combined with marketing lesson\n• random marketing topic\n\nSome things that I find important:\n• apparently it's better to ask for a social media post instead of a linkedin post\n• every day/category will have a different skill.\n• i will always have the change to edit and review. Approved drafts are saved to improve future output. \n\nOnce approved, my LinkedIn image skill will create a visual for it. \nFirst impression is great, but it still needs some work on the writing style. Hashtags, really Claude? I'll have to fine-tune that a bit, and then...\n\nLet's see how this does for a week :) \n\n## next time\n• work with most recent note for weekly progress \n• work with most recently updated for vibing\n• dates don't match the right day. \n\n---\n\nMarch 7, 2026\n\nI let Claude write skills for every category of post, then I edited them manually. Unfortunately, the planner can't work directly with the skills, but the prompts were integrated into the existing tool. Since it will take into account the last five approved drafts for writing a new one, the system should still be kind of self-learning, only the prompt itself won't be updated automatically (if needed)\n\nLater, I can set up an \"update skills with examples workflow\" to see if that does have a significant impact on the quality. But let's test the quality first.\n\n---\n\nMarch 9, 2026\n\n I noticed that for the product marketing posts, all the obsidian notes were being loaded, but I need only one note as source for a draft. For weekly updates, it should always be based on the most recent entry\n\n once approved, then what: create image with claude skill:\n\n You click Approve → post is saved as approved → infographic generation starts automatically     Topbar shows \"Generating infographic…\" spinner (purple)                                                                 When done → \"Open infographic\" link appears → opens the HTML file in a new tab                      You screenshot it in the browser and it's ready for LinkedIn\n\n never use hashtags\n\n---\n\nMarch 17, 2026\n\nWhile tinkering with Claude Cowork for Willow this morning, I found a way to create html visuals with a download button. It works really well for Willow so I wanted to implement this as well for my own visual creation skill.\n\nAfter doing that, I still had to make sure that the tool call the right skill at the right time to generate the visual.\n\nStill not entirely happy with some of the writing prompts, however, but hope this will improve over time as I have more approved posts.",
+      "description": "March 5, 2026\n\nThought it's about time to create my own social media engine :) Of course, we're doing great work over at Willow, but we're not at a level (yet?) were I can just use my Obsidian notes as the foundation for my content strategy.\n\nSo today we're building a clean interface and self-learning content system that has a weekly rotation of 5 topics:\n• product marketing\n• lesson from last week\n• ux law \n• cool story combined with marketing lesson\n• random marketing topic\n\nSome things that I find important:\n• apparently it's better to ask for a social media post instead of a linkedin post\n• every day/category will have a different skill.\n• i will always have the change to edit and review. Approved drafts are saved to improve future output. \n\nOnce approved, my LinkedIn image skill will create a visual for it. \nFirst impression is great, but it still needs some work on the writing style. Hashtags, really Claude? I'll have to fine-tune that a bit, and then...\n\nLet's see how this does for a week :) \n\n## next time\n• work with most recent note for weekly progress \n• work with most recently updated for vibing\n• dates don't match the right day. \n\n---\n\nMarch 7, 2026\n\nI let Claude write skills for every category of post, then I edited them manually. Unfortunately, the planner can't work directly with the skills, but the prompts were integrated into the existing tool. Since it will take into account the last five approved drafts for writing a new one, the system should still be kind of self-learning, only the prompt itself won't be updated automatically (if needed)\n\nLater, I can set up an \"update skills with examples workflow\" to see if that does have a significant impact on the quality. But let's test the quality first.\n\n---\n\nMarch 9, 2026\n\n I noticed that for the product marketing posts, all the obsidian notes were being loaded, but I need only one note as source for a draft. For weekly updates, it should always be based on the most recent entry\n\n once approved, then what: create image with claude skill:\n\n You click Approve → post is saved as approved → infographic generation starts automatically     Topbar shows \"Generating infographic…\" spinner (purple)                                                                 When done → \"Open infographic\" link appears → opens the HTML file in a new tab                      You screenshot it in the browser and it's ready for LinkedIn\n\n never use hashtags\n\n---\n\nMarch 17, 2026\n\nWhile tinkering with Claude Cowork for Willow this morning, I found a way to create html visuals with a download button. It works really well for Willow so I wanted to implement this as well for my own visual creation skill.\n\nAfter doing that, I still had to make sure that the tool call the right skill at the right time to generate the visual.\n\nStill not entirely happy with some of the writing prompts, however, but hope this will improve over time as I have more approved posts.\n\n---\n\nMarch 25, 2026\n\nAfter a chat with Hans van Gent, I decided to include an analysis feature in the content planner. On the one hand, it'll analyse my data and give me feedback on what content does and does not work.\nOn the other hand, I want it to focus heavily on content categories and keywords to make sure my content stays aligned with my profile and goals. (inspired by looking at Favikon rankings)",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -306,7 +334,8 @@
         "2026-03-05",
         "2026-03-07",
         "2026-03-09",
-        "2026-03-17"
+        "2026-03-17",
+        "2026-03-25"
       ]
     },
     {
@@ -347,9 +376,12 @@
         "HTML",
         "Vanilla CSS",
         "Claude API",
-        "Obsidian"
+        "Obsidian",
+        "OpenAI Whisper",
+        "Jinja2",
+        "CSS"
       ],
-      "description": "February 20, 2026\n\nI built a personal goals tracking system that manages my career progression from daily activities up to my 15-year vision. The system lets me log daily work, set weekly goals, track quarterly objectives, and maintain long-term visions for 2030, 2035, and 2040. Every Friday when I log my activities, it automatically generates a weekly overview markdown file and saves it to my Obsidian vault in the \"Weekly B2B notes\" folder.\n\nI also integrated Claude AI so I can chat about my goals and progress. I can ask questions like \"When did I last work on coffee-rater?\" or \"What activities aren't aligned with my long-term vision?\" and Claude analyzes my last 30 days of activities and all my goals to give me contextual answers. The chat remembers our conversation and helps me stay aligned with my 2030/2035/2040 vision milestones.\n\n---\n\nMarch 5, 2026\n\nAI chat button wasn't working. I had to update some packages to make it work again.\n\nThe fact that this chat works with my memories/notes from the past weeks and aligns them with future goals and can guide me on what is useful and what is not, is insane.\n\n---\n\nMarch 9, 2026\n\nIt looks like the automatic weekly summaries aren't being made, so I have to look into this. And while i'm doing this, I should probably include a check to complete missing info and see if I've crossed off all my weekly goals.\n\nThe easiest way for this, i think, is a screen with all the daily entries of the past 4 weeks. This way, I can edit and add information easily. I can also manually generate a summary for the missing weeks, once the info is completed.\n\n---\n\nMarch 15, 2026\n\n\"Really happy but looks like weekly and quarterly goals can't be checked off yet. Would need this capability + an overview of weekly goals that have or have not been accomplished + maybe some graphs.\n\nNow I can chat with the AI to talk about my progress, but would be nice if i got feedback autonomously. One way is to have the AI link my weekly notes to my quarterly goals and long-term vision and write a few lines about that in the summary.\n\nBut I think i should also export a more comprehensive quarterly report based on everything from the past month. Should look into reports/frameworks to make the most of this.\"\n\nSent all of this to Claude in plan mode. GREAT decision as it mapped out changes and allowed me to fine-tune the next steps.\n\n Check-off weekly/quarterly goals — Checkbox forms on the dashboard toggle active ↔ completed. Failed goals show a red strikethrough with a \"Mark done\" button.                                                \n  Weekly goals overview with chart — /history/weekly now shows a stacked Chart.js bar chart (completed/failed/active per week) and per-week completion badges (\"2 / 3 done · 1 failed\") with toggle buttons.       \n\n  AI reflection in weekly Obsidian export — generateweeklyoverview() now calls Claude with your visions, quarterly goals, and week's activities to write a 2-3 sentence \"Reflection\" subsection at the top of the summary.\n\n  Failed status for expired goals — expireoldgoals() runs on every dashboard load, auto-failing any weekly goal where week_end < today and any quarterly goal where the quarter has ended. Shown in red strikethrough everywhere.                                                                                                                                                                                           \n    Quarterly report — \"📊 Generate Quarterly Report\" button in the footer. POSTs to /report/quarterly/export, calls Claude for Vision Alignment + Retrospective + Focus sections, interleaves OKR-style goal completion stats and week-by-week progress table, writes 2026 - Q1 quarterly review.md to your Obsidian weekly notes folder.\n\n---\n\nMarch 16, 2026\n\nAlso might need to look into the size of the database. at what stage does it become an issue? Perhaps I can clean the database's daily entries after 6 months since everything should be in Obsidian by then anyway. On the other hand, if it's just text entries, it doesn't take a lot of memory.\n\nFeels like the summary is a python script, and not an AI summary because it's pretty long and almost identical to the daily entries...\n\n---\n\nMarch 24, 2026\n\nTrying to hook up my calendar to create daily entries automatically.",
+      "description": "February 20, 2026\n\nI built a personal goals tracking system that manages my career progression from daily activities up to my 15-year vision. The system lets me log daily work, set weekly goals, track quarterly objectives, and maintain long-term visions for 2030, 2035, and 2040. Every Friday when I log my activities, it automatically generates a weekly overview markdown file and saves it to my Obsidian vault in the \"Weekly B2B notes\" folder.\n\nI also integrated Claude AI so I can chat about my goals and progress. I can ask questions like \"When did I last work on coffee-rater?\" or \"What activities aren't aligned with my long-term vision?\" and Claude analyzes my last 30 days of activities and all my goals to give me contextual answers. The chat remembers our conversation and helps me stay aligned with my 2030/2035/2040 vision milestones.\n\n---\n\nMarch 5, 2026\n\nAI chat button wasn't working. I had to update some packages to make it work again.\n\nThe fact that this chat works with my memories/notes from the past weeks and aligns them with future goals and can guide me on what is useful and what is not, is insane.\n\n---\n\nMarch 9, 2026\n\nIt looks like the automatic weekly summaries aren't being made, so I have to look into this. And while i'm doing this, I should probably include a check to complete missing info and see if I've crossed off all my weekly goals.\n\nThe easiest way for this, i think, is a screen with all the daily entries of the past 4 weeks. This way, I can edit and add information easily. I can also manually generate a summary for the missing weeks, once the info is completed.\n\n---\n\nMarch 15, 2026\n\n\"Really happy but looks like weekly and quarterly goals can't be checked off yet. Would need this capability + an overview of weekly goals that have or have not been accomplished + maybe some graphs.\n\nNow I can chat with the AI to talk about my progress, but would be nice if i got feedback autonomously. One way is to have the AI link my weekly notes to my quarterly goals and long-term vision and write a few lines about that in the summary.\n\nBut I think i should also export a more comprehensive quarterly report based on everything from the past month. Should look into reports/frameworks to make the most of this.\"\n\nSent all of this to Claude in plan mode. GREAT decision as it mapped out changes and allowed me to fine-tune the next steps.\n\n Check-off weekly/quarterly goals — Checkbox forms on the dashboard toggle active ↔ completed. Failed goals show a red strikethrough with a \"Mark done\" button.                                                \n  Weekly goals overview with chart — /history/weekly now shows a stacked Chart.js bar chart (completed/failed/active per week) and per-week completion badges (\"2 / 3 done · 1 failed\") with toggle buttons.       \n\n  AI reflection in weekly Obsidian export — generateweeklyoverview() now calls Claude with your visions, quarterly goals, and week's activities to write a 2-3 sentence \"Reflection\" subsection at the top of the summary.\n\n  Failed status for expired goals — expireoldgoals() runs on every dashboard load, auto-failing any weekly goal where week_end < today and any quarterly goal where the quarter has ended. Shown in red strikethrough everywhere.                                                                                                                                                                                           \n    Quarterly report — \"📊 Generate Quarterly Report\" button in the footer. POSTs to /report/quarterly/export, calls Claude for Vision Alignment + Retrospective + Focus sections, interleaves OKR-style goal completion stats and week-by-week progress table, writes 2026 - Q1 quarterly review.md to your Obsidian weekly notes folder.\n\n---\n\nMarch 16, 2026\n\nAlso might need to look into the size of the database. at what stage does it become an issue? Perhaps I can clean the database's daily entries after 6 months since everything should be in Obsidian by then anyway. On the other hand, if it's just text entries, it doesn't take a lot of memory.\n\nFeels like the summary is a python script, and not an AI summary because it's pretty long and almost identical to the daily entries...\n\n---\n\nMarch 24, 2026\n\nTrying to hook up my calendar to create daily entries automatically. Accessing calendar didn't work so I gave up on this idea. It wouldn't have been such a timesaver anyway.\n\n---\n\nMarch 25, 2026\n\nAdded STT for larger text fields. This will make it much easier to input text and create more detailed daily entries. I'm also adding a short reflection form when creating a weekly review.",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -361,7 +393,8 @@
         "2026-03-09",
         "2026-03-15",
         "2026-03-16",
-        "2026-03-24"
+        "2026-03-24",
+        "2026-03-25"
       ]
     },
     {
@@ -642,35 +675,6 @@
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Case study maker.md",
       "workDates": [
         "2026-01-16"
-      ]
-    },
-    {
-      "id": "secret-project",
-      "date": "2001-03-19",
-      "title": "Secret project",
-      "vibeTools": [
-        "Claude Code"
-      ],
-      "stack": [
-        "Claude API",
-        "Vite",
-        "React",
-        "TailwindCSS",
-        "Radix UI",
-        "Express",
-        "Typescript",
-        "SQLite",
-        "Drizzle ORM",
-        "Leaflet"
-      ],
-      "description": "March 19, 2001\n\nWorking on a \"secret\" exploration tool to compare objects based on several criteria. Every criterium will have a score and every object will have a total score based on a weighted average.\n\nI started with a plan but feel Claude still moves a bit too fast. I'm pretty sure the suggested dependencies are not very up to date, but let's trust him on this one. React 18, for example, is no longer supported.\n\nFirst result is mind-blowingly good.",
-      "learnings": [],
-      "cost": null,
-      "status": "completed",
-      "intensity": 1,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Secret project.md",
-      "workDates": [
-        "2001-03-19"
       ]
     }
   ]
