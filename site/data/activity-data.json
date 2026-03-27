@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-03-26T08:00:03.081Z",
-    "totalProjects": 17,
+    "generated": "2026-03-27T08:00:01.725Z",
+    "totalProjects": 18,
     "dateRange": {
       "start": "2026-01-16",
-      "end": "2026-03-25"
+      "end": "2026-03-26"
     }
   },
   "dailyContributions": {
@@ -187,6 +187,14 @@
         "Claude Code"
       ]
     },
+    "2026-03-26": {
+      "intensity": 3,
+      "projectCount": 2,
+      "vibeTools": [
+        "Claude Code",
+        "Le Chat"
+      ]
+    },
     "2026-02-16": {
       "intensity": 3,
       "projectCount": 1,
@@ -248,9 +256,22 @@
   },
   "projects": [
     {
-      "id": "icp,-positioning-and-messaging-agents",
+      "id": "interview-notetaker",
+      "date": "2026-03-26",
+      "title": "Interview notetaker",
+      "vibeTools": [],
+      "stack": [],
+      "description": "For the team interviews, I could build my own recording tool that will solve a couple of things for me. So if the recording tool can manage multiple projects and I can create a project, give it the questions of my project and then do the recordings with different members and it could automatically pass the replies from the recording, from the transcript to meet the right questions. And then if I put the different interviews next to each other, which have similar questions, then I could make compilations of all the questions for the same answer. So it's a bit like a mix between a recording tool and a form maker. If I do it with ZYGO branding, I think it would be really cool.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 2,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Interview notetaker.md"
+    },
+    {
+      "id": "gtm-dashboard",
       "date": "2026-03-25",
-      "title": "ICP, positioning and messaging agents",
+      "title": "GTM dashboard",
       "vibeTools": [
         "Claude Code",
         "Le Chat"
@@ -264,14 +285,15 @@
         "CSS",
         "JSON"
       ],
-      "description": "March 25, 2026\n\nI started with an agent in Mistral's chat because I wanted to create like a nice framework combining three existing documents to create ICPs, positioning frameworks, and messaging ideas. But when I started talking, it suggested the agency works together so that changes to customer talks would influence ICP, that would then influence the positioning, and that positioning would then source new messaging. I really liked that idea, so I wanted to have that automation, and so I asked the chat to continue exploring the idea, but it was very focused on having this in the cloud with Zapier, with Make, with all sorts of different tools. So instead, I decided to take the input from the chat, put it into Cloud in plan mode, have it look at other tools that are existing, and then recreate a new one that will follow the agentic flows as suggested by the chat. So now it's taking the front-end UI from my planner and goal tracker to make this new tab with everything linked to each other. Now let's see!\n\nI didn't do a terrific job of importing my existing templates for ICP and positioning but with some tweak we'll get there. I also will ask claude to analyse my product marketing notes to find further improvements.",
+      "description": "March 25, 2026\n\nI started with an agent in Mistral's chat because I wanted to create like a nice framework combining three existing documents to create ICPs, positioning frameworks, and messaging ideas. But when I started talking, it suggested the agency works together so that changes to customer talks would influence ICP, that would then influence the positioning, and that positioning would then source new messaging. I really liked that idea, so I wanted to have that automation, and so I asked the chat to continue exploring the idea, but it was very focused on having this in the cloud with Zapier, with Make, with all sorts of different tools. So instead, I decided to take the input from the chat, put it into Cloud in plan mode, have it look at other tools that are existing, and then recreate a new one that will follow the agentic flows as suggested by the chat. So now it's taking the front-end UI from my planner and goal tracker to make this new tab with everything linked to each other. Now let's see!\n\nI didn't do a terrific job of importing my existing templates for ICP and positioning but with some tweak we'll get there. I also will ask claude to analyse my product marketing notes to find further improvements.\n\n---\n\nMarch 26, 2026\n\nWhat I built yesterday, was an MVP but it worked nicely for my intended use case.\nThe problem is that the tool was the project. But I don't manage one brand, I manage multiple, so I'm turning this dashboard into one that can handle multiple projects.\n\nI also want to create more assets beyond web copy. Now the instructions are hardcoded. Instead I'm now adding assets as skills/customgpts whatever you want to call them with custom instructions and examples to guide the creation of the asset. Exciting :D",
       "learnings": [],
       "cost": null,
       "status": "completed",
       "intensity": 3,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/ICP, positioning and messaging agents.md",
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/GTM dashboard.md",
       "workDates": [
-        "2026-03-25"
+        "2026-03-25",
+        "2026-03-26"
       ]
     },
     {
