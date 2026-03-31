@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-03-30T07:00:00.633Z",
+    "generated": "2026-03-31T07:00:05.088Z",
     "totalProjects": 18,
     "dateRange": {
       "start": "2026-01-16",
-      "end": "2026-03-26"
+      "end": "2026-03-30"
     }
   },
   "dailyContributions": {
@@ -162,7 +162,7 @@
       ]
     },
     "2026-03-02": {
-      "intensity": 3,
+      "intensity": 4,
       "projectCount": 2,
       "vibeTools": [
         "Claude Code",
@@ -236,7 +236,7 @@
       ]
     },
     "2026-02-09": {
-      "intensity": 3,
+      "intensity": 4,
       "projectCount": 1,
       "vibeTools": [
         "Claude Code",
@@ -245,7 +245,16 @@
       ]
     },
     "2026-02-10": {
-      "intensity": 3,
+      "intensity": 4,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code",
+        "Xcode",
+        "Le Chat"
+      ]
+    },
+    "2026-03-30": {
+      "intensity": 4,
       "projectCount": 1,
       "vibeTools": [
         "Claude Code",
@@ -465,16 +474,21 @@
         "SwiftData",
         "Swift Charts"
       ],
-      "description": "February 9, 2026\n\nI just realised that I don't have a solid view of my business expenses. I know that I typically earn more than I spend, but how much?\nNo better way to find out, than to vibe code a desktop app to keep track of invoices sent and received. \nInitially, it doesn't need to be complicated. The only tricky part is the difference between one-off expenses, and monthly, quarterly and yearly recurring ones. \n\nWhen this part works, I also want to develop a personal tracker. I've been tracking my investments in a Number sheet for over 10 years and it's getting kind of clunky. I'm also pretty sure there are some mistakes in my logic. So I can fix it and add it to my tracker.\n\nLater on, if everything works, I could look at automating parts. I'm especially thinking about syncing expenses. Open banking is something I'm not going to get involved with, though.\n\nThis session, Claude generated:\n• 26 Swift files (~3,700 lines of code)\n• 24 source files\n• 2 test files (30+ unit tests)\n• 6 documentation files (comprehensive guides)\n• 100% of planned features implemented\n\nThis version included an App with CloudKit. It sounded like an overkill for an app that just needs to sync between my devices, but what do I know? Only after trying to set it up in Xcode, my suspicions were confirmed.\n\nIt cost less than $5 so far. But it will probably end up costing a lot more as I need quite some back and forth to roll back Cloud capabilities that aren't available to free plans. Easily spent an extra hour on this as well. \n\nDamn, it looks like a real Apple App. Not what I expected but pretty nice apart from some alignment issues.\n\n---\n\nFebruary 10, 2026\n\nAfter some further back and forth, I got the app to work with decent padding too.\n\nNow, I'm most definitely not going to use the same app for personal finances because it's going to break again. But I can use the structure and learnings from this to create another one.\n\nOnly thing left to do now is figure out how i can add this app to my desktop and how to give it a logo so I don't have to run it from Xcode every time.\n\n---\n\nMarch 2, 2026\n\nTime to implement the next changes:\n• net profit = difference between income and expenses without VAT\n• (later include more detailed calculations for VAT based on category)\n• Save names of expenses (eg charging) + detailed overview of expenses per name instead of category\n• quarterly and yearly costs -> split over months but only if the expense is more than 250 euros.\n\n It worked pretty well but I had to delete the database and start from scratch since there was no database backup. Ah well, I didn't have that much in there yet anyway.",
-      "learnings": [],
+      "description": "February 9, 2026\n\nI just realised that I don't have a solid view of my business expenses. I know that I typically earn more than I spend, but how much?\nNo better way to find out, than to vibe code a desktop app to keep track of invoices sent and received. \nInitially, it doesn't need to be complicated. The only tricky part is the difference between one-off expenses, and monthly, quarterly and yearly recurring ones. \n\nWhen this part works, I also want to develop a personal tracker. I've been tracking my investments in a Number sheet for over 10 years and it's getting kind of clunky. I'm also pretty sure there are some mistakes in my logic. So I can fix it and add it to my tracker.\n\nLater on, if everything works, I could look at automating parts. I'm especially thinking about syncing expenses. Open banking is something I'm not going to get involved with, though.\n\nThis session, Claude generated:\n• 26 Swift files (~3,700 lines of code)\n• 24 source files\n• 2 test files (30+ unit tests)\n• 6 documentation files (comprehensive guides)\n• 100% of planned features implemented\n\nThis version included an App with CloudKit. It sounded like an overkill for an app that just needs to sync between my devices, but what do I know? Only after trying to set it up in Xcode, my suspicions were confirmed.\n\nIt cost less than $5 so far. But it will probably end up costing a lot more as I need quite some back and forth to roll back Cloud capabilities that aren't available to free plans. Easily spent an extra hour on this as well. \n\nDamn, it looks like a real Apple App. Not what I expected but pretty nice apart from some alignment issues.\n\n---\n\nFebruary 10, 2026\n\nAfter some further back and forth, I got the app to work with decent padding too.\n\nNow, I'm most definitely not going to use the same app for personal finances because it's going to break again. But I can use the structure and learnings from this to create another one.\n\nOnly thing left to do now is figure out how i can add this app to my desktop and how to give it a logo so I don't have to run it from Xcode every time.\n\n---\n\nMarch 2, 2026\n\nTime to implement the next changes:\n• net profit = difference between income and expenses without VAT\n• (later include more detailed calculations for VAT based on category)\n• Save names of expenses (eg charging) + detailed overview of expenses per name instead of category\n• quarterly and yearly costs -> split over months but only if the expense is more than 250 euros.\n\n It worked pretty well but I had to delete the database and start from scratch since there was no database backup. Ah well, I didn't have that much in there yet anyway.\n\n---\n\nMarch 30, 2026\n\nLast time, I had to delete the database and start from scratch, so please make a backup first today. And then I want to implement the following changes. \n• I want to see the income based on the issue date instead of the date, \n• the modal for inputting expenses has an issue when the number gets larger than 250 because then the accrued text shows and that causes the window to be too narrow. So the text then gets wider and the window is not wide enough. \n• I also want the possibility to add new categories myself and I want these to be reflected every where in the app.\n• The fourth thing I want to add is that I want previous entries for company name and description to be viewable when I enter a new one, so maybe as a dropdown list or as some sort of cache that's filling while I'm typing.\n• The next thing that I want to make available is 0% VAT on invoices because when I'm invoicing a foreign customer, I do not have to include VAT. \n• And finally, the number for the next invoice is not correct anymore because it only counts the number of existing invoices. It should just be plus one because i deleted the first invoice.\n\nAlso added an app icon. And removed wages from the graph of expenses because it was (i'm to ired to find the word) the graph.",
+      "learnings": [
+        "I want to see the income based on the issue date instead of the date,",
+        "the modal for inputting expenses has an issue when the number gets larger than 250 because then the accrued text shows and that causes the window to be too narrow. So the text then gets wider and the window is not wide enough.",
+        "And finally, the number for the next invoice is not correct anymore because it only counts the number of existing invoices. It should just be plus one because i deleted the first invoice."
+      ],
       "cost": "$5",
       "status": "completed",
-      "intensity": 3,
+      "intensity": 4,
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Company finance tracking.md",
       "workDates": [
         "2026-02-09",
         "2026-02-10",
-        "2026-03-02"
+        "2026-03-02",
+        "2026-03-30"
       ]
     },
     {
