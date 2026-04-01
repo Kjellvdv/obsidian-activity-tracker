@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-03-31T07:00:05.088Z",
+    "generated": "2026-04-01T07:00:06.554Z",
     "totalProjects": 18,
     "dateRange": {
       "start": "2026-01-16",
-      "end": "2026-03-30"
+      "end": "2026-03-31"
     }
   },
   "dailyContributions": {
@@ -134,7 +134,7 @@
         "Le Chat"
       ]
     },
-    "2026-03-11": {
+    "2026-03-31": {
       "intensity": 3,
       "projectCount": 1,
       "vibeTools": []
@@ -265,6 +265,19 @@
   },
   "projects": [
     {
+      "id": "personal-marketing-assistant",
+      "date": "2026-03-31",
+      "title": "Personal marketing assistant",
+      "vibeTools": [],
+      "stack": [],
+      "description": "If you want the connected version — a real chat UI that knows your content, your calendar, your clients — that's a small web app. The good news: your linkedin-planner already has the Anthropic API wired up. It\n could be extended into a broader marketing assistant rather than building from scratch.\n\n It would look like:\n• A simple chat interface in the browser\n• Skills become selectable modes or just work naturally from context (\"repurpose this for LinkedIn\" / \"where can this go\")\n• Connected to your Obsidian vault, your post calendar, your client profiles.\n\n What I'd build as skills:\n\n /content-map — You paste in a piece of content (press release, blog post, interview transcript, anything). It reads it and outputs a distribution plan: LinkedIn post, newsletter section, website page, client case\n study, whatever fits. Each channel gets a one-line brief — angle, format, length — not a rewrite. You decide what to act on.\n\n /repurpose — Given source content + a target format (e.g. \"LinkedIn post for Willow\"), it rewrites for that channel using the right brand voice. Still needs your review, but the first draft is done.\n\n /positioning-check — You paste in a piece of copy (homepage, ad, email). It checks it against basic positioning principles: is the ICP clear, is the value prop specific, is there a differentiator. Returns a short\n diagnostic, not a rewrite.\n\nwould have to be able to differentiate between multiple clients. with positioning instructions and more. \n\nShould also have access to all previous tools, but first I need to make sure they can all run at the same time.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 3,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Personal marketing assistant.md"
+    },
+    {
       "id": "interview-notetaker",
       "date": "2026-03-26",
       "title": "Interview notetaker",
@@ -304,19 +317,6 @@
         "2026-03-25",
         "2026-03-26"
       ]
-    },
-    {
-      "id": "personal-marketing-assistant",
-      "date": "2026-03-11",
-      "title": "Personal marketing assistant",
-      "vibeTools": [],
-      "stack": [],
-      "description": "If you want the connected version — a real chat UI that knows your content, your calendar, your clients — that's a small web app. The good news: your linkedin-planner already has the Anthropic API wired up. It\n could be extended into a broader marketing assistant rather than building from scratch.\n\n It would look like:\n• A simple chat interface in the browser\n• Skills become selectable modes or just work naturally from context (\"repurpose this for LinkedIn\" / \"where can this go\")\n• Connected to your Obsidian vault, your post calendar, your client profiles.\n\n What I'd build as skills:\n\n /content-map — You paste in a piece of content (press release, blog post, interview transcript, anything). It reads it and outputs a distribution plan: LinkedIn post, newsletter section, website page, client case\n study, whatever fits. Each channel gets a one-line brief — angle, format, length — not a rewrite. You decide what to act on.\n\n /repurpose — Given source content + a target format (e.g. \"LinkedIn post for Willow\"), it rewrites for that channel using the right brand voice. Still needs your review, but the first draft is done.\n\n /positioning-check — You paste in a piece of copy (homepage, ad, email). It checks it against basic positioning principles: is the ICP clear, is the value prop specific, is there a differentiator. Returns a short\n diagnostic, not a rewrite.\n\nwould have to be able to differentiate between multiple clients. with positioning instructions and more.",
-      "learnings": [],
-      "cost": null,
-      "status": "completed",
-      "intensity": 3,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Personal marketing assistant.md"
     },
     {
       "id": "coffee-rater",
