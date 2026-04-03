@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-04-02T07:00:02.895Z",
+    "generated": "2026-04-03T07:00:00.659Z",
     "totalProjects": 18,
     "dateRange": {
       "start": "2026-01-16",
-      "end": "2026-04-01"
+      "end": "2026-04-02"
     }
   },
   "dailyContributions": {
@@ -134,8 +134,8 @@
         "Le Chat"
       ]
     },
-    "2026-03-31": {
-      "intensity": 3,
+    "2026-04-02": {
+      "intensity": 4,
       "projectCount": 1,
       "vibeTools": []
     },
@@ -273,16 +273,19 @@
   "projects": [
     {
       "id": "personal-marketing-assistant",
-      "date": "2026-03-31",
+      "date": "2026-04-02",
       "title": "Personal marketing assistant",
       "vibeTools": [],
       "stack": [],
-      "description": "If you want the connected version — a real chat UI that knows your content, your calendar, your clients — that's a small web app. The good news: your linkedin-planner already has the Anthropic API wired up. It\n could be extended into a broader marketing assistant rather than building from scratch.\n\n It would look like:\n• A simple chat interface in the browser\n• Skills become selectable modes or just work naturally from context (\"repurpose this for LinkedIn\" / \"where can this go\")\n• Connected to your Obsidian vault, your post calendar, your client profiles.\n\n What I'd build as skills:\n\n /content-map — You paste in a piece of content (press release, blog post, interview transcript, anything). It reads it and outputs a distribution plan: LinkedIn post, newsletter section, website page, client case\n study, whatever fits. Each channel gets a one-line brief — angle, format, length — not a rewrite. You decide what to act on.\n\n /repurpose — Given source content + a target format (e.g. \"LinkedIn post for Willow\"), it rewrites for that channel using the right brand voice. Still needs your review, but the first draft is done.\n\n /positioning-check — You paste in a piece of copy (homepage, ad, email). It checks it against basic positioning principles: is the ICP clear, is the value prop specific, is there a differentiator. Returns a short\n diagnostic, not a rewrite.\n\nwould have to be able to differentiate between multiple clients. with positioning instructions and more. \n\nShould also have access to all previous tools, but first I need to make sure they can all run at the same time.",
+      "description": "April 2, 2026\n\nCreating this assistant was pretty straightforward. I first made sure that all the older apps that I previously created and that it connects to run on different servers so they can all run at the same time. That was quick. \n\nThen I explained the idea of the marketing assistant that needs to access these three tools but also needs to be able to read from my Obsidian Vault and only my Obsidian Vault for certain questions. I took everything into account and then shared the skills from here below as examples and also told Claude to take into account those skills that I have created previously.\n\nWhen I was finished with all of that, the app was created in about 30 minutes tops which was quite impressive and the only changes that were needed were some API endpoints on the existing apps. \n\nNow the UI still isn't great and maybe needs some work on that but that's okay. \n\nBut then when it was finished, Laurens Nys shared a very timely post about the structuring of your information and notes etc. for AI agents. So I shared just copy pasted his post, asked Claude what he thinks of it, what we can improve. Claude agreed it was very timely and for example I added YAML frontmatter to the skills and it created a tree of my Vault so it can navigate better. So yeah those were some interesting additions that will make sure that the context windows aren't getting too big.\n\n### older saved input\n If you want the connected version — a real chat UI that knows your content, your calendar, your clients — that's a small web app. The good news: your linkedin-planner already has the Anthropic API wired up. It\n could be extended into a broader marketing assistant rather than building from scratch.\n\n It would look like:\n• A simple chat interface in the browser\n• Skills become selectable modes or just work naturally from context (\"repurpose this for LinkedIn\" / \"where can this go\")\n• Connected to your Obsidian vault, your post calendar, your client profiles.\n\n What I'd build as skills:\n\n /content-map — You paste in a piece of content (press release, blog post, interview transcript, anything). It reads it and outputs a distribution plan: LinkedIn post, newsletter section, website page, client case\n study, whatever fits. Each channel gets a one-line brief — angle, format, length — not a rewrite. You decide what to act on.\n\n /repurpose — Given source content + a target format (e.g. \"LinkedIn post for Willow\"), it rewrites for that channel using the right brand voice. Still needs your review, but the first draft is done.\n\n /positioning-check — You paste in a piece of copy (homepage, ad, email). It checks it against basic positioning principles: is the ICP clear, is the value prop specific, is there a differentiator. Returns a short\n diagnostic, not a rewrite.\n\nwould have to be able to differentiate between multiple clients. with positioning instructions and more. \n\nShould also have access to all previous tools, but first I need to make sure they can all run at the same time.",
       "learnings": [],
       "cost": null,
       "status": "completed",
-      "intensity": 3,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Personal marketing assistant.md"
+      "intensity": 4,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Personal marketing assistant.md",
+      "workDates": [
+        "2026-04-02"
+      ]
     },
     {
       "id": "interview-notetaker",
