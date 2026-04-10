@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated": "2026-04-09T07:00:02.621Z",
+    "generated": "2026-04-10T07:03:18.931Z",
     "totalProjects": 18,
     "dateRange": {
       "start": "2026-01-16",
@@ -285,12 +285,15 @@
       "date": "2026-04-09",
       "title": "Interview notetaker",
       "vibeTools": [],
-      "stack": [],
-      "description": "For the team interviews, I could build my own recording tool that will solve a couple of things for me. So if the recording tool can manage multiple projects and I can create a project, give it the questions of my project and then do the recordings with different members and it could automatically pass the replies from the recording, from the transcript to meet the right questions. And then if I put the different interviews next to each other, which have similar questions, then I could make compilations of all the questions for the same answer. So it's a bit like a mix between a recording tool and a form maker. If I do it with ZYGO branding, I think it would be really cool.\n\nBut maybe cooler if i don't use the typical flask approach, but make it publicly available with login and onboarding. Upon starting, you give a website and it takes the web branding to define the UI colours",
+      "stack": [
+        "OpenAI",
+        "OpenAI Whisper"
+      ],
+      "description": "For the team interviews, I could build my own recording tool that will solve a couple of things for me. So if the recording tool can manage multiple projects and I can create a project, give it the questions of my project and then do the recordings with different members and it could automatically pass the replies from the recording, from the transcript to meet the right questions. And then if I put the different interviews next to each other, which have similar questions, then I could make compilations of all the questions for the same answer. So it's a bit like a mix between a recording tool and a form maker. If I do it with ZYGO branding, I think it would be really cool.\n\nBut maybe cooler if i don't use the typical flask approach, but make it publicly available with login and onboarding. Upon starting, you give a website and it takes the web branding to define the UI colours.\n\nPlan looked great, but required to many external tools like supabase, whispr flow etc. so i'll start with a local MVP based on the usual stack.",
       "learnings": [],
       "cost": null,
       "status": "completed",
-      "intensity": 2,
+      "intensity": 3,
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Interview notetaker.md"
     },
     {
@@ -677,7 +680,7 @@
       "stack": [
         "Python3"
       ],
-      "description": "January 26, 2026\n\nAdded a timestamp to yaml so I kind of have a feeling which emails I should read first.\nAlso updated the script so it only processes unread emails instead of all emails.\nThen I ran the script again and I deleted everything from the gmail folders.\nHope I didn't miss anything :)\n\nDefinitely already noticed that I'm much more likely to open the emails from Obsidian than from my email app when I'm looking for something to do while waiting. \n\n---\n\nMarch 9, 2026\n\nThe script was made to run in a virtual environment, which is great for security but which doesn't really work that well if it's only going to be used once a wek via a launch agent. \n\nSo I recreated it without the venv. Most packages were already installed globally anyway and it was a good moment to replace openai with claude.",
+      "description": "January 26, 2026\n\nAdded a timestamp to yaml so I kind of have a feeling which emails I should read first.\nAlso updated the script so it only processes unread emails instead of all emails.\nThen I ran the script again and I deleted everything from the gmail folders.\nHope I didn't miss anything :)\n\nDefinitely already noticed that I'm much more likely to open the emails from Obsidian than from my email app when I'm looking for something to do while waiting. \n\n---\n\nMarch 9, 2026\n\nThe script was made to run in a virtual environment, which is great for security but which doesn't really work that well if it's only going to be used once a week via a launch agent. \n\nSo I recreated it without the venv. Most packages were already installed globally anyway and it was a good moment to replace openai with claude.",
       "learnings": [],
       "cost": null,
       "status": "completed",
