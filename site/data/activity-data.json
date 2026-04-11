@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-04-10T07:03:18.931Z",
+    "generated": "2026-04-11T07:04:09.678Z",
     "totalProjects": 18,
     "dateRange": {
       "start": "2026-01-16",
-      "end": "2026-04-09"
+      "end": "2026-04-10"
     }
   },
   "dailyContributions": {
@@ -148,6 +148,15 @@
         "Claude Code"
       ]
     },
+    "2026-04-10": {
+      "intensity": 2,
+      "projectCount": 2,
+      "vibeTools": [
+        "ChatGPT",
+        "Claude Code",
+        "Visual Code Studio"
+      ]
+    },
     "2026-02-03": {
       "intensity": 2,
       "projectCount": 1,
@@ -284,17 +293,23 @@
       "id": "interview-notetaker",
       "date": "2026-04-09",
       "title": "Interview notetaker",
-      "vibeTools": [],
+      "vibeTools": [
+        "Claude Code"
+      ],
       "stack": [
         "OpenAI",
-        "OpenAI Whisper"
+        "OpenAI Whisper",
+        "Flask"
       ],
-      "description": "For the team interviews, I could build my own recording tool that will solve a couple of things for me. So if the recording tool can manage multiple projects and I can create a project, give it the questions of my project and then do the recordings with different members and it could automatically pass the replies from the recording, from the transcript to meet the right questions. And then if I put the different interviews next to each other, which have similar questions, then I could make compilations of all the questions for the same answer. So it's a bit like a mix between a recording tool and a form maker. If I do it with ZYGO branding, I think it would be really cool.\n\nBut maybe cooler if i don't use the typical flask approach, but make it publicly available with login and onboarding. Upon starting, you give a website and it takes the web branding to define the UI colours.\n\nPlan looked great, but required to many external tools like supabase, whispr flow etc. so i'll start with a local MVP based on the usual stack.",
+      "description": "April 9, 2026\n\nFor the team interviews, I could build my own recording tool that will solve a couple of things for me. So if the recording tool can manage multiple projects and I can create a project, give it the questions of my project and then do the recordings with different members and it could automatically pass the replies from the recording, from the transcript to meet the right questions. And then if I put the different interviews next to each other, which have similar questions, then I could make compilations of all the questions for the same answer. So it's a bit like a mix between a recording tool and a form maker. If I do it with ZYGO branding, I think it would be really cool.\n\nBut maybe cooler if i don't use the typical flask approach, but make it publicly available with login and onboarding. Upon starting, you give a website and it takes the web branding to define the UI colours.\n\nPlan looked great, but required to many external tools like supabase, whispr flow etc. so i'll start with a local MVP based on the usual stack.\n\nWorks nicely after a little debugging because the audio wasn't being parsed correctly. Hooking this up to my PA took surprisingly little time.",
       "learnings": [],
       "cost": null,
       "status": "completed",
       "intensity": 3,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Interview notetaker.md"
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Interview notetaker.md",
+      "workDates": [
+        "2026-04-09"
+      ]
     },
     {
       "id": "personal-marketing-assistant",
@@ -405,9 +420,11 @@
       ],
       "stack": [
         "Drizzle ORM",
-        "PostgreSQL"
+        "PostgreSQL",
+        "SQLite",
+        "Better-sqlite3"
       ],
-      "description": "March 2, 2026\n\nFor over 10 years, i've been tracking my investments in a Numbers file. Over time, i've wanted to add more calculations and \"features\" but the more I add, the more I start to doubt the accuracy. So it was about time to code something.\n\nThe plan was defined rather quickly based on an csv of my existing file. \n\n---\n\nMarch 3, 2026\n\nSomehow the hardest app of all - just cant handle the existing data. two hours of debugging have only made things worse. Should I put the money I've spent on Claude down as an investment? It feels more like a waste at the moment...\n\nBack to scratch is the only way i can see this working out. Trying a \"soft\" reset didn't lreally do it. Telling Claude to clean the existing databases didn't really work because he ran into another conflict half an hour later. \n\nSo I told Claude to make an assessment and really start over. Judging from his reply, he agrees: \"will be much faster than continuing to debug mysterious database issues\".\n\n---\n\nMarch 4, 2026\n\nSometimes you really need to treat Claude like an intern. I've been rebuilding the app and database (I mean, Claude has been rebuilding it). But he used the same corrupted data. The whole idea behind the rebuild was to use the proper data and remove any duplicates or sources that could lead to confusion. \n\nAfter pointing this out, it seems to work. Now I'll just focus on getting everything right for me. .\n\nOnly thing left today, is adding some more graphs. \n\nNext month, I'll fix the data entry and dashboard views for the kids. Once this has happened, i will no longer need to import new data, so all parsing an data import scripts could be removed\n\nI'll also add more detailed data about yields: where they come from (interest, shares, other) and about individual investments.\n\n---\n\nApril 1, 2026\n\nFixing the kids dashboards today. Taking it step by step. Just been describing what information I have, how it's currently organised and then letting Claude do its work. Voice isn't working in Claude Code, so I'm just talking to Mistral and then copy-pasting. At least that makes the subscription worth a few cents lol. \n\nI like that Claude intuitevely added a field for the money source and putt grandma as the example.\n\nnext month, need to continue with more details and sspecific tracking for shares",
+      "description": "March 2, 2026\n\nFor over 10 years, i've been tracking my investments in a Numbers file. Over time, i've wanted to add more calculations and \"features\" but the more I add, the more I start to doubt the accuracy. So it was about time to code something.\n\nThe plan was defined rather quickly based on an csv of my existing file. \n\n---\n\nMarch 3, 2026\n\nSomehow the hardest app of all - just cant handle the existing data. two hours of debugging have only made things worse. Should I put the money I've spent on Claude down as an investment? It feels more like a waste at the moment...\n\nBack to scratch is the only way i can see this working out. Trying a \"soft\" reset didn't lreally do it. Telling Claude to clean the existing databases didn't really work because he ran into another conflict half an hour later. \n\nSo I told Claude to make an assessment and really start over. Judging from his reply, he agrees: \"will be much faster than continuing to debug mysterious database issues\".\n\n---\n\nMarch 4, 2026\n\nSometimes you really need to treat Claude like an intern. I've been rebuilding the app and database (I mean, Claude has been rebuilding it). But he used the same corrupted data. The whole idea behind the rebuild was to use the proper data and remove any duplicates or sources that could lead to confusion. \n\nAfter pointing this out, it seems to work. Now I'll just focus on getting everything right for me. .\n\nOnly thing left today, is adding some more graphs. \n\nNext month, I'll fix the data entry and dashboard views for the kids. Once this has happened, i will no longer need to import new data, so all parsing an data import scripts could be removed\n\nI'll also add more detailed data about yields: where they come from (interest, shares, other) and about individual investments.\n\n---\n\nApril 1, 2026\n\nFixing the kids dashboards today. Taking it step by step. Just been describing what information I have, how it's currently organised and then letting Claude do its work. Voice isn't working in Claude Code, so I'm just talking to Mistral and then copy-pasting. At least that makes the subscription worth a few cents lol. \n\nI like that Claude intuitevely added a field for the money source and putt grandma as the example.\n\nnext month, need to continue with more details and sspecific tracking for shares\n\n---\n\nApril 10, 2026\n\nI spent a lot of time trying to get my data right, only to realise that the PostgreSQL is saved locally and can't be accessed on my other device.\n\nSo now I'm running the following migration and I'm scared to death that it will have errors and ruin my data:\nBackup via pg_dump + JSON export\nSwap schema from PostgreSQL → SQLite types\nSwap driver from postgres → better-sqlite3\nPush schema to create the SQLite file\nImport data from JSON backup",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -417,7 +434,8 @@
         "2026-03-02",
         "2026-03-03",
         "2026-03-04",
-        "2026-04-01"
+        "2026-04-01",
+        "2026-04-10"
       ]
     },
     {
@@ -680,7 +698,7 @@
       "stack": [
         "Python3"
       ],
-      "description": "January 26, 2026\n\nAdded a timestamp to yaml so I kind of have a feeling which emails I should read first.\nAlso updated the script so it only processes unread emails instead of all emails.\nThen I ran the script again and I deleted everything from the gmail folders.\nHope I didn't miss anything :)\n\nDefinitely already noticed that I'm much more likely to open the emails from Obsidian than from my email app when I'm looking for something to do while waiting. \n\n---\n\nMarch 9, 2026\n\nThe script was made to run in a virtual environment, which is great for security but which doesn't really work that well if it's only going to be used once a week via a launch agent. \n\nSo I recreated it without the venv. Most packages were already installed globally anyway and it was a good moment to replace openai with claude.",
+      "description": "January 26, 2026\n\nAdded a timestamp to yaml so I kind of have a feeling which emails I should read first.\nAlso updated the script so it only processes unread emails instead of all emails.\nThen I ran the script again and I deleted everything from the gmail folders.\nHope I didn't miss anything :)\n\nDefinitely already noticed that I'm much more likely to open the emails from Obsidian than from my email app when I'm looking for something to do while waiting. \n\n---\n\nMarch 9, 2026\n\nThe script was made to run in a virtual environment, which is great for security but which doesn't really work that well if it's only going to be used once a week via a launch agent. \n\nSo I recreated it without the venv. Most packages were already installed globally anyway and it was a good moment to replace openai with claude. \n\n---\n\nApril 10, 2026\n\nThe last couple of syncs didn't have summaries anymore. Turns out the automation was supposed to use Haiku 3.5 which has been depreciated by now. So Claude updated the model and then i asked for a few more changes.\n\nThe yaml needs to be a bit more detailed so i can make a better overview of my unread newsletters and so they are easier to scan by my PA tool.\n\nTherefor all new imports now have type:mail and the summary/description inside the yaml instead of below.",
       "learnings": [],
       "cost": null,
       "status": "completed",
@@ -688,7 +706,8 @@
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Newsletter automater.md",
       "workDates": [
         "2026-01-26",
-        "2026-03-09"
+        "2026-03-09",
+        "2026-04-10"
       ]
     },
     {
