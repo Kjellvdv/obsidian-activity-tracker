@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "generated": "2026-04-18T07:00:01.981Z",
+    "generated": "2026-04-19T07:14:06.651Z",
     "totalProjects": 18,
     "dateRange": {
-      "start": "2026-01-16",
+      "start": "2001-04-16",
       "end": "2026-04-14"
     }
   },
@@ -134,6 +134,13 @@
         "Le Chat"
       ]
     },
+    "2001-04-16": {
+      "intensity": 4,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code"
+      ]
+    },
     "2026-04-02": {
       "intensity": 4,
       "projectCount": 1,
@@ -217,6 +224,14 @@
       "projectCount": 1,
       "vibeTools": [
         "Claude Code"
+      ]
+    },
+    "2001-04-17": {
+      "intensity": 3,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code",
+        "Le Chat"
       ]
     },
     "2026-03-26": {
@@ -316,56 +331,6 @@
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Interview notetaker.md",
       "workDates": [
         "2026-04-09"
-      ]
-    },
-    {
-      "id": "personal-marketing-assistant",
-      "date": "2026-04-02",
-      "title": "Personal marketing assistant",
-      "vibeTools": [
-        "Claude Code"
-      ],
-      "stack": [
-        "Claude API"
-      ],
-      "description": "April 2, 2026\n\nCreating this assistant was pretty straightforward. I first made sure that all the older apps that I previously created and that it connects to run on different servers so they can all run at the same time. That was quick. \n\nThen I explained the idea of the marketing assistant that needs to access these three tools but also needs to be able to read from my Obsidian Vault and only my Obsidian Vault for certain questions. I took everything into account and then shared the skills from here below as examples and also told Claude to take into account those skills that I have created previously.\n\nWhen I was finished with all of that, the app was created in about 30 minutes tops which was quite impressive and the only changes that were needed were some API endpoints on the existing apps. \n\nNow the UI still isn't great and maybe needs some work on that but that's okay. \n\nBut then when it was finished, Laurens Nys shared a very timely post about the structuring of your information and notes etc. for AI agents. So I shared just copy pasted his post, asked Claude what he thinks of it, what we can improve. Claude agreed it was very timely and for example I added YAML frontmatter to the skills and it created a tree of my Vault so it can navigate better. So yeah those were some interesting additions that will make sure that the context windows aren't getting too big.\n\n### older saved input\n If you want the connected version — a real chat UI that knows your content, your calendar, your clients — that's a small web app. The good news: your linkedin-planner already has the Anthropic API wired up. It\n could be extended into a broader marketing assistant rather than building from scratch.\n\n It would look like:\n• A simple chat interface in the browser\n• Skills become selectable modes or just work naturally from context (\"repurpose this for LinkedIn\" / \"where can this go\")\n• Connected to your Obsidian vault, your post calendar, your client profiles.\n\n What I'd build as skills:\n\n /content-map — You paste in a piece of content (press release, blog post, interview transcript, anything). It reads it and outputs a distribution plan: LinkedIn post, newsletter section, website page, client case\n study, whatever fits. Each channel gets a one-line brief — angle, format, length — not a rewrite. You decide what to act on.\n\n /repurpose — Given source content + a target format (e.g. \"LinkedIn post for Willow\"), it rewrites for that channel using the right brand voice. Still needs your review, but the first draft is done.\n\n /positioning-check — You paste in a piece of copy (homepage, ad, email). It checks it against basic positioning principles: is the ICP clear, is the value prop specific, is there a differentiator. Returns a short\n diagnostic, not a rewrite.\n\nwould have to be able to differentiate between multiple clients. with positioning instructions and more. \n\nShould also have access to all previous tools, but first I need to make sure they can all run at the same time.\n\n---\n\nApril 9, 2026\n\nOver the past few days, I've wrote down a couple of changes I want to make. As I started my session, Claude had some small suggestions as well, that we immediately implemented first:\n• Fixed GTM asset endpoint URL (/{slug}/assets/create → /api/projects/{slug}/assets)\n• Replaced custom markdown regex parser with marked.js\n• Animated typing indicator (three pulsing dots)\n• Obsidian search — multi-word scoring, title-match bonus, sentence-aware excerpts, maxresults param (default 10, max 20), totalmatches in response\n\nNext steps were to give the PA better access to branding assets such as colours, logos and local fonts for ZYGO and myself. I also updated the branding of the tool itself to match my brand colours.\n\nA few more updates:\n• Adding token usage per session in top banner\n• Adding links to underlying tools for more granular work (dropdown menu so the UI doesn't get too bloated)\n\nNow, for the real breakthrough, some bigger changes: On the left side of the chat window, I'd like to make a to-do list/roadmap with tasks the PA should handle while I'm away. On the right side, I want to make a list of the created assets ( last x created + link to library with other assets).\n\nAnd finally, the PA should be able to read specific urls when asked, without crawling the web for other answers.\n\n---\n\nApril 14, 2026\n\nMade some system-wide changes today. I redesigned all skills so they are more scalable. They work in different layers now so brands and creative skills can easily be combined. I also added some coding skills that check the coding base and update dependencies when needed. \n\nOf course, all connected through the PA.",
-      "learnings": [],
-      "cost": null,
-      "status": "completed",
-      "intensity": 4,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Personal marketing assistant.md",
-      "workDates": [
-        "2026-04-02",
-        "2026-04-09",
-        "2026-04-14"
-      ]
-    },
-    {
-      "id": "gtm-dashboard",
-      "date": "2026-03-25",
-      "title": "GTM dashboard",
-      "vibeTools": [
-        "Claude Code",
-        "Le Chat"
-      ],
-      "stack": [
-        "Flask",
-        "Claude API",
-        "WeasyPrint",
-        "Jinja2",
-        "Vanilla JS",
-        "CSS",
-        "JSON"
-      ],
-      "description": "March 25, 2026\n\nI started with an agent in Mistral's chat because I wanted to create like a nice framework combining three existing documents to create ICPs, positioning frameworks, and messaging ideas. But when I started talking, it suggested the agency works together so that changes to customer talks would influence ICP, that would then influence the positioning, and that positioning would then source new messaging. I really liked that idea, so I wanted to have that automation, and so I asked the chat to continue exploring the idea, but it was very focused on having this in the cloud with Zapier, with Make, with all sorts of different tools. So instead, I decided to take the input from the chat, put it into Cloud in plan mode, have it look at other tools that are existing, and then recreate a new one that will follow the agentic flows as suggested by the chat. So now it's taking the front-end UI from my planner and goal tracker to make this new tab with everything linked to each other. Now let's see!\n\nI didn't do a terrific job of importing my existing templates for ICP and positioning but with some tweak we'll get there. I also will ask claude to analyse my product marketing notes to find further improvements.\n\n---\n\nMarch 26, 2026\n\nWhat I built yesterday, was an MVP but it worked nicely for my intended use case.\nThe problem is that the tool was the project. But I don't manage one brand, I manage multiple, so I'm turning this dashboard into one that can handle multiple projects.\n\nI also want to create more assets beyond web copy. Now the instructions are hardcoded. Instead I'm now adding assets as skills/customgpts whatever you want to call them with custom instructions and examples to guide the creation of the asset. Exciting :D",
-      "learnings": [],
-      "cost": null,
-      "status": "completed",
-      "intensity": 3,
-      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/GTM dashboard.md",
-      "workDates": [
-        "2026-03-25",
-        "2026-03-26"
       ]
     },
     {
@@ -766,6 +731,58 @@
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Case study maker.md",
       "workDates": [
         "2026-01-16"
+      ]
+    },
+    {
+      "id": "gtm-dashboard",
+      "date": "2001-04-17",
+      "title": "GTM dashboard",
+      "vibeTools": [
+        "Claude Code",
+        "Le Chat"
+      ],
+      "stack": [
+        "Flask",
+        "Claude API",
+        "WeasyPrint",
+        "Jinja2",
+        "Vanilla JS",
+        "CSS",
+        "JSON"
+      ],
+      "description": "April 17, 2001\n\nI added branding to the app so it control the full spectrum of a brand, from logos and colours to ICP and messaging. \n\n---\n\nMarch 25, 2026\n\nI started with an agent in Mistral's chat because I wanted to create like a nice framework combining three existing documents to create ICPs, positioning frameworks, and messaging ideas. But when I started talking, it suggested the agency works together so that changes to customer talks would influence ICP, that would then influence the positioning, and that positioning would then source new messaging. I really liked that idea, so I wanted to have that automation, and so I asked the chat to continue exploring the idea, but it was very focused on having this in the cloud with Zapier, with Make, with all sorts of different tools. So instead, I decided to take the input from the chat, put it into Cloud in plan mode, have it look at other tools that are existing, and then recreate a new one that will follow the agentic flows as suggested by the chat. So now it's taking the front-end UI from my planner and goal tracker to make this new tab with everything linked to each other. Now let's see!\n\nI didn't do a terrific job of importing my existing templates for ICP and positioning but with some tweak we'll get there. I also will ask claude to analyse my product marketing notes to find further improvements.\n\n---\n\nMarch 26, 2026\n\nWhat I built yesterday, was an MVP but it worked nicely for my intended use case.\nThe problem is that the tool was the project. But I don't manage one brand, I manage multiple, so I'm turning this dashboard into one that can handle multiple projects.\n\nI also want to create more assets beyond web copy. Now the instructions are hardcoded. Instead I'm now adding assets as skills/customgpts whatever you want to call them with custom instructions and examples to guide the creation of the asset. Exciting :D",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 3,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/GTM dashboard.md",
+      "workDates": [
+        "2001-04-17",
+        "2026-03-25",
+        "2026-03-26"
+      ]
+    },
+    {
+      "id": "personal-marketing-assistant",
+      "date": "2001-04-16",
+      "title": "Personal marketing assistant",
+      "vibeTools": [
+        "Claude Code"
+      ],
+      "stack": [
+        "Claude API"
+      ],
+      "description": "April 16, 2001\n\nThe new Claude desktop app has basically retired my PA already. It can do the same things better and cheaper. A 15-line prompt replaced my local RAG. This was very short-lived. Do you get the irony \n\n---\n\nApril 2, 2026\n\nCreating this assistant was pretty straightforward. I first made sure that all the older apps that I previously created and that it connects to run on different servers so they can all run at the same time. That was quick. \n\nThen I explained the idea of the marketing assistant that needs to access these three tools but also needs to be able to read from my Obsidian Vault and only my Obsidian Vault for certain questions. I took everything into account and then shared the skills from here below as examples and also told Claude to take into account those skills that I have created previously.\n\nWhen I was finished with all of that, the app was created in about 30 minutes tops which was quite impressive and the only changes that were needed were some API endpoints on the existing apps. \n\nNow the UI still isn't great and maybe needs some work on that but that's okay. \n\nBut then when it was finished, Laurens Nys shared a very timely post about the structuring of your information and notes etc. for AI agents. So I shared just copy pasted his post, asked Claude what he thinks of it, what we can improve. Claude agreed it was very timely and for example I added YAML frontmatter to the skills and it created a tree of my Vault so it can navigate better. So yeah those were some interesting additions that will make sure that the context windows aren't getting too big.\n\n### older saved input\n If you want the connected version — a real chat UI that knows your content, your calendar, your clients — that's a small web app. The good news: your linkedin-planner already has the Anthropic API wired up. It\n could be extended into a broader marketing assistant rather than building from scratch.\n\n It would look like:\n• A simple chat interface in the browser\n• Skills become selectable modes or just work naturally from context (\"repurpose this for LinkedIn\" / \"where can this go\")\n• Connected to your Obsidian vault, your post calendar, your client profiles.\n\n What I'd build as skills:\n\n /content-map — You paste in a piece of content (press release, blog post, interview transcript, anything). It reads it and outputs a distribution plan: LinkedIn post, newsletter section, website page, client case\n study, whatever fits. Each channel gets a one-line brief — angle, format, length — not a rewrite. You decide what to act on.\n\n /repurpose — Given source content + a target format (e.g. \"LinkedIn post for Willow\"), it rewrites for that channel using the right brand voice. Still needs your review, but the first draft is done.\n\n /positioning-check — You paste in a piece of copy (homepage, ad, email). It checks it against basic positioning principles: is the ICP clear, is the value prop specific, is there a differentiator. Returns a short\n diagnostic, not a rewrite.\n\nwould have to be able to differentiate between multiple clients. with positioning instructions and more. \n\nShould also have access to all previous tools, but first I need to make sure they can all run at the same time.\n\n---\n\nApril 9, 2026\n\nOver the past few days, I've wrote down a couple of changes I want to make. As I started my session, Claude had some small suggestions as well, that we immediately implemented first:\n• Fixed GTM asset endpoint URL (/{slug}/assets/create → /api/projects/{slug}/assets)\n• Replaced custom markdown regex parser with marked.js\n• Animated typing indicator (three pulsing dots)\n• Obsidian search — multi-word scoring, title-match bonus, sentence-aware excerpts, maxresults param (default 10, max 20), totalmatches in response\n\nNext steps were to give the PA better access to branding assets such as colours, logos and local fonts for ZYGO and myself. I also updated the branding of the tool itself to match my brand colours.\n\nA few more updates:\n• Adding token usage per session in top banner\n• Adding links to underlying tools for more granular work (dropdown menu so the UI doesn't get too bloated)\n\nNow, for the real breakthrough, some bigger changes: On the left side of the chat window, I'd like to make a to-do list/roadmap with tasks the PA should handle while I'm away. On the right side, I want to make a list of the created assets ( last x created + link to library with other assets).\n\nAnd finally, the PA should be able to read specific urls when asked, without crawling the web for other answers.\n\n---\n\nApril 14, 2026\n\nMade some system-wide changes today. I redesigned all skills so they are more scalable. They work in different layers now so brands and creative skills can easily be combined. I also added some coding skills that check the coding base and update dependencies when needed. \n\nOf course, all connected through the PA.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 4,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Personal marketing assistant.md",
+      "workDates": [
+        "2001-04-16",
+        "2026-04-02",
+        "2026-04-09",
+        "2026-04-14"
       ]
     }
   ]
