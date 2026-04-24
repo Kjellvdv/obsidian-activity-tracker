@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-04-23T07:00:01.732Z",
-    "totalProjects": 18,
+    "generated": "2026-04-24T07:00:00.787Z",
+    "totalProjects": 19,
     "dateRange": {
       "start": "2001-04-16",
-      "end": "2026-04-14"
+      "end": "2026-04-24"
     }
   },
   "dailyContributions": {
@@ -86,6 +86,27 @@
         "Claude Code",
         "Visual Code Studio",
         "ChatGPT"
+      ]
+    },
+    "2026-04-22": {
+      "intensity": 4,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code"
+      ]
+    },
+    "2026-04-23": {
+      "intensity": 4,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code"
+      ]
+    },
+    "2026-04-24": {
+      "intensity": 4,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code"
       ]
     },
     "2026-01-28": {
@@ -311,6 +332,34 @@
     }
   },
   "projects": [
+    {
+      "id": "very-klear-website",
+      "date": "2026-04-22",
+      "title": "Very Klear website",
+      "vibeTools": [
+        "Claude Code"
+      ],
+      "stack": [
+        "Astro",
+        "TailwindCSS",
+        "Markdown",
+        "Obsidian"
+      ],
+      "description": "April 22, 2026\n\nStarted the retroactive interview process. Did leaf 2 (positioning audit) and leaf 3 (customer journey). The positioning one was the first to show what this process actually does — I told Claude that not every \"that's interesting\" in a demo is a positioning problem, often it's narrative ownership or a sales execution issue. Claude reshaped a whole section around that. The customer journey post got a similar treatment on the awareness gap: the underdog framing of \"like Google Analytics but GDPR-friendly\" works for small businesses but not for challengers, because it permanently positions you behind someone else.\n\nThis is the piece I keep underestimating — the articles sound fine when they're general, but the moment you put a specific opinion or a specific client pattern in, the whole thing gets sharper. And you can only do that with interview + edit, not by writing the first draft with perspective already in it. The perspective comes out in response to a question.\n\n---\n\nApril 23, 2026\n\nLong day.\n\nMorning: retroactive blog interviews. The posts were already published, clean on framework, but too abstract — no client stories, no ZYGO, no Willow data, no actual Kjell. So for each post, Claude reads it, asks 3-4 targeted questions at the abstract spots, I answer, Claude edits. Got through leaf 9 (founder-led sales), 10 (content engine), 11 (LinkedIn), and 13 (messaging guide). The messaging guide one was the most interesting — I told Claude to look underneath the GTM dashboard for more substance, and it actually did. Pulled out the value trifecta, the onlyness statement, the adoption-group tagging on value props, the category/brand/use objection taxonomy, the motivators section. The article went from six thin sections to a real framework that mirrors how I actually do the work. The tool isn't the point, the discipline is. That line made it into the post.\n\nDeleted four posts along the way: the three-page website one (didn't agree with the framing), the email sequence one, the three-failed-content-strategies post, and the GTM engagement description. Cleaned up all the cross-links. Messaging guide had gone orphan — no inbound or outbound links — so I reconnected it to ICP and positioning.\n\nHalfway through I realised Claude was doing all the interviews off my in-the-moment answers, not reading my weekly B2B notes where half the concrete examples already live. Saved that as a feedback memory and baked it into four skills (write-blog-post, blog-briefing, blog-research, blog-interview) so any future blog work pulls from the notes first.\n\nAfternoon: prep for deploy. Ran the build. Two pre-existing issues surfaced: `@tailwindcss/typography` was imported in the config but never in package.json (who ships like that), and one meta_description was 171 chars against the 160 schema limit. Both fixed. Added a privacy page at `/privacy` with the Belgian GDPR essentials — rights, third parties (Google Fonts, TidyCal), no cookies currently. Later added the legal entity details after I thought to mention them: Very Klear, Ligywijk 123, 8900 Belgium, VAT BE1014759659. Saved those to memory too.\n\nSitemap plugin kept crashing at build with `Cannot read properties of undefined (reading 'reduce')`. Turns out the latest `@astrojs/sitemap` (3.7.x) uses the `astro:routes:resolved` hook which only exists in Astro 5+. We're on 4.16, so `_routes` stayed undefined. Real fix is Astro 6 (which also clears the audit findings — 9 CVEs, all in middleware/SSR/dev-server which we don't use), but Astro 6 means replacing `@astrojs/tailwind` with the Tailwind 4 Vite plugin, which is a Tailwind migration I didn't want to do tonight. Downgraded sitemap to 3.4.1, which works on Astro 4. Added `robots.txt`, a 404 page, favicon.\n\nEvening: logo and fonts. Dropped three PNG wordmarks into `public/`: square stacked (for OG + favicon), horizontal transparent (for nav), horizontal cream (unused, ended up deleting). I use Fields as the display font in the actual wordmark. Shared the file — Fields Medium in OTF — and then Claude read the EULA. Desktop license. Explicit prohibition on CSS `@font-face` embedding. So the font file had to be pulled out of `public/` (anything in there ships publicly) and parked in a non-served folder. Fell back to Fraunces from Google Fonts, with the SOFT axis pinned at 100 to get the warmth close to Fields. Not identical but respectably close until I buy the webfont license.\n\nThen the CSS completely broke. Tailwind integration wasn't auto-injecting. Classes were in the HTML but no stylesheet was being loaded. Traced it to `@astrojs/tailwind@5.1.5` + Astro 4.16 silently failing to run the `injectScript(\"page-ssr\", ...)` hook. Fixed by disabling `applyBaseStyles` on the integration and explicitly importing a `global.css` from `BaseLayout.astro` with the three `@tailwind` directives. CSS back.\n\nLate evening: homepage overhaul. Gave feedback on the homepage — eight changes in one message. Killed the Before/After section (duplicated the problem section above it). Fixed the engagement timeline where the horizontal line was crossing the phase badges (z-index fix). Killed the Deliverables section. Killed the Results section with the four stats — \"they're tiny signals, you'd need 10+ for them to matter.\" Killed the ZYGO case study card (too soon to publish that). Replaced the reference-request CTA in testimonials with a Brent Schepers quote. Combined the two near-footer CTAs into one coral block. Blog cards made equal height.\n\nThen a few structural additions. A \"Who it's for\" section with fit / not-fit / trigger-moments blocks, pulled straight from the GTM dashboard's ICP JSON. A \"What's different\" section with three archetypes (strategy consultant / freelance operator / Very Klear) + a dark card describing the GTM dashboard as the system behind the work. Language pulled straight from the dashboard's `market.json` and `messaging.json` — not invented. A \"Recent writing\" 2-card section auto-pulling the latest posts. Removed weeks from the engagement phases. Renamed the phases Diagnosis → Diagnose, Foundation → Build, Traction → Grow to match the blog categories (which was inconsistent). Updated the clients grid: removed Airwallex, Soldo, Ecommpay, Malt, Accountable, Mercury; kept ZYGO, ONAH; renamed Aspire to Aspire App; added Willow and SOFICO. About paragraph rewritten to reflect the actual range — fintech scale-ups, deeptech/robotics, HRtech, enterprise finserv, crowdfunding, taxtech, cybersecurity, venture firms. Seven categories. Not just SaaS.\n\nThe ICP shift. B2B SaaS is narrowing as a category. AI is blurring the line with services-as-software. The companies I actually work with span way further than traditional SaaS — ZYGO deeptech, ONAH HRtech, SOFICO enterprise finserv, Winwinner crowdfunding, The Harbour fundraising, cybersecurity, various fintechs. So across the whole site: B2B SaaS → B2B tech. Homepage, privacy, footer, meta tags, RSS, blog index, category pages, six blog posts, GTM dashboard JSONs. The one slug I didn't change was `linkedin-for-b2b-saas-founders` — changing a URL means a redirect — so the page title updated but the URL didn't.\n\nDeploy. Zipped `dist/` (157KB) for SiteGround. First upload got a 403 because the dist folder contents went into a subfolder instead of straight into `public_html/`. Fixed. Kept `.well-known/` (Let's Encrypt validation). Deleted the \"Awesome Site in The Making\" placeholder.\n\nSpeed check. First visit cold: 3-6 seconds. Measured it with curl — 3.4s TTFB cold, 0.4s warm. DNS pre-resolved reduced it to 0.88s but SSL handshake alone was 0.5s. SiteGround shared plan, slow DNS and TLS. Biggest single fix is enabling Cloudflare on SiteGround — free, cuts cold connect by most of that. On the frontend side: shrunk favicon from 37KB to 6.8KB, narrowed the Fraunces variable-font axis range, added preload hints for the nav logo, added `fetchpriority=\"high\"` on it. Removed a few unused assets. Then rebuilt and re-zipped.\n\nAlso saved a few feedback memories: read weekly B2B notes before any blog work (baked into four skills), suggest updating the Vibing note near end of session (this file), ICP is B2B tech not B2B SaaS, the Very Klear legal entity details.\n\n---\n\nApril 24, 2026\n\nStarted the actual blog pipeline at 12:30am. Leaf 4: \"the 'do everything' trap — why multi-channel marketing kills early-stage B2B tech startups.\" Writing a post about focus at past midnight is, as I pointed out halfway through, the exact problem the post is about. Pretty meta. Kept going anyway.\n\nRan the full `/write-blog-post` orchestrator: brief → research → write → review → interview. The brief and research came out strong — Claude pulled the ONAH/Sophie story, the Sales Nav confession from my Apr 14 note, Peter Thiel on single-channel distribution, April Dunford on positioning-as-input, and a consensus data point that ~80% of pre-seed traction comes from one channel (MKT1, Stripe, Boundless). The writer produced a 1,650-word draft in one shot. Reviewer flagged five minor fixes — primary keyword gap in title and H1, missing the 80% stat in the body, meta description 2 chars over, inline attribution on three data claims, small line edits.\n\nDid the edits inline. Launched the interview agent. It asked five sharp questions back — whether to keep the Sophie session clean or tell the messier version, what the real emotion was underneath buying Sales Nav, what specific line recurs in five-channel-founder conversations, which of the four channel-filter questions does the heaviest lifting, and what the common pushback is. Answered four of five. The real emotion on Sales Nav wasn't tool-as-therapy, it was wanting a legitimate tool without the grey-area feeling of the scraper-of-the-month LinkedIn automation scene. That distinction is sharper than the generic framing. The pattern in five-channel-founder calls is the paradox: \"I don't have time\" + time spent on five channels that don't move the product. I've been there as a freelancer — going wide when business isn't going right, which always makes it worse. And the decisive filter question is always the same: where is your ICP? Everything else is downstream.\n\nGot distracted revising the draft manually while the interview agent was mid-revise — ended up going faster than the agent because I already knew what I wanted to say. The meta-point stands though: this is how the pipeline is supposed to work. You get a draft that's 90% there, a reviewer that catches the craft issues, and an interviewer that pulls out the last 10% that only you can provide.",
+      "learnings": [
+        "*Afternoon: prep for deploy.** Ran the build. Two pre-existing issues surfaced: `@tailwindcss/typography` was imported in the config but never in package.json (who ships like that), and one meta_description was 171 chars against the 160 schema limit. Both fixed. Added a privacy page at `/privacy` with the Belgian GDPR essentials — rights, third parties (Google Fonts, TidyCal), no cookies currently. Later added the legal entity details after I thought to mention them: Very Klear, Ligywijk 123, 8900 Belgium, VAT BE1014759659. Saved those to memory too.",
+        "*Late evening: homepage overhaul.** Gave feedback on the homepage — eight changes in one message. Killed the Before/After section (duplicated the problem section above it). Fixed the engagement timeline where the horizontal line was crossing the phase badges (z-index fix). Killed the Deliverables section. Killed the Results section with the four stats — \"they're tiny signals, you'd need 10+ for them to matter.\" Killed the ZYGO case study card (too soon to publish that). Replaced the reference-request CTA in testimonials with a Brent Schepers quote. Combined the two near-footer CTAs into one coral block. Blog cards made equal height."
+      ],
+      "cost": null,
+      "status": "completed",
+      "intensity": 4,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Very Klear website.md",
+      "workDates": [
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24"
+      ]
+    },
     {
       "id": "interview-notetaker",
       "date": "2026-04-09",
