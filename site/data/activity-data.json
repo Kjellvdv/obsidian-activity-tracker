@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated": "2026-05-02T07:00:05.612Z",
+    "generated": "2026-05-03T07:00:00.655Z",
     "totalProjects": 19,
     "dateRange": {
       "start": "2001-04-16",
@@ -184,7 +184,7 @@
       ]
     },
     "2026-04-10": {
-      "intensity": 2,
+      "intensity": 4,
       "projectCount": 2,
       "vibeTools": [
         "ChatGPT",
@@ -224,7 +224,7 @@
       ]
     },
     "2026-03-03": {
-      "intensity": 3,
+      "intensity": 4,
       "projectCount": 2,
       "vibeTools": [
         "Claude Code",
@@ -234,17 +234,26 @@
       ]
     },
     "2026-03-04": {
-      "intensity": 2,
+      "intensity": 4,
       "projectCount": 1,
       "vibeTools": [
         "Claude Code"
       ]
     },
     "2026-04-01": {
-      "intensity": 2,
+      "intensity": 4,
       "projectCount": 1,
       "vibeTools": [
         "Claude Code"
+      ]
+    },
+    "2026-05-02": {
+      "intensity": 4,
+      "projectCount": 2,
+      "vibeTools": [
+        "Claude Code",
+        "Xcode",
+        "Le Chat"
       ]
     },
     "2001-04-17": {
@@ -322,15 +331,6 @@
       ]
     },
     "2026-03-30": {
-      "intensity": 4,
-      "projectCount": 1,
-      "vibeTools": [
-        "Claude Code",
-        "Xcode",
-        "Le Chat"
-      ]
-    },
-    "2026-05-02": {
       "intensity": 4,
       "projectCount": 1,
       "vibeTools": [
@@ -455,18 +455,19 @@
         "SQLite",
         "Better-sqlite3"
       ],
-      "description": "March 2, 2026\n\nFor over 10 years, i've been tracking my investments in a Numbers file. Over time, i've wanted to add more calculations and \"features\" but the more I add, the more I start to doubt the accuracy. So it was about time to code something.\n\nThe plan was defined rather quickly based on an csv of my existing file. \n\n---\n\nMarch 3, 2026\n\nSomehow the hardest app of all - just cant handle the existing data. two hours of debugging have only made things worse. Should I put the money I've spent on Claude down as an investment? It feels more like a waste at the moment...\n\nBack to scratch is the only way i can see this working out. Trying a \"soft\" reset didn't lreally do it. Telling Claude to clean the existing databases didn't really work because he ran into another conflict half an hour later. \n\nSo I told Claude to make an assessment and really start over. Judging from his reply, he agrees: \"will be much faster than continuing to debug mysterious database issues\".\n\n---\n\nMarch 4, 2026\n\nSometimes you really need to treat Claude like an intern. I've been rebuilding the app and database (I mean, Claude has been rebuilding it). But he used the same corrupted data. The whole idea behind the rebuild was to use the proper data and remove any duplicates or sources that could lead to confusion. \n\nAfter pointing this out, it seems to work. Now I'll just focus on getting everything right for me. .\n\nOnly thing left today, is adding some more graphs. \n\nNext month, I'll fix the data entry and dashboard views for the kids. Once this has happened, i will no longer need to import new data, so all parsing an data import scripts could be removed\n\nI'll also add more detailed data about yields: where they come from (interest, shares, other) and about individual investments.\n\n---\n\nApril 1, 2026\n\nFixing the kids dashboards today. Taking it step by step. Just been describing what information I have, how it's currently organised and then letting Claude do its work. Voice isn't working in Claude Code, so I'm just talking to Mistral and then copy-pasting. At least that makes the subscription worth a few cents lol. \n\nI like that Claude intuitevely added a field for the money source and putt grandma as the example.\n\nnext month, need to continue with more details and sspecific tracking for shares\n\n---\n\nApril 10, 2026\n\nI spent a lot of time trying to get my data right, only to realise that the PostgreSQL is saved locally and can't be accessed on my other device.\n\nSo now I'm running the following migration and I'm scared to death that it will have errors and ruin my data:\nBackup via pg_dump + JSON export\nSwap schema from PostgreSQL → SQLite types\nSwap driver from postgres → better-sqlite3\nPush schema to create the SQLite file\nImport data from JSON backup",
+      "description": "March 2, 2026\n\nFor over 10 years, i've been tracking my investments in a Numbers file. Over time, i've wanted to add more calculations and \"features\" but the more I add, the more I start to doubt the accuracy. So it was about time to code something.\n\nThe plan was defined rather quickly based on an csv of my existing file. \n\n---\n\nMarch 3, 2026\n\nSomehow the hardest app of all - just cant handle the existing data. two hours of debugging have only made things worse. Should I put the money I've spent on Claude down as an investment? It feels more like a waste at the moment...\n\nBack to scratch is the only way i can see this working out. Trying a \"soft\" reset didn't lreally do it. Telling Claude to clean the existing databases didn't really work because he ran into another conflict half an hour later. \n\nSo I told Claude to make an assessment and really start over. Judging from his reply, he agrees: \"will be much faster than continuing to debug mysterious database issues\".\n\n---\n\nMarch 4, 2026\n\nSometimes you really need to treat Claude like an intern. I've been rebuilding the app and database (I mean, Claude has been rebuilding it). But he used the same corrupted data. The whole idea behind the rebuild was to use the proper data and remove any duplicates or sources that could lead to confusion. \n\nAfter pointing this out, it seems to work. Now I'll just focus on getting everything right for me. .\n\nOnly thing left today, is adding some more graphs. \n\nNext month, I'll fix the data entry and dashboard views for the kids. Once this has happened, i will no longer need to import new data, so all parsing an data import scripts could be removed\n\nI'll also add more detailed data about yields: where they come from (interest, shares, other) and about individual investments.\n\n---\n\nApril 1, 2026\n\nFixing the kids dashboards today. Taking it step by step. Just been describing what information I have, how it's currently organised and then letting Claude do its work. Voice isn't working in Claude Code, so I'm just talking to Mistral and then copy-pasting. At least that makes the subscription worth a few cents lol. \n\nI like that Claude intuitevely added a field for the money source and putt grandma as the example.\n\nnext month, need to continue with more details and sspecific tracking for shares\n\n---\n\nApril 10, 2026\n\nI spent a lot of time trying to get my data right, only to realise that the PostgreSQL is saved locally and can't be accessed on my other device.\n\nSo now I'm running the following migration and I'm scared to death that it will have errors and ruin my data:\nBackup via pg_dump + JSON export\nSwap schema from PostgreSQL → SQLite types\nSwap driver from postgres → better-sqlite3\nPush schema to create the SQLite file\nImport data from JSON backup \n---\n\nMay 2, 2026\n\nTried to run my investment tracker this morning. Got `Cannot find module 'yargs-parser'` — a transitive dependency `concurrently` needed somewhere two layers deep. Hadn't touched the code. Couldn't be a bug. Reinstall would normally fix this kind of thing in 30 seconds, but every reinstall was happening with iCloud running underneath, which turned out to be the actual problem.\n\n## The Diagnosis\n\niCloud Drive was evicting files inside `nodemodules` to save local disk space, replacing actual JavaScript files with placeholder stubs. When Node tried to `require('yargs-parser')`, it found nothing and threw. iCloud is built around the assumption that you have a few documents, not 50,000 tiny ones — `nodemodules` is basically its worst-case input.\n\nThe real diagnosis went one level deeper than that. I had two tools fighting over the same job. iCloud was syncing the whole project (because the project lived inside iCloud Drive). And Git — once I added it during the cleanup — was tracking the SQLite database file. Both wrong. Code shouldn't sync via iCloud; data shouldn't sync via Git.\n\n## The Fix\n\nSplit the responsibilities cleanly: code through Git, data through iCloud, glued together with a symlink.\n• Code lives outside iCloud now, in `~/Projects/`. Synced across devices through a private GitHub repo.\n• The SQLite database stays in iCloud at its original path. Single file, exactly what iCloud handles well.\n• A symlink in the project folder points to the database. The app sees `database.sqlite` where it expects, and underneath, that path resolves to the iCloud-synced file.\n\nAlso cleaned up the repo while I was there: the database, JSON/SQL backups, exported spreadsheets, even a screenshot — all tracked in the first commit. Removed them from tracking going forward, kept them on disk via `.gitignore`.\n\n## Key Learnings\n• iCloud silently evicts files it thinks aren't being used. For tens of thousands of tiny dependency files, this happens constantly and you never notice until something breaks\n• Git tracking a database means every save is a commit and `git pull` clobbers local data — worst of both worlds\n• SQLite is a single file, which is the sweet spot iCloud handles well\n• Symlinks let you mix sync mechanisms without the app needing to know\n• When two tools are doing the same job, the fix isn't to pick one — it's to draw a line between what each is good for\n\n## Challenges\n• The project was running inside a worktree of itself, and worktree git linkages use absolute paths — they break the moment you move the parent folder. Had to remove the worktree before any `mv`\n• A normal fast-forward merge would have deleted the on-disk data files since the cleanup commit untracked them. Used a mixed reset + targeted checkout instead so the working tree stayed intact\n• GitHub auto-created an \"Initial commit\" on the new repo, leaving local and remote histories divergent. Force-pushed since the remote stub had a 1-line auto-generated README and nothing of value\n\n## Tech Decisions\n• iCloud-synced SQLite over hosted DB: 5 minutes of setup vs. an hour of migration. Local-first is faster and works offline. The hosted option (Turso, Neon, Supabase) is the obvious upgrade when this app needs to run from a phone or a server\n• Symlink over `DATABASE_PATH` env var: both work. Symlink keeps `.env` identical across devices, which is one fewer thing to remember\n• Force-push over rebase: the remote stub had nothing worth preserving\n\n## The Catch\n\nCan't have the dev server running on both Macs at once. If two processes write through iCloud at the same time, the database file can corrupt. For a single-user app this is a discipline problem, not a real engineering problem — but it's the trade-off of choosing convenience over a hosted DB.\n\n## Outcome\n\nStarted the morning broken, ended with clean separation. Code where it belongs, data where it belongs, the two no longer overlapping. The migration path to a hosted database is laid out clearly for the day it matters, but today is not that day.",
       "learnings": [],
       "cost": null,
       "status": "completed",
-      "intensity": 2,
+      "intensity": 4,
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Investment tracker.md",
       "workDates": [
         "2026-03-02",
         "2026-03-03",
         "2026-03-04",
         "2026-04-01",
-        "2026-04-10"
+        "2026-04-10",
+        "2026-05-02"
       ]
     },
     {
