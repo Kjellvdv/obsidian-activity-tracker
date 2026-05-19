@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-05-18T07:00:00.676Z",
-    "totalProjects": 20,
+    "generated": "2026-05-19T07:00:03.727Z",
+    "totalProjects": 21,
     "dateRange": {
       "start": "2001-04-16",
-      "end": "2026-05-14"
+      "end": "2026-05-16"
     }
   },
   "dailyContributions": {
@@ -270,6 +270,13 @@
         "Claude Code"
       ]
     },
+    "2026-05-16": {
+      "intensity": 3,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code"
+      ]
+    },
     "2026-05-04": {
       "intensity": 4,
       "projectCount": 1,
@@ -363,6 +370,29 @@
     }
   },
   "projects": [
+    {
+      "id": "hiking-app",
+      "date": "2026-05-16",
+      "title": "Hiking app",
+      "vibeTools": [
+        "Claude Code"
+      ],
+      "stack": [
+        "PHP 8",
+        "Tailwind CDN",
+        "Leaflet + OpenTopoMap",
+        "Claude API"
+      ],
+      "description": "May 16, 2026\n\nBuilt a mini travel app for our annual hiking weekends with Manu, Jonas and Fre. Lives at hike.kjellv.com. SiteGround for hosting. The brief was simple: one page per trip, photos, planning, costs, AI overview of the area, no database.\n\nStack ended up being PHP 8 with flat-file JSON storage. Stays out of the way on SiteGround's shared hosting, no Node process to keep alive, no migrations. All four user accounts live in `data/users.json` as bcrypt hashes. Trips and their meta (links, checklist, notes, comments, routes) are JSON files per trip slug. Deploys are `rsync` over SSH after a long detour fighting SiteGround SSH keys.\n\nWhat got built: a Plannen tab (verblijf, links, checklist, notities), a Kosten tab with Splitwise-style settle-up math, an Over de regio tab where Claude generates a guide on trip creation (history, must sees, food, breweries, restaurants, transport, gotchas), a Foto's tab with upload + lightbox + +1 likes, and a Route tab with Leaflet on top of OpenTopoMap. The route tab supports multiple named routes per trip, GPX import, point-by-point editing, live geolocation, and even insert-between-segments when you click near an existing line.\n\nDesign pass landed on a Komoot/AllTrails outdoor aesthetic — Fraunces serif for display, Manrope for body, forest greens with terracotta accents, topographic contour pattern as background. Easter eggs in West-Flemish dialect surface as full-screen shoutouts (\"wo zim?\", \"ist nog verre?\", \"we gon ton nog een drinkn zeker?\", \"'t'is oal betaald\") at low probabilities on specific actions. Onboarding flow walks new logins through what's there and how to add the site to their iPhone home screen.\n\nMost of the build happened in one long session with Claude Code. The friction was at the edges: SSH auth, image library quirks, browser cache invalidation. The core ships fast when you skip frameworks and database schemas.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 3,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Hiking app.md",
+      "workDates": [
+        "2026-05-16"
+      ]
+    },
     {
       "id": "hexking",
       "date": "2026-05-04",
