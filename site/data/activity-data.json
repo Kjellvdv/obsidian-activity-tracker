@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-05-19T07:00:03.727Z",
-    "totalProjects": 21,
+    "generated": "2026-05-20T07:00:03.097Z",
+    "totalProjects": 22,
     "dateRange": {
       "start": "2001-04-16",
-      "end": "2026-05-16"
+      "end": "2026-05-19"
     }
   },
   "dailyContributions": {
@@ -103,6 +103,20 @@
       ]
     },
     "2026-04-24": {
+      "intensity": 4,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code"
+      ]
+    },
+    "2026-05-13": {
+      "intensity": 4,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code"
+      ]
+    },
+    "2026-05-19": {
       "intensity": 4,
       "projectCount": 1,
       "vibeTools": [
@@ -391,6 +405,37 @@
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Hiking app.md",
       "workDates": [
         "2026-05-16"
+      ]
+    },
+    {
+      "id": "vc-rater",
+      "date": "2026-05-13",
+      "title": "VC Rater",
+      "vibeTools": [
+        "Claude Code"
+      ],
+      "stack": [
+        "React",
+        "Vite",
+        "TypeScript",
+        "Express",
+        "Drizzle",
+        "Postgres",
+        "Tailwind",
+        "Auth.js",
+        "Anthropic SDK",
+        "Docker",
+        "cheerio"
+      ],
+      "description": "May 13, 2026\n\nDay one. Spent the morning planning rather than coding.\n\nRead the brand vault and the existing Spain Explorer codebase (same stack pattern). The product shape crystallised after some back-and-forth: internal tool first with a public-later horizon, where everyone shares the investor database but each user owns their scoring weights.\n\nPicked Railway over Vercel + Supabase. Vercel's 60s serverless cap was a blocker for long Claude enrichment runs; Railway just runs everything as one long-lived Node process. One platform, one deploy, one Postgres.\n\nPhase 1 deliverables: a controlled vocabulary (sectors, geos, stages, instruments, partner backgrounds, tier bands) and a hand-curated seed CSV of 79 EU robotics / hardware seed-to-Series-A funds, each with confidence flags. The vocabulary became the closed enum the scraper has to map free text into.\n\nPhase 2 scaffold: Express + Drizzle + Postgres + Vite + Tailwind + Auth.js with a dev-credentials provider (no OAuth setup needed for local). Got the first sign-in working end-to-end. Hit a Vite-proxy bug where Auth.js trusted the upstream Host header (localhost:3010) and tried to redirect the browser there instead of 5180. Two-line fix to `changeOrigin: false`. Saved a memory rule about avoiding common default ports (3000 / 5173 / 5432) so future scaffolds don't collide.\n\nEnded the day with 79 funds visible in the browser, signed in via dev login. Foundation in place.\n\n---\n\nMay 19, 2026\n\nMassive day. Built the matcher, expanded the catalogue, shipped the enrichment pipeline, and split admin from founder views.\n\nPhase 4 first: a scoring engine with eight criteria, each with editable per-value preference matrices (per-sector, per-geo, per-tier, per-partner-background). Per-stage matrix replaced binary stage matching once I realised \"Series A founders also pitch seed funds sometimes\" is the real story. Refactored criteria from per-user to per-profile after pointing out the public-launch path needs each founder owning their own scoring playbook. Added PDF deck upload — pdf-parse extracts text, Claude returns structured signals, founder reviews and applies.\n\nThe list went from 79 funds to 204:\n• 13 EU robotics specialists from Vestbee\n• 25 robotics-dedicated US / Canada funds (DCVC, Lemnos, Playground, Eclipse, Material Impact)\n• Country sweeps: Germany 43, UK 29, Netherlands 18, Italy 7, Spain 6, Nordics + Iceland + Luxembourg + Estonia filled out\n• Added an `impact` sector tag so climate-leaning funds (World Fund, Planet A, Extantia) still match founders who care\n• Lesson: aggregator-driven crawls systematically under-represent local-language funds. Miles Ahead only showed up because I flagged it manually\n\nThen Phase 3 enrichment: cheerio for HTML, Claude Sonnet for structured output. For each fund it fetches up to five candidate pages, strips tags, sends the combined text to Claude with a prompt that returns stages / sectors / geos / instruments / cheque sizes / partners / tier / fund vintage. Ran the batch across 191 funds — 164 succeeded, 40 errored (JS-rendered SPAs cheerio can't see). Backfilled tier from training-data knowledge for the rest via SQL.\n\nUX split: founders see only Matches (no Profile / Investors in nav). Admin (just my account) gets the Investors page as a deep dashboard with edit modal and inline status flags. 🚩 update-request flow, ⚠️ incomplete badge, pagination, null-as-zero scoring so missing data actually penalises.\n\nRoughly $5–10 on the Claude API. Worth it.",
+      "learnings": [],
+      "cost": "$5",
+      "status": "completed",
+      "intensity": 4,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/VC Rater.md",
+      "workDates": [
+        "2026-05-13",
+        "2026-05-19"
       ]
     },
     {
