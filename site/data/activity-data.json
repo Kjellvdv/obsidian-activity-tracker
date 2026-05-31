@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated": "2026-05-30T07:00:05.782Z",
+    "generated": "2026-05-31T07:00:00.744Z",
     "totalProjects": 22,
     "dateRange": {
       "start": "2001-04-16",
@@ -185,7 +185,7 @@
     },
     "2026-05-14": {
       "intensity": 4,
-      "projectCount": 1,
+      "projectCount": 2,
       "vibeTools": [
         "Claude Code"
       ]
@@ -299,7 +299,14 @@
       ]
     },
     "2026-05-17": {
-      "intensity": 4,
+      "intensity": 3,
+      "projectCount": 1,
+      "vibeTools": [
+        "Claude Code"
+      ]
+    },
+    "2026-05-23": {
+      "intensity": 3,
       "projectCount": 1,
       "vibeTools": [
         "Claude Code"
@@ -400,7 +407,7 @@
   "projects": [
     {
       "id": "hiking-app",
-      "date": "2026-05-17",
+      "date": "2026-05-14",
       "title": "Hiking app",
       "vibeTools": [
         "Claude Code"
@@ -411,14 +418,16 @@
         "Leaflet + OpenTopoMap",
         "Claude API"
       ],
-      "description": "May 17, 2026\n\nThe Eifel trip is wrapping up so I shifted gears from \"ship it\" to \"iterate on it.\" Most of the polish today came from small things the three friends actually hit while using the app over the weekend.\n• Trip cards were pulling the 800px thumbnail for the cover image, which got upscaled and looked blurry on desktop. Switched the cover source to the 2000px original with lazy loading. Better looking and not measurably slower since only one image is above the fold.\n• Added a \"Maak cover\" button inside the lightbox so the cover photo isn't just \"most recent upload\" — now anyone can pick their favorite shot. Persists in `meta.json` and falls back if the pinned photo gets deleted.\n• The big one: a wishlist + shortlist flow for next year's destination. Anyone adds ideas (location + notes + short AI blurb), each person can promote one to the shortlist (max four), kjell finalizes. Wishlist persists across selection cycles so old ideas don't get lost. Trip detail page now gates tabs based on status: wishlist shows minimal info, shortlist unlocks plannen/route/regio, upcoming unlocks foto's and kosten.\n• Replaced native `confirm()` dialogs throughout (delete idea, promote, demote, finalize, delete expense, etc.) with the styled forest-green modal via a single delegated submit handler. `data-confirm` attribute on any form opts in. Way less rework next time.\n• Banned the word \"crew\" from the codebase per friend feedback. Felt slightly forced. Replaced with neutral phrasing.\n\nLesson of the day: the planning-for-next-trip workflow turned out richer than the trip-execution workflow. People care more about the dreaming than the logging.\n\nBuilt a mini travel app for our annual hiking weekends with Manu, Jonas and Fre. Lives at hike.kjellv.com. SiteGround for hosting. The brief was simple: one page per trip, photos, planning, costs, AI overview of the area, no database.\n\nStack ended up being PHP 8 with flat-file JSON storage. Stays out of the way on SiteGround's shared hosting, no Node process to keep alive, no migrations. All four user accounts live in `data/users.json` as bcrypt hashes. Trips and their meta (links, checklist, notes, comments, routes) are JSON files per trip slug. Deploys are `rsync` over SSH after a long detour fighting SiteGround SSH keys.\n\nWhat got built: a Plannen tab (verblijf, links, checklist, notities), a Kosten tab with Splitwise-style settle-up math, an Over de regio tab where Claude generates a guide on trip creation (history, must sees, food, breweries, restaurants, transport, gotchas), a Foto's tab with upload + lightbox + +1 likes, and a Route tab with Leaflet on top of OpenTopoMap. The route tab supports multiple named routes per trip, GPX import, point-by-point editing, live geolocation, and even insert-between-segments when you click near an existing line.\n\nDesign pass landed on a Komoot/AllTrails outdoor aesthetic — Fraunces serif for display, Manrope for body, forest greens with terracotta accents, topographic contour pattern as background. Easter eggs in West-Flemish dialect surface as full-screen shoutouts (\"wo zim?\", \"ist nog verre?\", \"we gon ton nog een drinkn zeker?\", \"'t'is oal betaald\") at low probabilities on specific actions. Onboarding flow walks new logins through what's there and how to add the site to their iPhone home screen.\n\nMost of the build happened in one long session with Claude Code. The friction was at the edges: SSH auth, image library quirks, browser cache invalidation. The core ships fast when you skip frameworks and database schemas.",
+      "description": "May 14, 2026\n\nBuilt a mini travel app for our annual hiking weekends with Manu, Jonas and Fre. Lives at hike.kjellv.com. SiteGround for hosting. The brief was simple: one page per trip, photos, planning, costs, AI overview of the area, no database.\n\nStack ended up being PHP 8 with flat-file JSON storage. Stays out of the way on SiteGround's shared hosting, no Node process to keep alive, no migrations. All four user accounts live in `data/users.json` as bcrypt hashes. Trips and their meta (links, checklist, notes, comments, routes) are JSON files per trip slug. Deploys are `rsync` over SSH after a long detour fighting SiteGround SSH keys.\n\nWhat got built: a Plannen tab (verblijf, links, checklist, notities), a Kosten tab with Splitwise-style settle-up math, an Over de regio tab where Claude generates a guide on trip creation (history, must sees, food, breweries, restaurants, transport, gotchas), a Foto's tab with upload + lightbox + +1 likes, and a Route tab with Leaflet on top of OpenTopoMap. The route tab supports multiple named routes per trip, GPX import, point-by-point editing, live geolocation, and even insert-between-segments when you click near an existing line.\n\nDesign pass landed on a Komoot/AllTrails outdoor aesthetic — Fraunces serif for display, Manrope for body, forest greens with terracotta accents, topographic contour pattern as background. Easter eggs in West-Flemish dialect surface as full-screen shoutouts (\"wo zim?\", \"ist nog verre?\", \"we gon ton nog een drinkn zeker?\", \"'t'is oal betaald\") at low probabilities on specific actions. Onboarding flow walks new logins through what's there and how to add the site to their iPhone home screen.\n\nMost of the build happened in one long session with Claude Code. The friction was at the edges: SSH auth, image library quirks, browser cache invalidation. The core ships fast when you skip frameworks and database schemas.\n\n---\n\nMay 17, 2026\n\n Trip cards were pulling the 800px thumbnail for the cover image, which got upscaled and looked blurry on desktop. Switched the cover source to the 2000px original with lazy loading. Better looking and not measurably slower since only one image is above the fold.\n\n---\n\nMay 23, 2026\n\nThe Eifel trip is wrapping up so I shifted gears from \"ship it\" to \"iterate on it.\" \n• Added a \"Maak cover\" button inside the lightbox so the cover photo isn't just \"most recent upload\" — now anyone can pick their favorite shot. Persists in `meta.json` and falls back if the pinned photo gets deleted.\n• The big one: a wishlist + shortlist flow for next year's destination. Anyone adds ideas (location + notes + short AI blurb), each person can promote one to the shortlist (max four), kjell finalizes. Wishlist persists across selection cycles so old ideas don't get lost. Trip detail page now gates tabs based on status: wishlist shows minimal info, shortlist unlocks plannen/route/regio, upcoming unlocks foto's and kosten.\n• Replaced native `confirm()` dialogs throughout (delete idea, promote, demote, finalize, delete expense, etc.) with the styled forest-green modal via a single delegated submit handler. `data-confirm` attribute on any form opts in. Way less rework next time.",
       "learnings": [],
       "cost": null,
       "status": "completed",
-      "intensity": 4,
+      "intensity": 3,
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Hiking app.md",
       "workDates": [
-        "2026-05-17"
+        "2026-05-14",
+        "2026-05-17",
+        "2026-05-23"
       ]
     },
     {
