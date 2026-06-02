@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated": "2026-06-01T07:00:00.658Z",
+    "generated": "2026-06-02T07:00:03.064Z",
     "totalProjects": 22,
     "dateRange": {
       "start": "2001-04-16",
@@ -111,9 +111,10 @@
     },
     "2026-05-13": {
       "intensity": 4,
-      "projectCount": 1,
+      "projectCount": 2,
       "vibeTools": [
-        "Claude Code"
+        "Claude Code",
+        "Vercel"
       ]
     },
     "2026-05-19": {
@@ -312,14 +313,6 @@
         "Claude Code"
       ]
     },
-    "2026-05-04": {
-      "intensity": 4,
-      "projectCount": 1,
-      "vibeTools": [
-        "Claude Code",
-        "Vercel"
-      ]
-    },
     "2001-04-17": {
       "intensity": 3,
       "projectCount": 1,
@@ -465,7 +458,7 @@
     },
     {
       "id": "hexking",
-      "date": "2026-05-04",
+      "date": "2026-05-13",
       "title": "Hexking",
       "vibeTools": [
         "Claude Code",
@@ -477,8 +470,9 @@
         "Vite",
         "Tailwind"
       ],
-      "description": "May 4, 2026\n\nStarted with a half-formed board game idea: round or hexagonal, two teams of eight, surround the enemy king. By the end of the session it was deployed and playable in a browser.\n\nThe interesting part wasn't writing code. It was getting the rules right before any code existed. Claude asked the questions, I answered: turn structure, board size, movement, win condition, what happens when a king has no legal move. Fifteen-plus design questions before any scaffolding. The rules came out clean: 1-hex king, 2-hex soldiers, edges and own pieces count toward surround, lose if encircled for one full cycle.\n\nA few things stood out:\n• Constraints surface fast when you're forced to articulate them. \"King moves the same speed as soldiers\" sounds fine until you realize the king runs forever and no one can win. We flipped it: king moves 1, soldiers move 2.\n• Writing the rules in plain English before any types or functions kept the implementation cheap. The entire game logic fits in one file.\n• Minimax with alpha-beta at depth 2 is enough to feel like a real opponent in a small game. The AI doesn't need to be smart, just consistent.\n• The \"classical chess club\" aesthetic took maybe twenty minutes once the game worked. Cinzel for headings, parchment hex cells, gradient stones with a gold rim on the king. Visual identity is mostly a typography choice.\n\nLive in production by the end of the session. Vercel deploy handled by Kjell.\n\nThen kept iterating. Three threads.\n\nThe \"luxurious border\" was the messiest. Chunky wood frame around the hexes: too much, looked stuck on. Smooth pointy-top hex outline around the playing area: too detached from the actual zigzag shape. The right answer was tracing gold along the literal perimeter edges, with each edge's drop shadow pushed outward along its own normal so the depth always lands on the dark side, never on the parchment.\n\nFor the AI: minimax depth 2 to 3 with root-level move ordering, plus a one-line bug fix that probably did more for difficulty than the depth bump. The eval was counting only pieces as \"filled neighbors\" of a king. Blocked hexes from maps weren't counted. So Sovereign was undervaluing every position where its opponent's king was pressed against a wall.\n\nFor replay value: four hand-designed maps (Open, Pillars, Wall, Quartet) with blocked hexes placed symmetrically across the y-axis. Blocked counts as wall toward surround, so you can use them as offensive geometry, not just obstacles.",
+      "description": "May 13, 2026\n\nSpent a session pushing on AI strength and game balance. Most of the tuning landed; some of it I rolled back.\n• Replaced difficulty levels with a \"7 or 9 soldiers\" toggle. AI always plays at full depth. 9 adds reserves at q=-3 behind the wingmen.\n• Added Scatter map: 4-6 random interior blocks per game, balanced in count between halves but not mirrored. Avoids starting positions and king escape hexes.\n• AI eval got asymmetric pressure (own wingmen don't count as threats), threat-scaled defender bonus, and a defender cap that depends on soldier count.\n• Tried jump moves over adjacent pieces to break fortressing. Worked mechanically. Killed the tactical feel completely. Reverted.\n• Same with bigger board, 1-hex movement, 200-move tiebreak, path-aware BFS, depth 4: each fix solved a real problem but stacking them turned the game into a chore. Rolled the whole stack back to the last fun version.\n\nThe lesson I keep relearning is that more knobs is not more game. The version that feels good is the version that's tightest. Every \"make it harder\" change has a cost in fun, and the cost compounds. Easier to bias the AI's eval than to bolt new mechanics on top.\n\nLive and pushed.\n\nStarted with a half-formed board game idea: round or hexagonal, two teams of eight, surround the enemy king. By the end of the session it was deployed and playable in a browser.\n\nThe interesting part wasn't writing code. It was getting the rules right before any code existed. Claude asked the questions, I answered: turn structure, board size, movement, win condition, what happens when a king has no legal move. Fifteen-plus design questions before any scaffolding. The rules came out clean: 1-hex king, 2-hex soldiers, edges and own pieces count toward surround, lose if encircled for one full cycle.\n\nA few things stood out:\n• Constraints surface fast when you're forced to articulate them. \"King moves the same speed as soldiers\" sounds fine until you realize the king runs forever and no one can win. We flipped it: king moves 1, soldiers move 2.\n• Writing the rules in plain English before any types or functions kept the implementation cheap. The entire game logic fits in one file.\n• Minimax with alpha-beta at depth 2 is enough to feel like a real opponent in a small game. The AI doesn't need to be smart, just consistent.\n• The \"classical chess club\" aesthetic took maybe twenty minutes once the game worked. Cinzel for headings, parchment hex cells, gradient stones with a gold rim on the king. Visual identity is mostly a typography choice.\n\nLive in production by the end of the session. Vercel deploy handled by Kjell.\n\nThen kept iterating. Three threads.\n\nThe \"luxurious border\" was the messiest. Chunky wood frame around the hexes: too much, looked stuck on. Smooth pointy-top hex outline around the playing area: too detached from the actual zigzag shape. The right answer was tracing gold along the literal perimeter edges, with each edge's drop shadow pushed outward along its own normal so the depth always lands on the dark side, never on the parchment.\n\nFor the AI: minimax depth 2 to 3 with root-level move ordering, plus a one-line bug fix that probably did more for difficulty than the depth bump. The eval was counting only pieces as \"filled neighbors\" of a king. Blocked hexes from maps weren't counted. So Sovereign was undervaluing every position where its opponent's king was pressed against a wall.\n\nFor replay value: four hand-designed maps (Open, Pillars, Wall, Quartet) with blocked hexes placed symmetrically across the y-axis. Blocked counts as wall toward surround, so you can use them as offensive geometry, not just obstacles.",
       "learnings": [
+        "Same with bigger board, 1-hex movement, 200-move tiebreak, path-aware BFS, depth 4: each fix solved a real problem but stacking them turned the game into a chore. Rolled the whole stack back to the last fun version.",
         "Minimax with alpha-beta at depth 2 is enough to feel like a real opponent in a small game. The AI doesn't need to be smart, just consistent."
       ],
       "cost": null,
@@ -486,7 +480,7 @@
       "intensity": 4,
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Hexking.md",
       "workDates": [
-        "2026-05-04"
+        "2026-05-13"
       ]
     },
     {
