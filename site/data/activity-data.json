@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-06-04T07:00:00.658Z",
-    "totalProjects": 23,
+    "generated": "2026-06-05T07:00:05.596Z",
+    "totalProjects": 24,
     "dateRange": {
       "start": "2001-04-16",
-      "end": "2026-06-02"
+      "end": "2026-06-04"
     }
   },
   "dailyContributions": {
@@ -321,6 +321,14 @@
         "Claude Code"
       ]
     },
+    "2026-06-04": {
+      "intensity": 4,
+      "projectCount": 2,
+      "vibeTools": [
+        "Claude Code",
+        "Vercel"
+      ]
+    },
     "2001-04-17": {
       "intensity": 3,
       "projectCount": 1,
@@ -406,6 +414,32 @@
     }
   },
   "projects": [
+    {
+      "id": "arsenal-belgium-prono",
+      "date": "2026-06-04",
+      "title": "Arsenal Belgium prono",
+      "vibeTools": [
+        "Claude Code"
+      ],
+      "stack": [
+        "React",
+        "Vite",
+        "TailwindCSS",
+        "Express",
+        "Typescript",
+        "SQLite",
+        "Drizzle ORM"
+      ],
+      "description": "June 4, 2026\n\nArsenal Belgium Prono is a score-prediction game for a supporters group. Predict every match, exact score scores 3 points, right result 1, wrong 0. Live leaderboard, lock 15 minutes before kick-off, picks revealed after. Built solo with Claude Code over a few sittings.\n\nThe best decision this week was making it config-driven. Instead of hardcoding Arsenal everywhere, I pulled team name, app name, competitions, logo and background into one profile in `shared/appConfig.ts`. Flip an env var and the same codebase runs the Belgian Red Devils World Cup version. So I'm launching Belgium first as a low-stakes trial, then switching back to Arsenal for the season. One repo, two products.\n\nDeploy moved from Fly to Railway, since Fly's free tier is gone. Two real production gotchas ate some time. Express needs `trust proxy` set or it won't set the secure session cookie behind Railway's TLS, which reads as \"not authenticated\" on every request. And a global `NODE_ENV=production` prunes the devDeps Vite needs to build, so the start script sets production at runtime instead.\n\nToday's focus was the password flow. The old reset was a dead end: an admin could hand out a temp password, but the user couldn't change it. Added a self-service Account page, an in-app forgot-password request that flags admins, plus dismiss and auto-clear-on-login so stray requests vanish. Also shipped admin-only participation credits (one per prediction) with a name and credits CSV export.\n\nLesson that keeps repeating: the cookie was never broken, my access path was. Verify the boring layer first.",
+      "learnings": [],
+      "cost": null,
+      "status": "completed",
+      "intensity": 3,
+      "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Arsenal Belgium prono.md",
+      "workDates": [
+        "2026-06-04"
+      ]
+    },
     {
       "id": "betting-coach",
       "date": "2026-06-02",
@@ -506,7 +540,7 @@
         "Vite",
         "Tailwind"
       ],
-      "description": "May 13, 2026\n\nSpent a session pushing on AI strength and game balance. Most of the tuning landed; some of it I rolled back.\n• Replaced difficulty levels with a \"7 or 9 soldiers\" toggle. AI always plays at full depth. 9 adds reserves at q=-3 behind the wingmen.\n• Added Scatter map: 4-6 random interior blocks per game, balanced in count between halves but not mirrored. Avoids starting positions and king escape hexes.\n• AI eval got asymmetric pressure (own wingmen don't count as threats), threat-scaled defender bonus, and a defender cap that depends on soldier count.\n• Tried jump moves over adjacent pieces to break fortressing. Worked mechanically. Killed the tactical feel completely. Reverted.\n• Same with bigger board, 1-hex movement, 200-move tiebreak, path-aware BFS, depth 4: each fix solved a real problem but stacking them turned the game into a chore. Rolled the whole stack back to the last fun version.\n\nThe lesson I keep relearning is that more knobs is not more game. The version that feels good is the version that's tightest. Every \"make it harder\" change has a cost in fun, and the cost compounds. Easier to bias the AI's eval than to bolt new mechanics on top.\n\nLive and pushed.\n\nStarted with a half-formed board game idea: round or hexagonal, two teams of eight, surround the enemy king. By the end of the session it was deployed and playable in a browser.\n\nThe interesting part wasn't writing code. It was getting the rules right before any code existed. Claude asked the questions, I answered: turn structure, board size, movement, win condition, what happens when a king has no legal move. Fifteen-plus design questions before any scaffolding. The rules came out clean: 1-hex king, 2-hex soldiers, edges and own pieces count toward surround, lose if encircled for one full cycle.\n\nA few things stood out:\n• Constraints surface fast when you're forced to articulate them. \"King moves the same speed as soldiers\" sounds fine until you realize the king runs forever and no one can win. We flipped it: king moves 1, soldiers move 2.\n• Writing the rules in plain English before any types or functions kept the implementation cheap. The entire game logic fits in one file.\n• Minimax with alpha-beta at depth 2 is enough to feel like a real opponent in a small game. The AI doesn't need to be smart, just consistent.\n• The \"classical chess club\" aesthetic took maybe twenty minutes once the game worked. Cinzel for headings, parchment hex cells, gradient stones with a gold rim on the king. Visual identity is mostly a typography choice.\n\nLive in production by the end of the session. Vercel deploy handled by Kjell.\n\nThen kept iterating. Three threads.\n\nThe \"luxurious border\" was the messiest. Chunky wood frame around the hexes: too much, looked stuck on. Smooth pointy-top hex outline around the playing area: too detached from the actual zigzag shape. The right answer was tracing gold along the literal perimeter edges, with each edge's drop shadow pushed outward along its own normal so the depth always lands on the dark side, never on the parchment.\n\nFor the AI: minimax depth 2 to 3 with root-level move ordering, plus a one-line bug fix that probably did more for difficulty than the depth bump. The eval was counting only pieces as \"filled neighbors\" of a king. Blocked hexes from maps weren't counted. So Sovereign was undervaluing every position where its opponent's king was pressed against a wall.\n\nFor replay value: four hand-designed maps (Open, Pillars, Wall, Quartet) with blocked hexes placed symmetrically across the y-axis. Blocked counts as wall toward surround, so you can use them as offensive geometry, not just obstacles.\n\n---\n\nJune 2, 2026\n\nShort session tuning the AI by playing, spotting weird moves, and fixing the one dial behind each. No new mechanics this time, just nudging the eval. The play → report → adjust loop worked well: I describe what looks off in plain language, the specific weight gets traced and changed.\n\nWhat worked:\n• The AI kept walking its only piece touching my king away. Turned out a piece sitting next to the enemy king scored no better than one hovering nearby. Forcing \"on a king neighbour = max value\" stopped it abandoning contact.\n• Added an anti-fidget rule: when several moves score the same, don't disturb a piece already touching the king, bring up a different one instead. Killed the pointless back-and-forth shuffling.\n• Fixed the king fleeing to the border when cornered. A corner only needs 3 walls to surround vs 6 in the interior, so the rim shortens its life even though the squares look open. Added a threat-scaled penalty for low-neighbour squares (the defensive mirror of the term that drives the enemy king toward the rim).\n• The earlier transposition table and weight-struct refactor paid off here: every term is now a named dial, so \"the king is too scared\" maps to one number I can move.\n\nThe recurring lesson holds: bias the eval, don't bolt on mechanics. A symptom in gameplay almost always traces to a single weight being wrong, not a missing rule.\n\nNot pushed yet.",
+      "description": "May 13, 2026\n\nSpent a session pushing on AI strength and game balance. Most of the tuning landed; some of it I rolled back.\n• Replaced difficulty levels with a \"7 or 9 soldiers\" toggle. AI always plays at full depth. 9 adds reserves at q=-3 behind the wingmen.\n• Added Scatter map: 4-6 random interior blocks per game, balanced in count between halves but not mirrored. Avoids starting positions and king escape hexes.\n• AI eval got asymmetric pressure (own wingmen don't count as threats), threat-scaled defender bonus, and a defender cap that depends on soldier count.\n• Tried jump moves over adjacent pieces to break fortressing. Worked mechanically. Killed the tactical feel completely. Reverted.\n• Same with bigger board, 1-hex movement, 200-move tiebreak, path-aware BFS, depth 4: each fix solved a real problem but stacking them turned the game into a chore. Rolled the whole stack back to the last fun version.\n\nThe lesson I keep relearning is that more knobs is not more game. The version that feels good is the version that's tightest. Every \"make it harder\" change has a cost in fun, and the cost compounds. Easier to bias the AI's eval than to bolt new mechanics on top.\n\nLive and pushed.\n\nStarted with a half-formed board game idea: round or hexagonal, two teams of eight, surround the enemy king. By the end of the session it was deployed and playable in a browser.\n\nThe interesting part wasn't writing code. It was getting the rules right before any code existed. Claude asked the questions, I answered: turn structure, board size, movement, win condition, what happens when a king has no legal move. Fifteen-plus design questions before any scaffolding. The rules came out clean: 1-hex king, 2-hex soldiers, edges and own pieces count toward surround, lose if encircled for one full cycle.\n\nA few things stood out:\n• Constraints surface fast when you're forced to articulate them. \"King moves the same speed as soldiers\" sounds fine until you realize the king runs forever and no one can win. We flipped it: king moves 1, soldiers move 2.\n• Writing the rules in plain English before any types or functions kept the implementation cheap. The entire game logic fits in one file.\n• Minimax with alpha-beta at depth 2 is enough to feel like a real opponent in a small game. The AI doesn't need to be smart, just consistent.\n• The \"classical chess club\" aesthetic took maybe twenty minutes once the game worked. Cinzel for headings, parchment hex cells, gradient stones with a gold rim on the king. Visual identity is mostly a typography choice.\n\nLive in production by the end of the session. Vercel deploy handled by Kjell.\n\nThen kept iterating. Three threads.\n\nThe \"luxurious border\" was the messiest. Chunky wood frame around the hexes: too much, looked stuck on. Smooth pointy-top hex outline around the playing area: too detached from the actual zigzag shape. The right answer was tracing gold along the literal perimeter edges, with each edge's drop shadow pushed outward along its own normal so the depth always lands on the dark side, never on the parchment.\n\nFor the AI: minimax depth 2 to 3 with root-level move ordering, plus a one-line bug fix that probably did more for difficulty than the depth bump. The eval was counting only pieces as \"filled neighbors\" of a king. Blocked hexes from maps weren't counted. So Sovereign was undervaluing every position where its opponent's king was pressed against a wall.\n\nFor replay value: four hand-designed maps (Open, Pillars, Wall, Quartet) with blocked hexes placed symmetrically across the y-axis. Blocked counts as wall toward surround, so you can use them as offensive geometry, not just obstacles.\n\n---\n\nJune 2, 2026\n\nShort session tuning the AI by playing, spotting weird moves, and fixing the one dial behind each. No new mechanics this time, just nudging the eval. The play → report → adjust loop worked well: I describe what looks off in plain language, the specific weight gets traced and changed.\n\nWhat worked:\n• The AI kept walking its only piece touching my king away. Turned out a piece sitting next to the enemy king scored no better than one hovering nearby. Forcing \"on a king neighbour = max value\" stopped it abandoning contact.\n• Added an anti-fidget rule: when several moves score the same, don't disturb a piece already touching the king, bring up a different one instead. Killed the pointless back-and-forth shuffling.\n• Fixed the king fleeing to the border when cornered. A corner only needs 3 walls to surround vs 6 in the interior, so the rim shortens its life even though the squares look open. Added a threat-scaled penalty for low-neighbour squares (the defensive mirror of the term that drives the enemy king toward the rim).\n• The earlier transposition table and weight-struct refactor paid off here: every term is now a named dial, so \"the king is too scared\" maps to one number I can move.\n\nThe recurring lesson holds: bias the eval, don't bolt on mechanics. A symptom in gameplay almost always traces to a single weight being wrong, not a missing rule.\n\nNot pushed yet.\n\n---\n\nJune 4, 2026\n\nMore eval tuning, plus a small UX fix. Carried on the same play → report → adjust loop, but this time the best input came from a transcript: I had Claude play a full game against the engine, lose, and write up what it learned. Turning an opponent's post-mortem into eval changes is a sharper signal than my own gut reads.\n\nWhat worked:\n• Fixed the king fleeing to the border when cornered last time; this time the gap was the opposite end. The old \"defender\" dial rewarded any friendly piece near the king, which is exactly backwards. Own pieces count toward surround, so guards hugging the king help the opponent encircle you.\n• Replaced it with an escape-hatch rule: reward exactly one friendly piece beside the king (the piece you slide away to break free of a full encirclement), penalize zero (the surround becomes unbreakable) and two-plus (you're gifting the enemy free walls). Peak at one, declining both sides, silent in the opening.\n• Triaged the rest of the post-mortem against the eval and resisted adding dials for things already handled: net-coverage shuffles (the anti-fidget tie-break covers it), advancement (already the engine's main win lever), tempo (minimax depth sees short forcing lines). Only the guards insight was a genuine hole.\n• Moved the victory banner onto the board as an overlay with a New Game button. Tried a session score count too, then cut it: a win tally only earns its keep with accounts behind it.\n\nThe lesson holds: a strong opponent's analysis is the cheapest eval-tuning data there is. Live and pushed.",
       "learnings": [
         "Same with bigger board, 1-hex movement, 200-move tiebreak, path-aware BFS, depth 4: each fix solved a real problem but stacking them turned the game into a chore. Rolled the whole stack back to the last fun version.",
         "Minimax with alpha-beta at depth 2 is enough to feel like a real opponent in a small game. The AI doesn't need to be smart, just consistent."
@@ -517,7 +551,8 @@
       "filePath": "/Users/kjellvandevyvere/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/Vibing/Hexking.md",
       "workDates": [
         "2026-05-13",
-        "2026-06-02"
+        "2026-06-02",
+        "2026-06-04"
       ]
     },
     {
