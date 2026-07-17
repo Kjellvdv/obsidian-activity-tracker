@@ -363,6 +363,14 @@ async function parseVibingNotes() {
  * Generate output JSON structure
  */
 function generateOutput(projects) {
+  if (projects.length === 0) {
+    // An empty result means the vault was unreadable (e.g. launchd blocked from
+    // iCloud Drive), not that all projects disappeared — abort instead of
+    // overwriting good data with an empty dataset.
+    console.error(`❌ Parsed 0 projects — refusing to overwrite existing data. Check vault access.`);
+    process.exit(1);
+  }
+
   console.log(`\n📊 Processing ${projects.length} projects...\n`);
 
   // Build daily contributions map
