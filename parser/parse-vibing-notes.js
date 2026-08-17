@@ -101,6 +101,16 @@ function parseDateFromHeading(heading) {
     return isoMatch[1];
   }
 
+  // Default a year-less date to the current year ("17 April" parses to 2001 in
+  // V8). Match the shape explicitly: appending a year to any heading would turn
+  // prose into a date, since V8 reads "Tech Decisions 2026" as 1 December.
+  if (!/\d{4}/.test(text) && isYearlessDate(text)) {
+    const parsed = new Date(`${text} ${new Date().getFullYear()}`);
+    if (!isNaN(parsed.getTime())) {
+      return format(parsed, 'yyyy-MM-dd');
+    }
+  }
+
   // Try parsing natural date (Jan 22, 2026 or January 22, 2026)
   try {
     const parsed = new Date(text);
@@ -112,6 +122,26 @@ function parseDateFromHeading(heading) {
   }
 
   return null;
+}
+
+const MONTH_NAMES = 'jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|' +
+  'jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?';
+
+const DAY_MONTH = new RegExp(`^(\\d{1,2})(?:st|nd|rd|th)?\\s+(?:of\\s+)?(?:${MONTH_NAMES})\\.?$`, 'i');
+const MONTH_DAY = new RegExp(`^(?:${MONTH_NAMES})\\.?\\s+(\\d{1,2})(?:st|nd|rd|th)?,?$`, 'i');
+
+/**
+ * Does this heading look like a day and month with the year left off?
+ * Requires a day number, so a bare month name is not a date.
+ */
+function isYearlessDate(text) {
+  const match = text.match(DAY_MONTH) || text.match(MONTH_DAY);
+  if (!match) {
+    return false;
+  }
+
+  const day = parseInt(match[1], 10);
+  return day >= 1 && day <= 31;
 }
 
 /**
