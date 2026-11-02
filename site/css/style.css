@@ -161,6 +161,29 @@ body {
     font-weight: 500;
 }
 
+/* Retirement notice */
+.retired-notice {
+    background: white;
+    border: 2px solid #D6D1CB; /* Subtle stone */
+    border-left: 6px solid #D76262; /* Signal coral */
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 40px;
+}
+
+.retired-notice-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #D76262; /* Signal coral */
+    margin-bottom: 8px;
+}
+
+.retired-notice p {
+    font-size: 16px;
+    color: #2B2B2B; /* Soft charcoal */
+}
+
 /* Contribution Graph */
 .graph-container {
     background: white;
